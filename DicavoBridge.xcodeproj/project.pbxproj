@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59FC24A2E23A05FF770E9977 /* AnalysisError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA3FCE20DA6B6ADED6C347 /* AnalysisError.swift */; };
+		3C90686742FB76DFA44F5AAE /* AnalysisTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE732D8E77932452E901CD /* AnalysisTool.swift */; };
+		9EE5C5CDD03A73106E6C35E8 /* BridgeDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B919D6172C0C84EDC38E97 /* BridgeDescriptor.swift */; };
+		248EA278ED1D08C2435655A9 /* BridgeHTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143FCD075D2D3F629E3702 /* BridgeHTTP.swift */; };
+		B1F84F1AA022EC4ABB60CE23 /* BridgeLocalCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195307A71C1D71324886162 /* BridgeLocalCommand.swift */; };
+		E1FC33CB2B698FFA8CEABC6F /* BridgeRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92812A392113C609AFE27E18 /* BridgeRequestHandler.swift */; };
+		CEE98CDB1185FCADA66CEA1B /* BridgeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29DDAB0C6A0288D3ED202B /* BridgeServer.swift */; };
+		F29AC3DA44378AFBA5B54290 /* BridgeUpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E810980170202FC5E93C461 /* BridgeUpdateChecker.swift */; };
+		F6A4397897A65B234642970E /* BridgeUpdateInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43852830D99FFAEAA62085 /* BridgeUpdateInstaller.swift */; };
+		00229937E28253B1CE585F87 /* BridgeUpdateManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE14BDE3106310A6833A383 /* BridgeUpdateManifest.swift */; };
+		A61D31A9733BD9752C149EEB /* CLIAnalysisProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FA7262D23D7CCF94735D01 /* CLIAnalysisProvider.swift */; };
+		C95CE689C38549099D3A9642 /* InterfaceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB933E8AAC010AF11C44CBCF /* InterfaceLanguage.swift */; };
+		66AF500424A726D4DBA9DC23 /* LicenseVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB0617A4D1E2CA8176A614 /* LicenseVocabulary.swift */; };
+		C3CCAA7E432546D7131C5B54 /* ManifestDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83D3E004112283884ED95D /* ManifestDecoding.swift */; };
+		E6F9CCC6A18DB28EF8B951B1 /* BridgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B32452C6E85B0514BF320 /* BridgeModel.swift */; };
+		01F146D9CF14DE5841591002 /* BridgeStatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624CB6A83D098FEA71FB4102 /* BridgeStatusIcon.swift */; };
+		16C5F1137C943EC0096BCEDD /* BridgeUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0827F2FD28DA5FFA6D8DB /* BridgeUpdateController.swift */; };
+		CD80C55D84127142F4DCF68C /* DicavoBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891538312AA1833467EB583 /* DicavoBridgeApp.swift */; };
+		EA1C720D77854AD176443BC8 /* LocalCommandSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85AE26321C92CCFD34FEDE /* LocalCommandSettings.swift */; };
+		2F01647AFE027288A47A3EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D634FF00C121E9A9EF3D9421 /* Assets.xcassets */; };
+		3CBB68FAA92A8D13919F750F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 25454B3C29D52F7BB6D7ED47 /* Localizable.xcstrings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BBA3FCE20DA6B6ADED6C347 /* AnalysisError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnalysisError.swift"; sourceTree = "<group>"; };
+		67FE732D8E77932452E901CD /* AnalysisTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnalysisTool.swift"; sourceTree = "<group>"; };
+		A1B919D6172C0C84EDC38E97 /* BridgeDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeDescriptor.swift"; sourceTree = "<group>"; };
+		AA143FCD075D2D3F629E3702 /* BridgeHTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeHTTP.swift"; sourceTree = "<group>"; };
+		F195307A71C1D71324886162 /* BridgeLocalCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeLocalCommand.swift"; sourceTree = "<group>"; };
+		92812A392113C609AFE27E18 /* BridgeRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeRequestHandler.swift"; sourceTree = "<group>"; };
+		DF29DDAB0C6A0288D3ED202B /* BridgeServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeServer.swift"; sourceTree = "<group>"; };
+		9E810980170202FC5E93C461 /* BridgeUpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeUpdateChecker.swift"; sourceTree = "<group>"; };
+		8E43852830D99FFAEAA62085 /* BridgeUpdateInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeUpdateInstaller.swift"; sourceTree = "<group>"; };
+		CFE14BDE3106310A6833A383 /* BridgeUpdateManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeUpdateManifest.swift"; sourceTree = "<group>"; };
+		31FA7262D23D7CCF94735D01 /* CLIAnalysisProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLIAnalysisProvider.swift"; sourceTree = "<group>"; };
+		CB933E8AAC010AF11C44CBCF /* InterfaceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceLanguage.swift"; sourceTree = "<group>"; };
+		DBEB0617A4D1E2CA8176A614 /* LicenseVocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LicenseVocabulary.swift"; sourceTree = "<group>"; };
+		4E83D3E004112283884ED95D /* ManifestDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManifestDecoding.swift"; sourceTree = "<group>"; };
+		188B32452C6E85B0514BF320 /* BridgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeModel.swift"; sourceTree = "<group>"; };
+		624CB6A83D098FEA71FB4102 /* BridgeStatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeStatusIcon.swift"; sourceTree = "<group>"; };
+		00F0827F2FD28DA5FFA6D8DB /* BridgeUpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeUpdateController.swift"; sourceTree = "<group>"; };
+		1891538312AA1833467EB583 /* DicavoBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DicavoBridgeApp.swift"; sourceTree = "<group>"; };
+		4F85AE26321C92CCFD34FEDE /* LocalCommandSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalCommandSettings.swift"; sourceTree = "<group>"; };
+		D634FF00C121E9A9EF3D9421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		25454B3C29D52F7BB6D7ED47 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Localizable.xcstrings"; sourceTree = "<group>"; };
+		BA97E74282593B5F471EB2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		21D7DB8D897F110C95DC7023 /* DicavoBridge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DicavoBridge.entitlements"; sourceTree = "<group>"; };
+		0A9EE91F4316CBEEB17F3508 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Signing.xcconfig"; sourceTree = "<group>"; };
+		5B981D068FF9A4B0036EF408 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Version.xcconfig"; sourceTree = "<group>"; };
+		38A007151ABE87CC01A5B6E9 /* Dicavo CLI Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dicavo CLI Bridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		666F302BE8BCA3DDA418DEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDA6D6223944636B9C5B54AA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				AFC936400759205E171DBBD9 /* Sources */,
+				DB2F961D07CCBFA8E59CCFBD /* Config */,
+				BFE00B156DCFC34C4751A6E5 /* Products */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		AFC936400759205E171DBBD9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				85707F05CFBABF13E6039A86 /* BridgeCore */,
+				E61AD77D59849C1596E8B5C6 /* DicavoBridge */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		85707F05CFBABF13E6039A86 /* BridgeCore */ = {
+			isa = PBXGroup;
+			children = (
+				0BBA3FCE20DA6B6ADED6C347 /* AnalysisError.swift */,
+				67FE732D8E77932452E901CD /* AnalysisTool.swift */,
+				A1B919D6172C0C84EDC38E97 /* BridgeDescriptor.swift */,
+				AA143FCD075D2D3F629E3702 /* BridgeHTTP.swift */,
+				F195307A71C1D71324886162 /* BridgeLocalCommand.swift */,
+				92812A392113C609AFE27E18 /* BridgeRequestHandler.swift */,
+				DF29DDAB0C6A0288D3ED202B /* BridgeServer.swift */,
+				9E810980170202FC5E93C461 /* BridgeUpdateChecker.swift */,
+				8E43852830D99FFAEAA62085 /* BridgeUpdateInstaller.swift */,
+				CFE14BDE3106310A6833A383 /* BridgeUpdateManifest.swift */,
+				31FA7262D23D7CCF94735D01 /* CLIAnalysisProvider.swift */,
+				CB933E8AAC010AF11C44CBCF /* InterfaceLanguage.swift */,
+				DBEB0617A4D1E2CA8176A614 /* LicenseVocabulary.swift */,
+				4E83D3E004112283884ED95D /* ManifestDecoding.swift */,
+			);
+			name = BridgeCore;
+			path = BridgeCore;
+			sourceTree = "<group>";
+		};
+		E61AD77D59849C1596E8B5C6 /* DicavoBridge */ = {
+			isa = PBXGroup;
+			children = (
+				188B32452C6E85B0514BF320 /* BridgeModel.swift */,
+				624CB6A83D098FEA71FB4102 /* BridgeStatusIcon.swift */,
+				00F0827F2FD28DA5FFA6D8DB /* BridgeUpdateController.swift */,
+				1891538312AA1833467EB583 /* DicavoBridgeApp.swift */,
+				4F85AE26321C92CCFD34FEDE /* LocalCommandSettings.swift */,
+				D634FF00C121E9A9EF3D9421 /* Assets.xcassets */,
+				25454B3C29D52F7BB6D7ED47 /* Localizable.xcstrings */,
+				BA97E74282593B5F471EB2E8 /* Info.plist */,
+				21D7DB8D897F110C95DC7023 /* DicavoBridge.entitlements */,
+			);
+			name = DicavoBridge;
+			path = DicavoBridge;
+			sourceTree = "<group>";
+		};
+		DB2F961D07CCBFA8E59CCFBD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0A9EE91F4316CBEEB17F3508 /* Signing.xcconfig */,
+				5B981D068FF9A4B0036EF408 /* Version.xcconfig */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		BFE00B156DCFC34C4751A6E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38A007151ABE87CC01A5B6E9 /* Dicavo CLI Bridge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E8A3AD980EC179856012B7E /* DicavoBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D8B67C81BE4F695571BC034 /* Build configuration list for PBXNativeTarget "DicavoBridge" */;
+			buildPhases = (
+				4C4C65357CD66E2AFCB23FF9 /* Sources */,
+				666F302BE8BCA3DDA418DEA5 /* Frameworks */,
+				7C50252361AC2081181B3C83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DicavoBridge;
+			productName = DicavoBridge;
+			productReference = 38A007151ABE87CC01A5B6E9 /* Dicavo CLI Bridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = 01DF1D3A7F02866ECA6BB742 /* Build configuration list for PBXProject "DicavoBridge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				cs,
+				de,
+				pl,
+				sk,
+			);
+			mainGroup = EDA6D6223944636B9C5B54AA /* Root */;
+			productRefGroup = BFE00B156DCFC34C4751A6E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E8A3AD980EC179856012B7E /* DicavoBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C50252361AC2081181B3C83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F01647AFE027288A47A3EA4 /* Assets.xcassets in Resources */,
+				3CBB68FAA92A8D13919F750F /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C4C65357CD66E2AFCB23FF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC24A2E23A05FF770E9977 /* AnalysisError.swift in Sources */,
+				3C90686742FB76DFA44F5AAE /* AnalysisTool.swift in Sources */,
+				9EE5C5CDD03A73106E6C35E8 /* BridgeDescriptor.swift in Sources */,
+				248EA278ED1D08C2435655A9 /* BridgeHTTP.swift in Sources */,
+				B1F84F1AA022EC4ABB60CE23 /* BridgeLocalCommand.swift in Sources */,
+				E1FC33CB2B698FFA8CEABC6F /* BridgeRequestHandler.swift in Sources */,
+				CEE98CDB1185FCADA66CEA1B /* BridgeServer.swift in Sources */,
+				F29AC3DA44378AFBA5B54290 /* BridgeUpdateChecker.swift in Sources */,
+				F6A4397897A65B234642970E /* BridgeUpdateInstaller.swift in Sources */,
+				00229937E28253B1CE585F87 /* BridgeUpdateManifest.swift in Sources */,
+				A61D31A9733BD9752C149EEB /* CLIAnalysisProvider.swift in Sources */,
+				C95CE689C38549099D3A9642 /* InterfaceLanguage.swift in Sources */,
+				66AF500424A726D4DBA9DC23 /* LicenseVocabulary.swift in Sources */,
+				C3CCAA7E432546D7131C5B54 /* ManifestDecoding.swift in Sources */,
+				E6F9CCC6A18DB28EF8B951B1 /* BridgeModel.swift in Sources */,
+				01F146D9CF14DE5841591002 /* BridgeStatusIcon.swift in Sources */,
+				16C5F1137C943EC0096BCEDD /* BridgeUpdateController.swift in Sources */,
+				CD80C55D84127142F4DCF68C /* DicavoBridgeApp.swift in Sources */,
+				EA1C720D77854AD176443BC8 /* LocalCommandSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B05BEBB064D0A38CFA49E7B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9EE91F4316CBEEB17F3508 /* Signing.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C8F75B80E1CEC91DA7341A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9EE91F4316CBEEB17F3508 /* Signing.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		258A38BC256D3BE0936BEE7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9EE91F4316CBEEB17F3508 /* Signing.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/DicavoBridge/DicavoBridge.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/DicavoBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.smartbrains.dicavo.bridge;
+				PRODUCT_NAME = "Dicavo CLI Bridge";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		AF08645F33FB7E7450F93573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9EE91F4316CBEEB17F3508 /* Signing.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/DicavoBridge/DicavoBridge.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/DicavoBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.smartbrains.dicavo.bridge;
+				PRODUCT_NAME = "Dicavo CLI Bridge";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01DF1D3A7F02866ECA6BB742 /* Build configuration list for PBXProject "DicavoBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B05BEBB064D0A38CFA49E7B1 /* Debug */,
+				8C8F75B80E1CEC91DA7341A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D8B67C81BE4F695571BC034 /* Build configuration list for PBXNativeTarget "DicavoBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				258A38BC256D3BE0936BEE7F /* Debug */,
+				AF08645F33FB7E7450F93573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}

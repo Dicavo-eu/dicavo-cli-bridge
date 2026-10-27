@@ -1,0 +1,5 @@
+// Copy this file to Signing.local.xcconfig and replace both placeholders.
+// Signing.local.xcconfig is ignored by Git.
+
+CODE_SIGN_IDENTITY[sdk=macosx*] = <your-certificate-sha1>
+DEVELOPMENT_TEAM = <your-apple-development-team-id>

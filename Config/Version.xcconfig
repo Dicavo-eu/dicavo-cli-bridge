@@ -1,0 +1,5 @@
+// MARKETING_VERSION is what users see. CURRENT_PROJECT_VERSION must increase
+// with every release: the bridge's updater compares builds by this number
+// alone and never installs a lower one.
+MARKETING_VERSION = 2.2
+CURRENT_PROJECT_VERSION = 31

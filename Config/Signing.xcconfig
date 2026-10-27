@@ -1,0 +1,12 @@
+// Signing for local builds. Copy Signing.local.xcconfig.example to
+// Signing.local.xcconfig and fill in your own team and certificate. The
+// local file is ignored by Git, so personal signing values never reach the
+// repository. An unsigned build needs neither file: pass
+// CODE_SIGNING_ALLOWED=NO to xcodebuild.
+
+CODE_SIGNING_ALLOWED = YES
+CODE_SIGNING_REQUIRED = YES
+CODE_SIGN_STYLE = Manual
+
+#include "Version.xcconfig"
+#include? "Signing.local.xcconfig"
