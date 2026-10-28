@@ -208,6 +208,42 @@ struct AnalysisProcessRunner: AnalysisCommandRunning {
     }
 }
 
+/// Every child the runner started and has not yet seen exit, by the target
+/// a signal goes to: the negative group ID where the child leads a group of
+/// its own, else its PID. A bridge that quits cannot rely on the delayed
+/// SIGKILL of a cancelled run, because the process is gone before it fires;
+/// `terminateAll` makes sure no tool outlives it.
+enum RunningAnalysisProcesses {
+    private static let lock = NSLock()
+    nonisolated(unsafe) private static var targets: [ObjectIdentifier: pid_t] = [:]
+
+    static func register(_ owner: AnyObject, target: pid_t) {
+        lock.withLock { targets[ObjectIdentifier(owner)] = target }
+    }
+
+    static func unregister(_ owner: AnyObject) {
+        _ = lock.withLock { targets.removeValue(forKey: ObjectIdentifier(owner)) }
+    }
+
+    static var count: Int { lock.withLock { targets.count } }
+
+    /// SIGTERM to every child and its group, up to `gracePeriod` for them
+    /// to go, then SIGKILL to whatever is left. Blocks the caller meanwhile.
+    static func terminateAll(gracePeriod: TimeInterval) {
+        #if canImport(Darwin)
+        var remaining = Set(lock.withLock { targets.values })
+        guard !remaining.isEmpty else { return }
+        for target in remaining { _ = Darwin.kill(target, SIGTERM) }
+        let deadline = Date().addingTimeInterval(max(0, gracePeriod))
+        while !remaining.isEmpty, Date() < deadline {
+            remaining = remaining.filter { Darwin.kill($0, 0) == 0 }
+            if !remaining.isEmpty { Thread.sleep(forTimeInterval: 0.05) }
+        }
+        for target in remaining { _ = Darwin.kill(target, SIGKILL) }
+        #endif
+    }
+}
+
 /// Coordinates one process launched by this runner. A pending cancellation is
 /// retained until after `Process.run()`, so cancellation before launch cannot
 /// leave a new child behind. The owned stdin writer is closed before sending a
@@ -246,6 +282,7 @@ private final class ProcessController: @unchecked Sendable {
             finished = true
         }
         lock.unlock()
+        RunningAnalysisProcesses.unregister(self)
     }
 
     /// Foundation already starts the child as the leader of a process group
@@ -259,10 +296,14 @@ private final class ProcessController: @unchecked Sendable {
         guard pid > 0 else { return }
         let leadsItsGroup = Darwin.getpgid(pid) == pid || Darwin.setpgid(pid, pid) == 0
         // Never this process's own group: a negative PID would signal it.
-        guard leadsItsGroup, pid != Darwin.getpgrp() else { return }
+        guard leadsItsGroup, pid != Darwin.getpgrp() else {
+            RunningAnalysisProcesses.register(self, target: pid)
+            return
+        }
         lock.lock()
         if self.process === process { processGroupID = pid }
         lock.unlock()
+        RunningAnalysisProcesses.register(self, target: -pid)
         #endif
     }
 
@@ -954,7 +995,7 @@ struct CLIAnalysisProvider: Sendable {
                 from: result.standardOutput
             )
             return status?.loggedIn == true ? .authenticated : .authenticationRequired
-        case .antigravity, .appleIntelligence, .claudeAPI, .openAICompatibleAPI, .dicavoBridge, .localCommand, .unrecognized:
+        case .appleIntelligence, .claudeAPI, .openAICompatibleAPI, .dicavoBridge, .localCommand, .unrecognized:
             throw AnalysisError.executableNotFound(path: tool.executableName)
         }
     }

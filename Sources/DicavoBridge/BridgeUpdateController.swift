@@ -64,8 +64,12 @@ final class BridgeUpdateController: ObservableObject {
         self.defaults = defaults
         automaticChecksEnabled = defaults.bool(forKey: Keys.automaticChecks)
         lastCheck = defaults.object(forKey: Keys.lastCheck) as? Date
+        // Validated like a fresh manifest: what the defaults hold is only
+        // what an earlier check wrote, but nothing is shown that a check
+        // would have refused.
         foundUpdate = (defaults.data(forKey: Keys.foundUpdate))
             .flatMap { try? JSONDecoder().decode(BridgeUpdateManifest.self, from: $0) }
+            .flatMap { (try? $0.validate()) == nil ? nil : $0 }
     }
 
     /// What Dicavo's Settings show about this bridge's updates.
@@ -193,15 +197,22 @@ final class BridgeUpdateController: ObservableObject {
         }
 
         phase = .waitingForRequests(manifest)
+        model?.pauseRequests(true)
         while model?.hasActiveRequests == true {
             try? await Task.sleep(for: .seconds(2))
         }
 
         phase = .installing(manifest)
+        // Off the main actor: the signature check and Gatekeeper's
+        // assessment can take a while, and the menu stays responsive.
+        let installer = installer
         do {
-            try installer.install(staged)
+            try await Task.detached(priority: .userInitiated) {
+                try installer.install(staged)
+            }.value
         } catch {
             BridgeUpdateInstaller.discard(staged)
+            model?.pauseRequests(false)
             fail(error.localizedDescription)
             return
         }
@@ -211,6 +222,7 @@ final class BridgeUpdateController: ObservableObject {
         } catch {
             // The new version is in place; it starts the next time the
             // bridge is opened. Say so rather than quitting into nothing.
+            model?.pauseRequests(false)
             phase = .failed(InterfaceLanguage.text("Version \(manifest.version) is installed. Quit and reopen Dicavo CLI Bridge to start it."))
             return
         }

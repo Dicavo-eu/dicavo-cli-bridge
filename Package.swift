@@ -2,9 +2,9 @@
 
 import PackageDescription
 
-// BridgeCore is everything in the Dicavo CLI Bridge that needs nothing but
-// Foundation: the loopback server, the request handler, the command runner
-// and the updater. The menu-bar application in Sources/DicavoBridge is built
+// BridgeCore is everything in the Dicavo CLI Bridge below its menu-bar app:
+// the loopback server, the request handler, the command runner and the
+// updater, on Apple's system frameworks alone. The menu-bar application in Sources/DicavoBridge is built
 // by DicavoBridge.xcodeproj, which compiles both directories into one module.
 let package = Package(
     name: "DicavoCLIBridge",

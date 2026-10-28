@@ -36,6 +36,14 @@ OUTPUT_DIR="$REPO/dist"
 DISTRIBUTION=0
 NOTARY_PROFILE=""
 IDENTITY=""
+# The Team ID the published bridge is signed with. The updater refuses any
+# other (Sources/BridgeCore/BridgeUpdateInstaller.swift), so a distribution
+# build with another identity is refused here before it costs a notarization.
+EXPECTED_TEAM_ID="H8LTS9AT3K"
+BUNDLE_ID="cz.smartbrains.dicavo.bridge"
+APP_GROUP="H8LTS9AT3K.cz.smartbrains.dicavo"
+FEED_URL="https://dicavo.eu/bridge/latest.json"
+SKIP_PUBLISHED_CHECK=0
 
 usage() {
     cat <<'USAGE'
@@ -50,6 +58,10 @@ usage: scripts/make-dmg.sh [options]
                            xcrun notarytool store-credentials <name>
   --identity <name>        signing identity to use instead of the
                            auto-detected Developer ID Application one
+  --expected-team-id <id>  Team ID a distribution build must be signed with
+                           (default: H8LTS9AT3K, the one the updater accepts)
+  --skip-published-check   do not compare the build number with the one
+                           published at https://dicavo.eu/bridge/latest.json
   -h, --help               this text
 
 Local mode prints the path, version, commit, architectures, SHA-256 and the
@@ -67,6 +79,8 @@ while [ $# -gt 0 ]; do
         --distribution) DISTRIBUTION=1; shift ;;
         --notary-profile) NOTARY_PROFILE="${2:?--notary-profile needs a value}"; shift 2 ;;
         --identity) IDENTITY="${2:?--identity needs a value}"; shift 2 ;;
+        --expected-team-id) EXPECTED_TEAM_ID="${2:?--expected-team-id needs a value}"; shift 2 ;;
+        --skip-published-check) SKIP_PUBLISHED_CHECK=1; shift ;;
         -h|--help) usage; exit 0 ;;
         *) echo "error: unknown argument: $1" >&2; usage >&2; exit 2 ;;
     esac
@@ -132,7 +146,14 @@ if [ "$DISTRIBUTION" -eq 1 ]; then
     TEAM_ID="$(printf '%s' "$IDENTITY" | sed -nE 's/.*\(([A-Z0-9]+)\)$/\1/p')"
     [ -n "$TEAM_ID" ] || fail "cannot read the Team ID out of the identity name: $IDENTITY"
     ok "$IDENTITY"
+    [ "$TEAM_ID" = "$EXPECTED_TEAM_ID" ] \
+        || fail "the identity's Team ID $TEAM_ID is not $EXPECTED_TEAM_ID; the bridge's updater would refuse this build (pass --expected-team-id for a build of your own)"
     ok "Team ID $TEAM_ID"
+
+    # A distribution build is always Release: Debug carries code, such as
+    # printing the token on request, that a published bridge must not.
+    [ "$CONFIGURATION" = "Release" ] || fail "--distribution builds the Release configuration only, not '$CONFIGURATION'"
+    ok "configuration Release"
 
     # Fail before the build rather than after it, if the profile is unusable.
     if ! xcrun notarytool history --keychain-profile "$NOTARY_PROFILE" >/dev/null 2>&1; then
@@ -161,6 +182,15 @@ step "Commit"
 COMMIT="$(git -C "$REPO" rev-parse "$REF^{commit}")" || fail "cannot resolve ref: $REF"
 SHORT="$(git -C "$REPO" rev-parse --short=7 "$COMMIT")"
 ok "$REF -> $COMMIT"
+
+if [ "$DISTRIBUTION" -eq 1 ]; then
+    # Every published DMG names a commit anyone can look up: it has to be
+    # on a branch of the remote already, not only in this checkout.
+    git -C "$REPO" fetch --quiet origin || fail "git fetch origin failed; a distribution build checks that the commit is pushed"
+    [ -n "$(git -C "$REPO" branch -r --contains "$COMMIT" 2>/dev/null)" ] \
+        || fail "commit $COMMIT is not on any branch of origin; push it before building a published DMG"
+    ok "commit is on origin"
+fi
 
 # --- build ------------------------------------------------------------------
 
@@ -280,6 +310,24 @@ BUILD_NUMBER="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP/Conten
 ARCHS="$(lipo -archs "$APP/Contents/MacOS/$EXECUTABLE" 2>/dev/null || echo 'unknown')"
 ok "version $VERSION (build $BUILD_NUMBER), architectures: $ARCHS"
 
+FOUND_BUNDLE_ID="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Contents/Info.plist" 2>/dev/null || true)"
+[ "$FOUND_BUNDLE_ID" = "$BUNDLE_ID" ] || fail "bundle identifier is '$FOUND_BUNDLE_ID', not $BUNDLE_ID"
+ok "bundle identifier $BUNDLE_ID"
+codesign -d --entitlements - --xml "$APP" 2>/dev/null | grep -q "<string>$APP_GROUP</string>" \
+    || fail "the signed entitlements do not carry the App Group $APP_GROUP"
+ok "App Group $APP_GROUP in the signed entitlements"
+
+if [ "$DISTRIBUTION" -eq 1 ] && [ "$SKIP_PUBLISHED_CHECK" -eq 0 ]; then
+    # The updater installs only a higher build; a DMG that is not higher
+    # than the published one would never reach anyone who updates.
+    PUBLISHED_BUILD="$(curl -fsS --max-time 30 "$FEED_URL" \
+        | /usr/bin/python3 -c 'import json, sys; print(int(json.load(sys.stdin)["build"]))')" \
+        || fail "could not read the published build from $FEED_URL (use --skip-published-check to build anyway)"
+    [ "$BUILD_NUMBER" -gt "$PUBLISHED_BUILD" ] 2>/dev/null \
+        || fail "build $BUILD_NUMBER is not higher than the published build $PUBLISHED_BUILD; raise CURRENT_PROJECT_VERSION in Config/Version.xcconfig"
+    ok "build $BUILD_NUMBER is higher than the published $PUBLISHED_BUILD"
+fi
+
 # --- staging and image ------------------------------------------------------
 
 step "DMG"
@@ -378,11 +426,12 @@ mv "$TMPDMG" "$DEST"
 TMPDMG=""
 # After stapling, so the hash covers exactly what is handed over.
 SHA256="$(shasum -a 256 "$DEST" | awk '{print $1}')"
-SIZE="$(du -h "$DEST" | awk '{print $1}')"
+# Exact bytes: the manifest's `size` must match the file to the byte.
+SIZE="$(stat -f %z "$DEST")"
 
 printf '\n==> Result\n'
 printf '    path           %s\n' "$DEST"
-printf '    size           %s\n' "$SIZE"
+printf '    size           %s bytes\n' "$SIZE"
 printf '    version        %s (build %s)\n' "$VERSION" "$BUILD_NUMBER"
 printf '    commit         %s\n' "$COMMIT"
 printf '    configuration  %s\n' "$CONFIGURATION"

@@ -28,6 +28,12 @@ struct BridgeDescriptor: Codable, Equatable, Sendable {
     /// Bridge 2.0 and older do not write it, and Dicavo 2.0 and older skip
     /// it, so the schema version stays 1.
     var updates: BridgeUpdateSummary?
+    /// When the process that wrote the file started, as the kernel reports
+    /// it. A PID is reused once its process is gone; together with this
+    /// time it names one process only, so a descriptor left behind by a
+    /// crash is not taken for a running bridge. Bridge 2.1 and older do not
+    /// write it.
+    var processStartedAt: Date? = nil
 
     var endpoint: URL? {
         URL(string: "http://127.0.0.1:\(port)/v1")
@@ -93,7 +99,10 @@ struct BridgeDescriptorStore: Sendable {
 
     /// The published descriptor, or `nil` when there is none, it cannot be
     /// read, or the bridge that wrote it is no longer running.
-    func load(processIsAlive: (Int32) -> Bool = BridgeDescriptorStore.processIsAlive) -> BridgeDescriptor? {
+    func load(
+        processIsAlive: (Int32) -> Bool = BridgeDescriptorStore.processIsAlive,
+        processStartTime: (Int32) -> Date? = BridgeDescriptorStore.processStartTime
+    ) -> BridgeDescriptor? {
         guard let fileURL, let data = try? Data(contentsOf: fileURL) else { return nil }
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
@@ -103,8 +112,18 @@ struct BridgeDescriptorStore: Sendable {
               descriptor.port > 0,
               processIsAlive(descriptor.processIdentifier)
         else { return nil }
+        // Where the start time cannot be read, the PID alone decides, as it
+        // did before the field existed.
+        if let recorded = descriptor.processStartedAt,
+           let actual = processStartTime(descriptor.processIdentifier),
+           abs(actual.timeIntervalSince(recorded)) > Self.startTimeTolerance {
+            return nil
+        }
         return descriptor
     }
+
+    /// ISO 8601 in the file keeps whole seconds only.
+    static let startTimeTolerance: TimeInterval = 1.5
 
     func save(_ descriptor: BridgeDescriptor) throws {
         guard let fileURL else { throw BridgeDescriptorError.containerUnavailable }
@@ -115,8 +134,19 @@ struct BridgeDescriptorStore: Sendable {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-        try encoder.encode(descriptor).write(to: fileURL, options: .atomic)
-        try FileManager.default.setAttributes([.posixPermissions: 0o600], ofItemAtPath: fileURL.path)
+        let data = try encoder.encode(descriptor)
+        // Created readable by its owner only, then renamed into place, so
+        // the token is never in a file anyone else could open, not even for
+        // the moment between writing and changing permissions.
+        let staging = fileURL.deletingLastPathComponent()
+            .appendingPathComponent(".\(Self.fileName).\(UUID().uuidString)", isDirectory: false)
+        guard FileManager.default.createFile(atPath: staging.path, contents: data, attributes: [.posixPermissions: 0o600]) else {
+            throw BridgeDescriptorError.writeFailed
+        }
+        guard rename(staging.path, fileURL.path) == 0 else {
+            try? FileManager.default.removeItem(at: staging)
+            throw BridgeDescriptorError.writeFailed
+        }
     }
 
     /// Removes the descriptor. Called when the bridge quits, so Dicavo does
@@ -130,8 +160,26 @@ struct BridgeDescriptorStore: Sendable {
         guard pid > 0 else { return false }
         return kill(pid, 0) == 0 || errno == EPERM
     }
+
+    /// The kernel's start time of process `pid`, or nil when it is gone or
+    /// cannot be asked about.
+    static func processStartTime(_ pid: Int32) -> Date? {
+        #if os(macOS)
+        guard pid > 0 else { return nil }
+        var info = kinfo_proc()
+        var size = MemoryLayout<kinfo_proc>.stride
+        var mib: [Int32] = [CTL_KERN, KERN_PROC, KERN_PROC_PID, pid]
+        guard sysctl(&mib, u_int(mib.count), &info, &size, nil, 0) == 0, size > 0 else { return nil }
+        let start = info.kp_proc.p_un.__p_starttime
+        guard start.tv_sec > 0 else { return nil }
+        return Date(timeIntervalSince1970: TimeInterval(start.tv_sec) + TimeInterval(start.tv_usec) / 1_000_000)
+        #else
+        return nil
+        #endif
+    }
 }
 
 enum BridgeDescriptorError: Error, Equatable {
     case containerUnavailable
+    case writeFailed
 }

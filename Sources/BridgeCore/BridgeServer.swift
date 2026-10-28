@@ -23,6 +23,16 @@ final class BridgeServer: @unchecked Sendable {
     static let requestDeadline: TimeInterval = 30
     /// Dicavo sends one request at a time per chunk; this is room enough.
     static let maximumConnections = 16
+    /// A connection that has not shown the token within this time is closed.
+    /// Dicavo sends its headers at once; only a client without the token
+    /// lingers, and it would otherwise hold a slot for the whole deadline.
+    static let authorizationDeadline: TimeInterval = 5
+    /// At most this many connections wait for their token check at once.
+    /// A new connection beyond that closes the oldest waiting one rather
+    /// than being refused: Dicavo shows its token within milliseconds of
+    /// connecting, so a local process without the token that keeps opening
+    /// connections only ever pushes out its own.
+    static let maximumUnauthorizedConnections = 8
 
     private let handler: BridgeRequestHandler
     private let queue = DispatchQueue(label: "cz.smartbrains.DicavoBridge.server")
@@ -32,9 +42,22 @@ final class BridgeServer: @unchecked Sendable {
     /// The task answering each connection's request, while it runs.
     private var requests: [ObjectIdentifier: Task<Void, Never>] = [:]
     private var requestsInFlight = 0
+    /// Connections whose token has not been checked yet, oldest first.
+    private var unauthorized: [ObjectIdentifier] = []
+    private var paused = false
 
-    init(handler: BridgeRequestHandler) {
+    private let authorizationTimeout: TimeInterval
+    private let requestTimeout: TimeInterval
+
+    /// The deadlines are parameters for the tests only.
+    init(
+        handler: BridgeRequestHandler,
+        authorizationDeadline: TimeInterval = BridgeServer.authorizationDeadline,
+        requestDeadline: TimeInterval = BridgeServer.requestDeadline
+    ) {
         self.handler = handler
+        self.authorizationTimeout = authorizationDeadline
+        self.requestTimeout = requestDeadline
     }
 
     /// Starts listening and returns the port once the listener is ready.
@@ -104,6 +127,14 @@ final class BridgeServer: @unchecked Sendable {
         lock.withLock { requestsInFlight }
     }
 
+    /// While paused, a request that arrives is answered at once with 503
+    /// `bridge_updating` instead of starting a tool: an update that waits
+    /// for the requests in flight is not kept waiting by new ones.
+    var isPaused: Bool {
+        get { lock.withLock { paused } }
+        set { lock.withLock { paused = newValue } }
+    }
+
     func stop() {
         let current = lock.withLock { () -> NWListener? in
             let current = listener
@@ -130,17 +161,27 @@ final class BridgeServer: @unchecked Sendable {
     private func connectionEnded(_ connection: NWConnection) {
         let request = lock.withLock { () -> Task<Void, Never>? in
             connections.removeValue(forKey: ObjectIdentifier(connection))
+            unauthorized.removeAll { $0 == ObjectIdentifier(connection) }
             return requests.removeValue(forKey: ObjectIdentifier(connection))
         }
         request?.cancel()
     }
 
     private func accept(_ connection: NWConnection) {
-        let admitted = lock.withLock { () -> Bool in
-            guard connections.count < Self.maximumConnections else { return false }
-            connections[ObjectIdentifier(connection)] = connection
-            return true
+        let id = ObjectIdentifier(connection)
+        let (admitted, evicted) = lock.withLock { () -> (Bool, NWConnection?) in
+            var evicted: NWConnection?
+            if unauthorized.count >= Self.maximumUnauthorizedConnections
+                || (connections.count >= Self.maximumConnections && !unauthorized.isEmpty) {
+                let oldest = unauthorized.removeFirst()
+                evicted = connections.removeValue(forKey: oldest)
+            }
+            guard connections.count < Self.maximumConnections else { return (false, evicted) }
+            connections[id] = connection
+            unauthorized.append(id)
+            return (true, evicted)
         }
+        evicted?.cancel()
         guard admitted else {
             connection.cancel()
             return
@@ -155,7 +196,11 @@ final class BridgeServer: @unchecked Sendable {
         }
         connection.start(queue: queue)
         let arrived = RequestArrival()
-        queue.asyncAfter(deadline: .now() + Self.requestDeadline) {
+        queue.asyncAfter(deadline: .now() + authorizationTimeout) { [weak self] in
+            let waiting = self?.lock.withLock { self?.unauthorized.contains(id) ?? false } ?? false
+            if waiting { connection.cancel() }
+        }
+        queue.asyncAfter(deadline: .now() + requestTimeout) {
             if !arrived.isComplete { connection.cancel() }
         }
         receive(on: connection, parser: BridgeHTTPRequestParser(), arrived: arrived, checkedToken: false)
@@ -173,10 +218,14 @@ final class BridgeServer: @unchecked Sendable {
             do {
                 if let data, !data.isEmpty, let request = try parser.append(data) {
                     arrived.markComplete()
+                    // The handler checks the token of a request that arrived
+                    // in one piece; it no longer waits for a check here.
+                    self.markAuthorizationChecked(connection)
                     self.respond(to: request, on: connection)
                     return
                 }
                 if !checkedToken, let head = parser.headersOnly {
+                    self.markAuthorizationChecked(connection)
                     guard self.handler.isAuthorized(head) else {
                         arrived.markComplete()
                         self.send(
@@ -216,8 +265,23 @@ final class BridgeServer: @unchecked Sendable {
         func markComplete() { lock.withLock { complete = true } }
     }
 
+    private func markAuthorizationChecked(_ connection: NWConnection) {
+        lock.withLock { unauthorized.removeAll { $0 == ObjectIdentifier(connection) } }
+    }
+
     private func respond(to request: BridgeHTTPRequest, on connection: NWConnection) {
         let id = ObjectIdentifier(connection)
+        if isPaused, handler.isAuthorized(request) {
+            send(
+                BridgeRequestHandler.error(
+                    status: 503,
+                    type: "bridge_updating",
+                    message: "Dicavo CLI Bridge is installing an update. Try again in a minute."
+                ),
+                on: connection
+            )
+            return
+        }
         lock.withLock { requestsInFlight += 1 }
         let task = Task {
             let response = await handler.handle(request)

@@ -33,7 +33,7 @@ struct BridgeUpdateChecker: Sendable {
         let data: Data
         let response: URLResponse
         do {
-            (data, response) = try await session.data(for: request)
+            (data, response) = try await session.data(for: request, delegate: TrustedRedirects.shared)
         } catch {
             throw BridgeUpdateError.network(error.localizedDescription)
         }
@@ -41,8 +41,9 @@ struct BridgeUpdateChecker: Sendable {
         return try BridgeUpdateManifest.decode(data)
     }
 
-    /// A redirect that ends anywhere but dicavo.eu is refused, whatever it
-    /// returned.
+    /// A redirect to anywhere but dicavo.eu is not followed
+    /// (`TrustedRedirects`); a response from anywhere else, or anything but
+    /// 200, is refused.
     static func check(_ response: URLResponse) throws {
         guard let http = response as? HTTPURLResponse else { throw BridgeUpdateError.network("No HTTP response.") }
         if let url = http.url, !BridgeUpdateManifest.isTrusted(url) { throw BridgeUpdateError.untrustedURL }

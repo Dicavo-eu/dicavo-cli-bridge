@@ -66,18 +66,64 @@ struct BridgeUpdateInstaller: Sendable {
         }
     }
 
-    private func download(_ manifest: BridgeUpdateManifest, into directory: URL) async throws -> URL {
-        let temporary: URL
+    /// Streams the image into the work folder under a name of its own,
+    /// never one taken from the URL: `lastPathComponent` decodes `%2F`, so a
+    /// name from a hostile manifest could point anywhere. A response longer
+    /// than the manifest's size is cut off as it arrives, not after.
+    func download(_ manifest: BridgeUpdateManifest, into directory: URL) async throws -> URL {
+        let image = try Self.imageLocation(for: manifest, in: directory)
+        let bytes: URLSession.AsyncBytes
         let response: URLResponse
         do {
-            (temporary, response) = try await session.download(for: URLRequest(url: manifest.url))
+            (bytes, response) = try await session.bytes(
+                for: URLRequest(url: manifest.url),
+                delegate: TrustedRedirects.shared
+            )
         } catch {
             throw BridgeUpdateError.network(error.localizedDescription)
         }
         try BridgeUpdateChecker.check(response)
-        let image = directory.appendingPathComponent(manifest.url.lastPathComponent.isEmpty ? "update.dmg" : manifest.url.lastPathComponent)
-        try FileManager.default.moveItem(at: temporary, to: image)
+        if response.expectedContentLength > manifest.size { throw BridgeUpdateError.sizeMismatch }
+        guard FileManager.default.createFile(atPath: image.path, contents: nil, attributes: [.posixPermissions: 0o600]) else {
+            throw BridgeUpdateError.installFailed("The update could not be saved.")
+        }
+        let handle = try FileHandle(forWritingTo: image)
+        defer { try? handle.close() }
+        var buffer = Data()
+        buffer.reserveCapacity(Self.downloadChunkBytes)
+        var written: Int64 = 0
+        do {
+            for try await byte in bytes {
+                buffer.append(byte)
+                if buffer.count == Self.downloadChunkBytes {
+                    written += Int64(buffer.count)
+                    guard written <= manifest.size else { throw BridgeUpdateError.sizeMismatch }
+                    try handle.write(contentsOf: buffer)
+                    buffer.removeAll(keepingCapacity: true)
+                }
+            }
+        } catch let error as BridgeUpdateError {
+            throw error
+        } catch {
+            throw BridgeUpdateError.network(error.localizedDescription)
+        }
+        written += Int64(buffer.count)
+        guard written <= manifest.size else { throw BridgeUpdateError.sizeMismatch }
+        try handle.write(contentsOf: buffer)
+        try handle.close()
         try Self.checkIntegrity(of: image, against: manifest)
+        return image
+    }
+
+    static let downloadChunkBytes = 1 << 16
+
+    /// Where a download is saved: a fixed name built from the build number
+    /// alone, and provably inside `directory`.
+    static func imageLocation(for manifest: BridgeUpdateManifest, in directory: URL) throws -> URL {
+        let image = directory.appendingPathComponent("DicavoCLIBridge-\(manifest.build).dmg", isDirectory: false)
+        guard image.standardizedFileURL.deletingLastPathComponent().path == directory.standardizedFileURL.path else {
+            throw BridgeUpdateError.untrustedURL
+        }
         return image
     }
 
@@ -304,11 +350,22 @@ struct BridgeUpdateInstaller: Sendable {
             throw BridgeUpdateError.buildMismatch
         }
         guard build > currentBuild else { throw BridgeUpdateError.notNewer }
-        // Never trade down: a notarised bridge only accepts a notarised
-        // update. A locally signed build can still exercise the whole path.
-        if Self.passesGatekeeper(installedApplication), !Self.passesGatekeeper(application) {
-            throw BridgeUpdateError.notNotarized
+        // Never trade down. A bridge signed with Developer ID, as every
+        // published one is, only accepts an update that Gatekeeper accepts,
+        // whatever Gatekeeper says about the running copy: a failed or
+        // offline assessment refuses the update rather than skipping the
+        // check. A locally signed build can still exercise the whole path.
+        if Self.isSignedWithDeveloperID(installedApplication) || Self.passesGatekeeper(installedApplication) {
+            guard Self.passesGatekeeper(application) else { throw BridgeUpdateError.notNotarized }
         }
+    }
+
+    /// A Developer ID Application certificate at the leaf, issued by Apple.
+    static let developerIDRequirement = "anchor apple generic and certificate leaf[field.1.2.840.113635.100.6.1.13] exists"
+
+    static func isSignedWithDeveloperID(_ application: URL) -> Bool {
+        guard let requirement = try? requirement(developerIDRequirement) else { return false }
+        return (try? verifySignature(of: application, requirements: [requirement], enforceRevocation: false)) != nil
     }
 
     static func developerRequirement(bundleIdentifier: String) -> String {
@@ -342,11 +399,14 @@ struct BridgeUpdateInstaller: Sendable {
         return requirement
     }
 
-    static func verifySignature(of application: URL, requirements: [SecRequirement]) throws {
+    /// Revocation is enforced on the update: a certificate Apple has revoked
+    /// fails the check even when its signature is otherwise intact.
+    static func verifySignature(of application: URL, requirements: [SecRequirement], enforceRevocation: Bool = true) throws {
         var code: SecStaticCode?
         var status = SecStaticCodeCreateWithPath(application as CFURL, [], &code)
         guard status == errSecSuccess, let code else { throw BridgeUpdateError.signatureInvalid(message(for: status)) }
-        let flags = SecCSFlags(rawValue: kSecCSCheckAllArchitectures | kSecCSStrictValidate | kSecCSCheckNestedCode)
+        var flags = SecCSFlags(rawValue: kSecCSCheckAllArchitectures | kSecCSStrictValidate | kSecCSCheckNestedCode)
+        if enforceRevocation { flags.insert(.enforceRevocationChecks) }
         for requirement in requirements {
             var error: Unmanaged<CFError>?
             status = SecStaticCodeCheckValidityWithErrors(code, flags, requirement, &error)
@@ -415,10 +475,10 @@ struct BridgeUpdateInstaller: Sendable {
     /// returns where it went.
     static func keepImageForManualInstall(_ update: StagedUpdate) throws -> URL {
         let downloads = try FileManager.default.url(for: .downloadsDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        var destination = downloads.appendingPathComponent(update.image.lastPathComponent)
+        let base = "DicavoCLIBridge-\(update.manifest.build)"
+        var destination = downloads.appendingPathComponent("\(base).dmg")
         var counter = 2
         while FileManager.default.fileExists(atPath: destination.path) {
-            let base = update.image.deletingPathExtension().lastPathComponent
             destination = downloads.appendingPathComponent("\(base) \(counter).dmg")
             counter += 1
         }
@@ -443,7 +503,11 @@ struct BridgeUpdateInstaller: Sendable {
         }
     }
 
-    static func run(_ executable: String, _ arguments: [String]) throws -> ProcessResult {
+    /// The longest any disk image, copy or assessment tool may take; one
+    /// that hangs is stopped and the update fails instead of waiting forever.
+    static let commandTimeout: TimeInterval = 120
+
+    static func run(_ executable: String, _ arguments: [String], timeout: TimeInterval = commandTimeout) throws -> ProcessResult {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: executable)
         process.arguments = arguments
@@ -453,6 +517,15 @@ struct BridgeUpdateInstaller: Sendable {
         process.standardError = error
         process.standardInput = FileHandle.nullDevice
         try process.run()
+        let watchdog = DispatchWorkItem { [weak process] in
+            guard let process, process.isRunning else { return }
+            process.terminate()
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2) { [weak process] in
+                if let process, process.isRunning { kill(process.processIdentifier, SIGKILL) }
+            }
+        }
+        DispatchQueue.global().asyncAfter(deadline: .now() + timeout, execute: watchdog)
+        defer { watchdog.cancel() }
         // Drain both pipes before waiting, so a chatty child cannot block on
         // a full pipe while this waits for it to exit.
         let group = DispatchGroup()
@@ -473,3 +546,20 @@ struct BridgeUpdateInstaller: Sendable {
     }
 }
 #endif
+
+/// Follows a redirect only to another URL the manifest itself could name:
+/// HTTPS on dicavo.eu. Any other target is not requested at all; the
+/// redirect response itself is what the caller then refuses.
+final class TrustedRedirects: NSObject, URLSessionTaskDelegate, Sendable {
+    static let shared = TrustedRedirects()
+
+    func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        willPerformHTTPRedirection response: HTTPURLResponse,
+        newRequest request: URLRequest
+    ) async -> URLRequest? {
+        guard let url = request.url, BridgeUpdateManifest.isTrusted(url) else { return nil }
+        return request
+    }
+}

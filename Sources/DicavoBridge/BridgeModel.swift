@@ -117,10 +117,19 @@ final class BridgeModel: ObservableObject {
         (server?.activeRequestCount ?? 0) > 0
     }
 
+    /// While an update waits to be installed, new requests are turned away
+    /// with `bridge_updating` rather than started.
+    func pauseRequests(_ paused: Bool) {
+        server?.isPaused = paused
+    }
+
     func stop() {
         server?.stop()
         server = nil
         descriptors.remove()
+        // The cancelled runs signal their tools, but the delayed SIGKILL
+        // for one that ignores SIGTERM would fire after the bridge is gone.
+        RunningAnalysisProcesses.terminateAll(gracePeriod: 2)
     }
 
     func refreshTools() async {
@@ -159,7 +168,8 @@ final class BridgeModel: ObservableObject {
             processIdentifier: ProcessInfo.processInfo.processIdentifier,
             startedAt: Date(),
             availableTools: toolStatuses.filter(\.isUsable).map(\.tool.rawValue),
-            updates: updateSummary
+            updates: updateSummary,
+            processStartedAt: BridgeDescriptorStore.processStartTime(ProcessInfo.processInfo.processIdentifier)
         )
         do {
             try descriptors.save(descriptor)
