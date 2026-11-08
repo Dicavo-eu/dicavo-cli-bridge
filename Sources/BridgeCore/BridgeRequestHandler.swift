@@ -44,10 +44,13 @@ struct BridgeRequestHandler: Sendable {
 
     let token: String
     let runner: any BridgeToolRunning
+    /// Where the requests in flight are shown (X16); nil keeps nothing.
+    let activeTasks: BridgeActiveTasks?
 
-    init(token: String, runner: any BridgeToolRunning) {
+    init(token: String, runner: any BridgeToolRunning, activeTasks: BridgeActiveTasks? = nil) {
         self.token = token
         self.runner = runner
+        self.activeTasks = activeTasks
     }
 
     /// Whether a request presents this launch's token. Used on the headers
@@ -111,6 +114,16 @@ struct BridgeRequestHandler: Sendable {
             return Self.error(status: 400, type: "invalid_request_error", message: "messages carry no text.")
         }
 
+        // What Dicavo said about the request, for the menu only (X16). The
+        // title is never logged or written anywhere.
+        let taskID = UUID()
+        activeTasks?.begin(BridgeActiveTask(
+            id: taskID,
+            tool: selection.tool,
+            startedAt: Date(),
+            info: BridgeTaskInfo(headerValue: request.header(BridgeTaskInfo.headerName))
+        ))
+        defer { activeTasks?.end(taskID) }
         do {
             let markdown = try await runner.run(
                 tool: selection.tool,

@@ -18,6 +18,10 @@ final class BridgeModel: ObservableObject {
     @Published private(set) var isRefreshingTools = false
     @Published private(set) var launchAtLoginEnabled = SMAppService.mainApp.status == .enabled
     @Published private(set) var descriptorError: String?
+    /// The analyses Dicavo is waiting on now (X16), for the icon and the
+    /// menu. In memory only.
+    @Published private(set) var workingTasks: [BridgeActiveTask] = []
+    private let activeTasks = BridgeActiveTasks()
     /// The command set up in the bridge, as last saved.
     @Published private(set) var localCommand: BridgeLocalCommandConfiguration
     /// Set by the update controller; published with the descriptor so
@@ -100,7 +104,10 @@ final class BridgeModel: ObservableObject {
     }
 
     func start() async {
-        let server = BridgeServer(handler: BridgeRequestHandler(token: token, runner: runner))
+        activeTasks.observeOnMainActor { [weak self] tasks in
+            self?.workingTasks = tasks
+        }
+        let server = BridgeServer(handler: BridgeRequestHandler(token: token, runner: runner, activeTasks: activeTasks))
         self.server = server
         do {
             let port = try await server.start()

@@ -24,6 +24,11 @@ struct DicavoBridgeApp: App {
                 .labelStyle(.titleAndIcon)
             }
             Text(verbatim: statusLine)
+            // What Dicavo waits on (X16): one line per analysis, built when
+            // the analysis starts.
+            ForEach(model.workingTasks) { task in
+                Text(verbatim: taskLine(task))
+            }
             if let error = model.descriptorError {
                 Text(verbatim: error).font(.caption)
             }
@@ -72,6 +77,10 @@ struct DicavoBridgeApp: App {
             }
             .keyboardShortcut("q")
         } label: {
+            // A still glyph that changes only with the state. A pulsing
+            // label (a TimelineView here) made the status item lay itself
+            // out without end: the main thread at 100 %, memory growing by
+            // gigabytes and the menu no longer opening during an analysis.
             Image(nsImage: BridgeStatusIcon.image(for: iconState))
                 .accessibilityLabel(BridgeStatusIcon.accessibilityLabel(for: iconState))
         }
@@ -94,9 +103,31 @@ struct DicavoBridgeApp: App {
     private var iconState: BridgeStatusIcon.State {
         switch model.serverState {
         case .starting: return .starting
-        case .listening: return model.toolStatuses.contains(where: \.isUsable) ? .ready : .noUsableTool
+        case .listening:
+            if !model.workingTasks.isEmpty { return .working(dimmed: false) }
+            return model.toolStatuses.contains(where: \.isUsable) ? .ready : .noUsableTool
         case .failed: return .failed
         }
+    }
+
+    /// "AI analysis with Claude Code · Sprint retro · part 3 of 5 · since 10:12".
+    /// The title is shown only when Dicavo sent it.
+    private func taskLine(_ task: BridgeActiveTask) -> String {
+        var line = InterfaceLanguage.text("AI analysis with \(task.tool.displayName)")
+        if let title = task.info?.title {
+            line += " · " + title
+        }
+        if let part = task.info?.part, let count = task.info?.partCount {
+            line += " · " + InterfaceLanguage.text("part \(part) of \(count)")
+        }
+        // The start time, not a running duration: the menu is built when
+        // the task starts and not again while it runs, so a duration would
+        // stand still, and redrawing it every second is what hung the item.
+        let started = task.startedAt.formatted(
+            Date.FormatStyle(date: .omitted, time: .shortened).locale(InterfaceLanguage.locale)
+        )
+        line += " · " + InterfaceLanguage.text("since \(started)")
+        return line
     }
 
     @ViewBuilder
@@ -149,6 +180,8 @@ struct DicavoBridgeApp: App {
         switch model.serverState {
         case .starting:
             return InterfaceLanguage.text("Starting…")
+        case .listening where !model.workingTasks.isEmpty:
+            return InterfaceLanguage.text("Dicavo CLI Bridge is working")
         case let .listening(port):
             // A port is not a quantity: no digit grouping ("48 123").
             return InterfaceLanguage.text("Listening on 127.0.0.1:\(String(port)) for Dicavo")

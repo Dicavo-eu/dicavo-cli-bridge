@@ -10,11 +10,14 @@ import AppKit
 /// dimmed while starting, a dot when no tool is usable, struck through when
 /// it does not listen.
 enum BridgeStatusIcon {
-    enum State: Equatable {
+    enum State: Hashable {
         case starting
         case ready
         case noUsableTool
         case failed
+        /// Dicavo waits on an analysis (X16): the glyph with a dot. The dot
+        /// is dimmed every other beat to pulse, never with Reduce Motion.
+        case working(dimmed: Bool)
     }
 
     /// The glyph is drawn on the brand kit's 28 x 20 grid, at the height
@@ -26,7 +29,19 @@ enum BridgeStatusIcon {
         NSSize(width: units.width * symbolHeight / units.height, height: symbolHeight)
     }
 
+    /// One image per state, so the menu bar label gets the same image back
+    /// whenever its view is evaluated again and has nothing to redraw.
+    @MainActor private static var cache: [State: NSImage] = [:]
+
+    @MainActor
     static func image(for state: State) -> NSImage {
+        if let cached = cache[state] { return cached }
+        let image = makeImage(for: state)
+        cache[state] = image
+        return image
+    }
+
+    private static func makeImage(for state: State) -> NSImage {
         // Flipped, so the drawing below reads in the SVG's own coordinates.
         let image = NSImage(size: size, flipped: true) { rect in
             guard let context = NSGraphicsContext.current else { return false }
@@ -48,6 +63,7 @@ enum BridgeStatusIcon {
         case .ready: return InterfaceLanguage.text("Dicavo CLI Bridge is ready")
         case .noUsableTool: return InterfaceLanguage.text("Dicavo CLI Bridge found no usable tool")
         case .failed: return InterfaceLanguage.text("Dicavo CLI Bridge is not listening")
+        case .working: return InterfaceLanguage.text("Dicavo CLI Bridge is working")
         }
     }
 
@@ -65,6 +81,14 @@ enum BridgeStatusIcon {
             knockOut(NSBezierPath(ovalIn: circle(center, radius: 4)), in: context)
             NSColor.black.setFill()
             NSBezierPath(ovalIn: circle(center, radius: 2.6)).fill()
+        case let .working(dimmed):
+            drawGlyph(alpha: 1)
+            // The same ring cut out of the corner as for no usable tool,
+            // a solid dot inside: something runs.
+            let center = NSPoint(x: 24.5, y: 4.5)
+            knockOut(NSBezierPath(ovalIn: circle(center, radius: 4.4)), in: context)
+            NSColor.black.withAlphaComponent(dimmed ? 0.35 : 1).setFill()
+            NSBezierPath(ovalIn: circle(center, radius: 3)).fill()
         case .failed:
             drawGlyph(alpha: 0.45)
             let slash = NSBezierPath()

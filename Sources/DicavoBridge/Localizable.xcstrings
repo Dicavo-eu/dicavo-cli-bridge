@@ -1,6 +1,1206 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "The AI tool executable was not found at %@.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spustitelný soubor AI nástroje nebyl nalezen na %@."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die ausführbare Datei des KI-Tools wurde nicht unter %@ gefunden."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie znaleziono pliku wykonywalnego narzędzia AI w lokalizacji %@."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spustiteľný súbor AI nástroja sa nenašiel na %@."
+          }
+        }
+      }
+    },
+    "The selected AI tool is not executable: %@.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vybraný AI nástroj není spustitelný: %@."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das ausgewählte KI-Tool ist nicht ausführbar: %@."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybrane narzędzie AI nie jest wykonywalne: %@."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vybraný AI nástroj nie je spustiteľný: %@."
+          }
+        }
+      }
+    },
+    "%@ could not be started: %@": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ se nepodařilo spustit: %2$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ konnte nicht gestartet werden: %2$@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie można uruchomić %1$@: %2$@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ sa nepodarilo spustiť: %2$@"
+          }
+        }
+      }
+    },
+    "No diagnostic output.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez diagnostického výstupu."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Diagnoseausgabe."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak danych diagnostycznych."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez diagnostického výstupu."
+          }
+        }
+      }
+    },
+    "%@ sign-in has expired or is invalid. Open Terminal and run:\n%@\nComplete sign-in, then retry AI analysis. Your recording and transcript are saved.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přihlášení do %1$@ vypršelo nebo je neplatné. Otevřete Terminál a spusťte:\n%2$@\nDokončete přihlášení a znovu spusťte AI analýzu. Nahrávka i přepis jsou uložené."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Anmeldung bei %1$@ ist abgelaufen oder ungültig. Öffnen Sie Terminal und führen Sie Folgendes aus:\n%2$@\nSchließen Sie die Anmeldung ab und wiederholen Sie dann die KI-Analyse. Ihre Aufnahme und das Transkript sind gespeichert."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ sign-in has expired or is invalid. Open Terminal and run:\n%@\nComplete the sign-in, then retry AI analysis. Your recording and transcript are saved."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logowanie do %1$@ wygasło lub jest nieprawidłowe. Otwórz Terminal i uruchom:\n%2$@\nDokończ logowanie, a następnie ponów analizę AI. Nagranie i transkrypcja są zapisane."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Platnosť prihlásenia do %1$@ vypršala alebo je prihlásenie neplatné. Otvorte Terminál a spustite:\n%2$@\nDokončite prihlásenie a znova spustite AI analýzu. Nahrávka aj prepis sú uložené."
+          }
+        }
+      }
+    },
+    "%@ analysis timed out.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analýza přes %@ překročila časový limit."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Analyse mit %@ hat das Zeitlimit überschritten."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analiza za pomocą %@ przekroczyła limit czasu."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analýza cez %@ prekročila časový limit."
+          }
+        }
+      }
+    },
+    "A transcript segment or partial analysis is too large to process safely.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Část přepisu nebo dílčí analýza je příliš velká pro bezpečné zpracování."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein Transkriptabschnitt oder eine Teilanalyse ist zu groß, um sicher verarbeitet zu werden."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragment transkrypcji lub częściowa analiza ma zbyt duży rozmiar, aby można było bezpiecznie kontynuować przetwarzanie."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Časť prepisu alebo čiastková analýza je príliš veľká na bezpečné spracovanie."
+          }
+        }
+      }
+    },
+    "The AI tool returned an empty analysis.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI nástroj vrátil prázdnou analýzu."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das KI-Tool hat eine leere Analyse zurückgegeben."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Narzędzie AI zwróciło pustą analizę."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI nástroj vrátil prázdnu analýzu."
+          }
+        }
+      }
+    },
+    "The AI tool returned an analysis that is too large.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI nástroj vrátil příliš velkou analýzu."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das KI-Tool hat eine zu große Analyse zurückgegeben."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Narzędzie AI zwróciło zbyt dużą analizę."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI nástroj vrátil príliš veľkú analýzu."
+          }
+        }
+      }
+    },
+    "The AI analysis contains a reserved Dicavo marker.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza obsahuje vyhrazenou značku Dicavo."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die KI-Analyse enthält eine reservierte Dicavo-Markierung."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analiza AI zawiera zastrzeżony znacznik Dicavo."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza obsahuje vyhradenú značku Dicava."
+          }
+        }
+      }
+    },
+    "The structured AI analysis could not be decoded: %@": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strukturovanou AI analýzu se nepodařilo dekódovat: %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die strukturierte KI-Analyse konnte nicht decodiert werden: %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie można zdekodować ustrukturyzowanej analizy AI: %@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Štruktúrovanú AI analýzu sa nepodarilo dekódovať: %@"
+          }
+        }
+      }
+    },
+    "%@ sends the transcript to an external service. Confirm that in Settings → AI before analysis can run. Nothing was sent.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ posílá přepis externí službě. Potvrďte to v Nastavení → AI, teprve potom může analýza běžet. Nic se neodeslalo."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ sendet das Transkript an einen externen Dienst. Bestätigen Sie das unter Einstellungen → KI, bevor die Analyse ausgeführt werden kann. Es wurde nichts gesendet."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ wysyła transkrypcję do zewnętrznej usługi. Potwierdź to w Ustawieniach → AI, aby można było uruchomić analizę. Nic nie zostało wysłane."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odosiela prepis externej službe. Pred spustením analýzy to potvrďte v časti Nastavenia → AI. Nič sa neodoslalo."
+          }
+        }
+      }
+    },
+    "Dicavo Pro ended on %@. ": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo Pro skončilo dne %@. "
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo Pro ist am %@ abgelaufen. "
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo Pro wygasło %@. "
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Platnosť Dicavo Pro sa skončila dňa %@. "
+          }
+        }
+      }
+    },
+    "Cloud AI analysis needs Dicavo Pro. Nothing was sent; your recording and transcript are saved.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analýza přes cloudovou AI vyžaduje Dicavo Pro. Nic se neodeslalo; nahrávka i přepis jsou uložené."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Cloud-KI-Analyse erfordert Dicavo Pro. Es wurde nichts gesendet; Ihre Aufnahme und das Transkript sind gespeichert."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analiza AI w chmurze wymaga Dicavo Pro. Nic nie zostało wysłane; nagranie i transkrypcja są zapisane."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analýza cez cloudovú AI vyžaduje Dicavo Pro. Nič sa neodoslalo; nahrávka aj prepis sú uložené."
+          }
+        }
+      }
+    },
+    "Dicavo CLI Bridge analysis needs Dicavo Pro. Nothing was sent; your recording and transcript are saved.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analýza přes Dicavo CLI Bridge vyžaduje Dicavo Pro. Nic se neodeslalo; nahrávka i přepis jsou uložené."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Analyse über Dicavo CLI Bridge erfordert Dicavo Pro. Es wurde nichts gesendet; Ihre Aufnahme und das Transkript sind gespeichert."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analiza przez Dicavo CLI Bridge wymaga Dicavo Pro. Nic nie zostało wysłane; nagranie i transkrypcja są zapisane."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analýza cez Dicavo CLI Bridge vyžaduje Dicavo Pro. Nič sa neodoslalo; nahrávka aj prepis sú uložené."
+          }
+        }
+      }
+    },
+    "This feature needs Dicavo Pro. Nothing was sent; your recording and transcript are saved.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tato funkce vyžaduje Dicavo Pro. Nic se neodeslalo; nahrávka i přepis jsou uložené."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese Funktion erfordert Dicavo Pro. Es wurde nichts gesendet; Ihre Aufnahme und das Transkript sind gespeichert."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This feature requires Dicavo Pro. Nothing was sent; your recording and transcript are saved."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta funkcja wymaga Dicavo Pro. Nic nie zostało wysłane; nagranie i transkrypcja są zapisane."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Táto funkcia vyžaduje Dicavo Pro. Nič sa neodoslalo; nahrávka aj prepis sú uložené."
+          }
+        }
+      }
+    },
+    "No API key is saved for %@. Enter one in Settings → AI. Nothing was sent.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro %@ není uložený žádný klíč API. Zadejte ho v Nastavení → AI. Nic se neodeslalo."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für %@ ist kein API-Schlüssel gespeichert. Geben Sie einen unter Einstellungen → KI ein. Es wurde nichts gesendet."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak zapisanego klucza API dla %@. Wpisz go w Ustawieniach → AI. Nic nie zostało wysłane."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pre %@ nie je uložený žiadny API kľúč. Zadajte ho v časti Nastavenia → AI. Nič sa neodoslalo."
+          }
+        }
+      }
+    },
+    "%@ rejected the API key. Check the key in Settings → AI and that it has access to the selected model.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odmítl klíč API. V Nastavení → AI zkontrolujte klíč a ověřte, že má přístup k vybranému modelu."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ hat den API-Schlüssel abgelehnt. Prüfen Sie den Schlüssel unter Einstellungen → KI und stellen Sie sicher, dass er Zugriff auf das ausgewählte Modell hat."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ rejected the API key. Check the key in Settings → AI and make sure it has access to the selected model."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odrzucił klucz API. Sprawdź klucz w Ustawieniach → AI oraz to, czy ma dostęp do wybranego modelu."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odmietol API kľúč. Skontrolujte ho v časti Nastavenia → AI a overte, či má prístup k vybranému modelu."
+          }
+        }
+      }
+    },
+    "%@ has no valid base URL. Enter one in Settings → AI.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ nemá platnou základní URL. Zadejte ji v Nastavení → AI."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ hat keine gültige Basis-URL. Geben Sie eine unter Einstellungen → KI ein."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ nie ma prawidłowego bazowego adresu URL. Wpisz go w Ustawieniach → AI."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ nemá platnú základnú URL. Zadajte ju v časti Nastavenia → AI."
+          }
+        }
+      }
+    },
+    "%@ could not be reached: %@": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S %1$@ se nepodařilo spojit: %2$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ konnte nicht erreicht werden: %2$@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie można połączyć się z %1$@: %2$@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S %1$@ sa nepodarilo spojiť: %2$@"
+          }
+        }
+      }
+    },
+    "%@ via Dicavo CLI Bridge": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ přes Dicavo CLI Bridge"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ über Dicavo CLI Bridge"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ przez Dicavo CLI Bridge"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ cez Dicavo CLI Bridge"
+          }
+        }
+      }
+    },
+    "%@ is over its usage limit right now. The recording, transcript and note are saved; retry the AI analysis later.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nástroj %@ právě dosáhl limitu využití. Nahrávka, přepis i poznámka jsou uložené; AI analýzu zkuste znovu později."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für %@ ist das Nutzungslimit gerade überschritten. Aufnahme, Transkript und Notiz sind gespeichert; wiederholen Sie die KI-Analyse später."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limit użycia %@ został chwilowo przekroczony. Nagranie, transkrypcja i notatka są zapisane. Ponów analizę AI później."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pre %@ je momentálne vyčerpaný limit používania. Nahrávka, prepis aj poznámka sú uložené; AI analýzu skúste znova neskôr."
+          }
+        }
+      }
+    },
+    "%@ reports a usage limit: %@ The recording, transcript and note are saved; retry the AI analysis later.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ hlásí překročení limitu využití: %2$@ Nahrávka, přepis i poznámka jsou uložené; AI analýzu zkuste znovu později."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ meldet ein Nutzungslimit: %@ Aufnahme, Transkript und Notiz sind gespeichert; wiederholen Sie die KI-Analyse später."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ zgłasza przekroczenie limitu użycia: %@ Nagranie, transkrypcja i notatka są zapisane. Ponów analizę AI później."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ hlási limit používania: %2$@ Nahrávka, prepis aj poznámka sú uložené; AI analýzu skúste znova neskôr."
+          }
+        }
+      }
+    },
+    "%@ declined to analyze this recording.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odmítl tuto nahrávku analyzovat."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ hat die Analyse dieser Aufnahme abgelehnt."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odmówił analizy tego nagrania."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odmietol túto nahrávku analyzovať."
+          }
+        }
+      }
+    },
+    "Apple Intelligence is not available: %@": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence není k dispozici: %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence ist nicht verfügbar: %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence jest niedostępna: %@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence nie je k dispozícii: %@"
+          }
+        }
+      }
+    },
+    "Apple Intelligence does not support %@ as the output language. Choose another output language or another AI tool.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence nepodporuje %@ jako jazyk výstupu. Zvolte jiný jazyk výstupu nebo jiný AI nástroj."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence unterstützt %@ nicht als Ausgabesprache. Wählen Sie eine andere Ausgabesprache oder ein anderes KI-Tool."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence nie obsługuje języka %@ jako języka wyniku. Wybierz inny język wyniku lub inne narzędzie AI."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence nepodporuje %@ ako jazyk výstupu. Vyberte iný jazyk výstupu alebo iný AI nástroj."
+          }
+        }
+      }
+    },
+    "The Dicavo CLI Bridge is not running on this Mac. Start it, then retry AI analysis.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge na tomto Macu neběží. Spusťte ho a potom znovu spusťte AI analýzu."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge läuft nicht auf diesem Mac. Starten Sie die Bridge und wiederholen Sie dann die KI-Analyse."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge nie działa na tym Macu. Uruchom go, a następnie ponów analizę AI."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge na tomto Macu nebeží. Spustite ho a potom znova spustite AI analýzu."
+          }
+        }
+      }
+    },
+    "Dicavo CLI Bridge cannot run %@ on this Mac: it is not installed there or not ready. In Settings → AI, choose a model for a tool the bridge lists under Usable tools, then retry AI analysis.": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge nemůže na tomto Macu spustit %@: není nainstalovaný nebo připravený. V Nastavení → AI vyberte model nástroje, který Bridge uvádí v části Použitelné nástroje, a pak AI analýzu zopakujte."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge kann %@ auf diesem Mac nicht ausführen: Das Tool ist nicht installiert oder nicht bereit. Wählen Sie unter Einstellungen → KI ein Modell für ein Tool, das die Bridge unter „Verwendbare Tools“ aufführt, und wiederholen Sie die KI-Analyse."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge cannot run %@ on this Mac: it is not installed or ready. In Settings → AI, choose a model for a tool the bridge lists under Usable tools, then retry AI analysis."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge nie może uruchomić %@ na tym Macu: narzędzie nie jest zainstalowane lub gotowe. W Ustawieniach → AI wybierz model narzędzia wymienionego przez Bridge w sekcji Dostępne narzędzia, a następnie ponów analizę AI."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge nemôže na tomto Macu spustiť %@: nie je nainštalovaný alebo pripravený. V Nastaveniach → AI vyberte model pre nástroj, ktorý Bridge uvádza v časti Použiteľné nástroje, a potom znova spustite AI analýzu."
+          }
+        }
+      }
+    },
+    "%@ failed with exit code %lld: %@": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ skončil s chybovým kódom %2$lld: %3$@"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ skončil s návratovým kódem %2$lld: %3$@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ zakończył działanie z kodem błędu %2$lld: %3$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ wurde mit dem Fehlercode %2$lld beendet: %3$@"
+          }
+        }
+      }
+    },
+    "%@ responded with HTTP %lld: %@": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ odpovedal kódom HTTP %2$lld: %3$@"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ odpověděl kódem HTTP %2$lld: %3$@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ odpowiedział kodem HTTP %2$lld: %3$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ antwortete mit HTTP %2$lld: %3$@"
+          }
+        }
+      }
+    },
+    "AI analysis uses a locally installed command-line tool that this device cannot run. Transfer the recording to your Mac to analyze it there.": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza využíva lokálne nainštalovaný nástroj príkazového riadka, ktorý toto zariadenie nedokáže spustiť. Preneste nahrávku do Macu a analyzujte ju tam."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza probíhá pomocí lokálně nainstalovaného nástroje příkazového řádku, který toto zařízení nedokáže spustit. Přeneste nahrávku do Macu a analyzujte ji tam."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analiza AI korzysta z lokalnie zainstalowanego narzędzia wiersza poleceń, którego to urządzenie nie może uruchomić. Przenieś nagranie na Maca i przeanalizuj je tam."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die KI-Analyse läuft über ein lokal installiertes Befehlszeilen-Tool, das dieses Gerät nicht starten kann. Übertragen Sie die Aufnahme auf den Mac und analysieren Sie sie dort."
+          }
+        }
+      }
+    },
+    "requires macOS 26 or newer": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vyžaduje macOS 26 alebo novší"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vyžaduje macOS 26 nebo novější"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "wymaga systemu macOS 26 lub nowszego"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "erfordert macOS 26 oder neuer"
+          }
+        }
+      }
+    },
+    "this device does not support Apple Intelligence": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "toto zariadenie nepodporuje Apple Intelligence"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "toto zařízení nepodporuje Apple Intelligence"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "to urządzenie nie obsługuje Apple Intelligence"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dieses Gerät unterstützt Apple Intelligence nicht"
+          }
+        }
+      }
+    },
+    "Apple Intelligence is turned off in System Settings": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence je vypnutá v Systémových nastaveniach"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence je vypnutá v Nastavení systému"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "funkcja Apple Intelligence jest wyłączona w Ustawieniach systemowych"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence ist in den Systemeinstellungen deaktiviert"
+          }
+        }
+      }
+    },
+    "the model is still downloading or being prepared": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model sa ešte sťahuje alebo pripravuje"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model se ještě stahuje nebo připravuje"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model jest jeszcze pobierany lub przygotowywany"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das Modell wird noch heruntergeladen oder vorbereitet"
+          }
+        }
+      }
+    },
+    "the reason is unknown": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dôvod nie je známy"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "důvod není znám"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "przyczyna jest nieznana"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "der Grund ist unbekannt"
+          }
+        }
+      }
+    },
+    "the requested language": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "požadovaný jazyk"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "požadovaný jazyk"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "żądany język"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "die gewünschte Sprache"
+          }
+        }
+      }
+    },
+    "the model assets are not available": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "súbory modelu nie sú dostupné"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "soubory modelu nejsou dostupné"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pliki modelu nie są dostępne"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "die Modelldateien sind nicht verfügbar"
+          }
+        }
+      }
+    },
+    "the system is rate-limiting requests": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "systém obmedzuje počet požiadaviek"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "systém omezuje počet požadavků"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "system ogranicza liczbę żądań"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das System begrenzt die Anzahl der Anfragen"
+          }
+        }
+      }
+    },
+    "another request is already running": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "už sa spracúva iná požiadavka"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "už běží jiný požadavek"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "trwa już przetwarzanie innego żądania"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "eine andere Anfrage läuft bereits"
+          }
+        }
+      }
+    },
+    "the on-device model returned a response that could not be decoded": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model v zariadení vrátil odpoveď, ktorú nemožno dekódovať"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model v zařízení vrátil odpověď, kterou nelze zpracovat"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model na urządzeniu zwrócił odpowiedź, której nie da się zdekodować"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das Modell auf dem Gerät hat eine nicht dekodierbare Antwort geliefert"
+          }
+        }
+      }
+    },
+    "the on-device model rejected the output format": {
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model v zariadení odmietol požadovaný formát výstupu"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model v zařízení odmítl požadovaný formát výstupu"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model na urządzeniu odrzucił format wyniku"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das Modell auf dem Gerät hat das vorgegebene Ausgabeformat abgelehnt"
+          }
+        }
+      }
+    },
     "Dicavo CLI Bridge": {
       "extractionState": "manual",
       "localizations": {
@@ -780,6 +1980,93 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge je pripravený"
+          }
+        }
+      }
+    },
+    "part %lld of %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "část %1$lld z %2$lld"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teil %1$lld von %2$lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "część %1$lld z %2$lld"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "časť %1$lld z %2$lld"
+          }
+        }
+      }
+    },
+    "AI analysis with %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza přes %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KI-Analyse mit %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analiza AI przez %@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza cez %@"
+          }
+        }
+      }
+    },
+    "Dicavo CLI Bridge is working": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge pracuje"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge arbeitet"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge pracuje"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge pracuje"
           }
         }
       }
@@ -2585,6 +3872,35 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@%@: neprihlásené"
+          }
+        }
+      }
+    },
+    "since %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "od %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "seit %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "od %@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "od %@"
           }
         }
       }

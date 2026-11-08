@@ -13,6 +13,7 @@
 		248EA278ED1D08C2435655A9 /* BridgeHTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA143FCD075D2D3F629E3702 /* BridgeHTTP.swift */; };
 		B1F84F1AA022EC4ABB60CE23 /* BridgeLocalCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195307A71C1D71324886162 /* BridgeLocalCommand.swift */; };
 		E1FC33CB2B698FFA8CEABC6F /* BridgeRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92812A392113C609AFE27E18 /* BridgeRequestHandler.swift */; };
+		71E26C14359DED76B987A199 /* BridgeTaskHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFD1576A8399BBC56CB821 /* BridgeTaskHeader.swift */; };
 		CEE98CDB1185FCADA66CEA1B /* BridgeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29DDAB0C6A0288D3ED202B /* BridgeServer.swift */; };
 		F29AC3DA44378AFBA5B54290 /* BridgeUpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E810980170202FC5E93C461 /* BridgeUpdateChecker.swift */; };
 		F6A4397897A65B234642970E /* BridgeUpdateInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43852830D99FFAEAA62085 /* BridgeUpdateInstaller.swift */; };
@@ -37,6 +38,7 @@
 		AA143FCD075D2D3F629E3702 /* BridgeHTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeHTTP.swift"; sourceTree = "<group>"; };
 		F195307A71C1D71324886162 /* BridgeLocalCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeLocalCommand.swift"; sourceTree = "<group>"; };
 		92812A392113C609AFE27E18 /* BridgeRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeRequestHandler.swift"; sourceTree = "<group>"; };
+		2DCFD1576A8399BBC56CB821 /* BridgeTaskHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeTaskHeader.swift"; sourceTree = "<group>"; };
 		DF29DDAB0C6A0288D3ED202B /* BridgeServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeServer.swift"; sourceTree = "<group>"; };
 		9E810980170202FC5E93C461 /* BridgeUpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeUpdateChecker.swift"; sourceTree = "<group>"; };
 		8E43852830D99FFAEAA62085 /* BridgeUpdateInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BridgeUpdateInstaller.swift"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				AA143FCD075D2D3F629E3702 /* BridgeHTTP.swift */,
 				F195307A71C1D71324886162 /* BridgeLocalCommand.swift */,
 				92812A392113C609AFE27E18 /* BridgeRequestHandler.swift */,
+				2DCFD1576A8399BBC56CB821 /* BridgeTaskHeader.swift */,
 				DF29DDAB0C6A0288D3ED202B /* BridgeServer.swift */,
 				9E810980170202FC5E93C461 /* BridgeUpdateChecker.swift */,
 				8E43852830D99FFAEAA62085 /* BridgeUpdateInstaller.swift */,
@@ -221,6 +224,7 @@
 				248EA278ED1D08C2435655A9 /* BridgeHTTP.swift in Sources */,
 				B1F84F1AA022EC4ABB60CE23 /* BridgeLocalCommand.swift in Sources */,
 				E1FC33CB2B698FFA8CEABC6F /* BridgeRequestHandler.swift in Sources */,
+				71E26C14359DED76B987A199 /* BridgeTaskHeader.swift in Sources */,
 				CEE98CDB1185FCADA66CEA1B /* BridgeServer.swift in Sources */,
 				F29AC3DA44378AFBA5B54290 /* BridgeUpdateChecker.swift in Sources */,
 				F6A4397897A65B234642970E /* BridgeUpdateInstaller.swift in Sources */,

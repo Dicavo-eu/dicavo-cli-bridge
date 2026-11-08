@@ -61,58 +61,58 @@ enum AnalysisError: Error, Equatable, LocalizedError {
     var errorDescription: String? {
         switch self {
         case let .executableNotFound(path):
-            return "The AI tool executable was not found at \(path)."
+            return InterfaceLanguage.text("The AI tool executable was not found at \(path).")
         case let .executableNotRunnable(path):
-            return "The selected AI tool is not executable: \(path)."
+            return InterfaceLanguage.text("The selected AI tool is not executable: \(path).")
         case let .processLaunchFailed(tool, message):
-            return "\(tool.displayName) could not be started: \(message)"
+            return InterfaceLanguage.text("\(tool.displayName) could not be started: \(message)")
         case let .processFailed(tool, exitCode, message):
-            let detail = message.isEmpty ? "No diagnostic output." : message
-            return "\(tool.displayName) failed with exit code \(exitCode): \(detail)"
+            let detail = message.isEmpty ? InterfaceLanguage.text("No diagnostic output.") : message
+            return InterfaceLanguage.text("\(tool.displayName) failed with exit code \(Int(exitCode)): \(detail)")
         case let .authenticationRequired(tool, loginCommand):
-            return "\(tool.displayName) sign-in has expired or is invalid. Open Terminal and run:\n\(loginCommand)\nComplete sign-in, then retry AI analysis. Your recording and transcript are saved."
+            return InterfaceLanguage.text("\(tool.displayName) sign-in has expired or is invalid. Open Terminal and run:\n\(loginCommand)\nComplete sign-in, then retry AI analysis. Your recording and transcript are saved.")
         case let .processTimedOut(tool):
-            return "\(tool.displayName) analysis timed out."
+            return InterfaceLanguage.text("\(tool.displayName) analysis timed out.")
         case .transcriptChunkTooLarge:
-            return "A transcript segment or partial analysis is too large to process safely."
+            return InterfaceLanguage.text("A transcript segment or partial analysis is too large to process safely.")
         case .emptyOutput:
-            return "The AI tool returned an empty analysis."
+            return InterfaceLanguage.text("The AI tool returned an empty analysis.")
         case .outputTooLarge:
-            return "The AI tool returned an analysis that is too large."
+            return InterfaceLanguage.text("The AI tool returned an analysis that is too large.")
         case .reservedMarkerInOutput:
-            return "The AI analysis contains a reserved Dicavo marker."
+            return InterfaceLanguage.text("The AI analysis contains a reserved Dicavo marker.")
         case let .invalidStructuredOutput(reason):
-            return "The structured AI analysis could not be decoded: \(reason)"
+            return InterfaceLanguage.text("The structured AI analysis could not be decoded: \(reason)")
         case .localToolUnavailableOnThisPlatform:
-            return "AI analysis runs through a locally installed command-line tool, which this platform cannot start. Transfer the recording to the Mac to analyse it there."
+            return InterfaceLanguage.text("AI analysis uses a locally installed command-line tool that this device cannot run. Transfer the recording to your Mac to analyze it there.")
         case let .cloudConsentRequired(tool):
-            return "\(tool.displayName) sends the transcript to an external service. Confirm that in Settings → AI before analysis can run. Nothing was sent."
+            return InterfaceLanguage.text("\(tool.displayName) sends the transcript to an external service. Confirm that in Settings → AI before analysis can run. Nothing was sent.")
         case let .proRequired(feature, state):
             let ended: String
             if case .free(.expired(let date)) = state {
-                ended = "Dicavo Pro ended on \(date.formatted(date: .long, time: .omitted)). "
+                ended = InterfaceLanguage.text("Dicavo Pro ended on \(date.formatted(date: .long, time: .omitted)). ")
             } else {
                 ended = ""
             }
             switch feature {
             case .cloudAnalysis:
-                return ended + "Cloud AI analysis needs Dicavo Pro. Nothing was sent; your recording and transcript are saved."
+                return ended + InterfaceLanguage.text("Cloud AI analysis needs Dicavo Pro. Nothing was sent; your recording and transcript are saved.")
             case .bridgeAnalysis:
-                return ended + "Dicavo CLI Bridge analysis needs Dicavo Pro. Nothing was sent; your recording and transcript are saved."
+                return ended + InterfaceLanguage.text("Dicavo CLI Bridge analysis needs Dicavo Pro. Nothing was sent; your recording and transcript are saved.")
             default:
-                return ended + "This feature needs Dicavo Pro. Nothing was sent; your recording and transcript are saved."
+                return ended + InterfaceLanguage.text("This feature needs Dicavo Pro. Nothing was sent; your recording and transcript are saved.")
             }
         case let .apiKeyMissing(tool):
-            return "No API key is saved for \(tool.displayName). Enter one in Settings → AI. Nothing was sent."
+            return InterfaceLanguage.text("No API key is saved for \(tool.displayName). Enter one in Settings → AI. Nothing was sent.")
         case let .apiKeyRejected(tool):
-            return "\(tool.displayName) rejected the API key. Check the key in Settings → AI and that it has access to the selected model."
+            return InterfaceLanguage.text("\(tool.displayName) rejected the API key. Check the key in Settings → AI and that it has access to the selected model.")
         case let .endpointMissing(tool):
-            return "\(tool.displayName) has no valid base URL. Enter one in Settings → AI."
+            return InterfaceLanguage.text("\(tool.displayName) has no valid base URL. Enter one in Settings → AI.")
         case let .httpRequestFailed(tool, statusCode, message):
-            let detail = message.isEmpty ? "No diagnostic output." : message
-            return "\(tool.displayName) answered HTTP \(statusCode): \(detail)"
+            let detail = message.isEmpty ? InterfaceLanguage.text("No diagnostic output.") : message
+            return InterfaceLanguage.text("\(tool.displayName) responded with HTTP \(statusCode): \(detail)")
         case let .networkFailure(tool, message):
-            return "\(tool.displayName) could not be reached: \(message)"
+            return InterfaceLanguage.text("\(tool.displayName) could not be reached: \(message)")
         case let .rateLimited(tool, service, detail):
             // Stored with the recording when it happens, so it is written in
             // the interface language rather than in English.
@@ -128,13 +128,13 @@ enum AnalysisError: Error, Equatable, LocalizedError {
                 "\(who) reports a usage limit: \(detail) The recording, transcript and note are saved; retry the AI analysis later."
             )
         case let .responseRefused(tool):
-            return "\(tool.displayName) declined to analyze this recording."
+            return InterfaceLanguage.text("\(tool.displayName) declined to analyze this recording.")
         case let .onDeviceModelUnavailable(reason):
-            return "Apple Intelligence is not available: \(reason)"
+            return InterfaceLanguage.text("Apple Intelligence is not available: \(reason)")
         case let .onDeviceModelLanguageUnsupported(language):
-            return "Apple Intelligence does not support \(language) as the output language. Choose another output language or another AI tool."
+            return InterfaceLanguage.text("Apple Intelligence does not support \(language) as the output language. Choose another output language or another AI tool.")
         case .bridgeNotRunning:
-            return "The Dicavo CLI Bridge is not running on this Mac. Start it, then retry AI analysis."
+            return InterfaceLanguage.text("The Dicavo CLI Bridge is not running on this Mac. Start it, then retry AI analysis.")
         case let .bridgeToolUnavailable(service):
             // Stored with the recording, like a usage limit, so it is
             // written in the interface language.
