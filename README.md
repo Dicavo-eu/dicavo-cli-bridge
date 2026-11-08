@@ -52,6 +52,7 @@ From version 2.2 on, each DMG published on [dicavo.eu](https://dicavo.eu/en/brid
 
 | Version | Build | Source commit | DMG SHA-256 |
 |---|---|---|---|
+| 2.3 | 41 | [`4690937`](https://github.com/Dicavo-eu/dicavo-cli-bridge/commit/469093737db52af3181f8ac0e33feded5caf9320) | `4a8ee313cdcfe688c1381ccadfa2f361570e236f44d70bd814c3aa5052b37e0e` |
 | 2.2 | 31 | [`56a7500`](https://github.com/Dicavo-eu/dicavo-cli-bridge/commit/56a7500cd0c956502af0a2c0de2cd7c1e716c642) | `8a9e334b2b21dd1037e3452766d4b957a6cf7fa79753bf465af69051d6943951` |
 | 2.1.1 | 23 | `0fe4c8a` in the private Dicavo repository, before this repository existed | `7843dffb9e4ff841b73d23399c74c7281239dab90acdfc7961b851256f53dd8a` |
 
