@@ -1314,6 +1314,12 @@
             "state": "translated",
             "value": "Skontrolovať nástroje znova"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check Tools Again"
+          }
         }
       }
     },
@@ -1342,6 +1348,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Spustiť pri prihlásení"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at Login"
           }
         }
       }
@@ -1404,35 +1416,6 @@
         }
       }
     },
-    "Not listening: %@": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nenaslouchá: %@"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nicht empfangsbereit: %@"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nie nasłuchuje: %@"
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Neprijíma pripojenia: %@"
-          }
-        }
-      }
-    },
     "Copy sign-in command for %@": {
       "extractionState": "manual",
       "localizations": {
@@ -1458,6 +1441,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kopírovať prihlasovací príkaz pre %@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy Sign-In Command for %@"
           }
         }
       }
@@ -1603,6 +1592,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nainštalovať verziu %@…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install Version %@…"
           }
         }
       }
@@ -1752,35 +1747,6 @@
         }
       }
     },
-    "Update: %@": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aktualizace: %@"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Update: %@"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Uaktualnienie: %@"
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aktualizácia: %@"
-          }
-        }
-      }
-    },
     "Open download page": {
       "extractionState": "manual",
       "localizations": {
@@ -1806,6 +1772,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Otvoriť stránku na stiahnutie"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Download Page"
           }
         }
       }
@@ -1836,6 +1808,12 @@
             "state": "translated",
             "value": "Skontrolovať aktualizácie…"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check for Updates…"
+          }
         }
       }
     },
@@ -1864,6 +1842,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Automaticky kontrolovať aktualizácie"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check for Updates Automatically"
           }
         }
       }
@@ -2106,64 +2090,6 @@
         }
       }
     },
-    "Dicavo CLI Bridge is not listening": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge nenaslouchá"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge nimmt keine Verbindungen an"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge nie nasłuchuje"
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge neprijíma pripojenia"
-          }
-        }
-      }
-    },
-    "Version %@ is installed. Quit and reopen Dicavo CLI Bridge to start it.": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verze %@ je nainstalovaná. Spustíte ji, když Dicavo CLI Bridge ukončíte a znovu otevřete."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Version %@ ist installiert. Beenden Sie Dicavo CLI Bridge und öffnen Sie die App erneut, um die neue Version zu starten."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wersja %@ jest zainstalowana. Aby ją uruchomić, zakończ i ponownie otwórz Dicavo CLI Bridge."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verzia %@ je nainštalovaná. Ak ju chcete spustiť, ukončite Dicavo CLI Bridge a znova ho otvorte."
-          }
-        }
-      }
-    },
     "Finish the update in Finder": {
       "extractionState": "manual",
       "localizations": {
@@ -2321,70 +2247,6 @@
         }
       }
     },
-    "Dicavo CLI Bridge runs in the menu bar": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge běží v řádku nabídek"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge läuft in der Menüleiste"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge działa na pasku menu"
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dicavo CLI Bridge beží v menu bare"
-          }
-        }
-      }
-    },
-    "Look for ›D at the top right of the screen. From there you can check your tools, start the bridge at login and quit it.\n\nShould the bridge check once a day whether a new version is available? It then downloads a small file from dicavo.eu; nothing about your meetings or tools is sent. You can change this in the menu at any time.": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Najdete ho jako ›D vpravo nahoře na obrazovce. Odtud zkontrolujete nástroje, zapnete spouštění při přihlášení a Bridge ukončíte.\n\nMá Bridge jednou denně zkontrolovat, zda je dostupná nová verze? Stáhne přitom malý soubor z dicavo.eu; nic o vašich schůzkách ani nástrojích se neodesílá. V nabídce to můžete kdykoli změnit."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suchen Sie oben rechts auf dem Bildschirm nach ›D. Dort können Sie Ihre Tools prüfen, die Bridge bei der Anmeldung starten lassen und sie beenden.\n\nSoll die Bridge einmal täglich prüfen, ob eine neue Version verfügbar ist? Dazu lädt sie eine kleine Datei von dicavo.eu; über Ihre Meetings oder Tools wird nichts gesendet. Sie können dies jederzeit im Menü ändern."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Look for ›D at the top right of the screen. From there you can check your tools, launch the bridge at login and quit it.\n\nShould the bridge check once a day whether a new version is available? To check, it downloads a small file from dicavo.eu; nothing about your meetings or tools is sent. You can change this in the menu at any time."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Znajdziesz go jako ›D w prawym górnym rogu ekranu. Stamtąd możesz sprawdzić narzędzia, włączyć uruchamianie Bridge przy logowaniu i go zakończyć.\n\nCzy Bridge ma raz dziennie sprawdzać, czy jest dostępna nowa wersja? Pobiera wtedy mały plik z dicavo.eu; nie wysyła żadnych informacji o twoich spotkaniach ani narzędziach. Możesz to zmienić w menu w dowolnej chwili."
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nájdete ho ako ›D vpravo hore na obrazovke. Odtiaľ skontrolujete nástroje, zapnete spúšťanie pri prihlásení a ukončíte Bridge.\n\nMá Bridge raz denne skontrolovať, či je dostupná nová verzia? Stiahne pritom malý súbor z dicavo.eu; nič o vašich stretnutiach ani nástrojoch sa neodosiela. V menu to môžete kedykoľvek zmeniť."
-          }
-        }
-      }
-    },
     "Not now": {
       "extractionState": "manual",
       "localizations": {
@@ -2410,6 +2272,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Teraz nie"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Now"
           }
         }
       }
@@ -2655,6 +2523,12 @@
             "state": "translated",
             "value": "Nainštalovať a reštartovať"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install and Restart"
+          }
         }
       }
     },
@@ -2712,6 +2586,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Čo je nové"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What's New"
           }
         }
       }
@@ -3130,6 +3010,12 @@
             "state": "translated",
             "value": "Lokálny príkaz…"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Command…"
+          }
         }
       }
     },
@@ -3158,6 +3044,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lokálny príkaz"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Command"
           }
         }
       }
@@ -3222,35 +3114,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge môže pre Dicavo spúšťať jeden príkaz podľa vášho výberu, napríklad llm alebo ollama run s modelom. Príkaz dostane na štandardný vstup prepis stretnutia, poznámky a pokyny a analýzu zapíše ako Markdown na štandardný výstup. Dicavo nevidí, čo príkaz s prepisom urobí: ak ho pošle na server, prepis odíde tam."
-          }
-        }
-      }
-    },
-    "Enabled": {
-      "extractionState": "manual",
-      "localizations": {
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapnuto"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aktiviert"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Włączone"
-          }
-        },
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapnuté"
           }
         }
       }
@@ -3901,6 +3764,193 @@
           "stringUnit": {
             "state": "translated",
             "value": "od %@"
+          }
+        }
+      }
+    },
+    "Check for updates automatically?": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontrolovať aktualizácie automaticky?"
+          }
+        }
+      }
+    },
+    "Once a day the bridge would download a small file from dicavo.eu that names the newest version. Nothing about your meetings or tools is sent. You can change this in the bridge's menu at any time.": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge by raz denne stiahol z dicavo.eu malý súbor s číslom najnovšej verzie. O vašich schôdzkach ani nástrojoch sa nič neodosiela. Zmeniť to môžete kedykoľvek v menu Bridge."
+          }
+        }
+      }
+    },
+    "Dicavo CLI Bridge is in the menu bar at the top right, under this icon. From there you can check your tools, start the bridge at login and quit it.": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge nájdete vpravo hore v menu bare pod touto ikonou. Odtiaľ skontrolujete nástroje, zapnete spúšťanie pri prihlásení a Bridge ukončíte."
+          }
+        }
+      }
+    },
+    "Check Automatically": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontrolovať automaticky"
+          }
+        }
+      }
+    },
+    "Ready for Dicavo": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pripravený pre Dicavo"
+          }
+        }
+      }
+    },
+    "No AI tool is ready": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Žiadny AI nástroj nie je pripravený"
+          }
+        }
+      }
+    },
+    "Dicavo CLI Bridge did not start": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge sa nespustil"
+          }
+        }
+      }
+    },
+    "Try Again": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skúsiť znova"
+          }
+        }
+      }
+    },
+    "Dicavo Can’t See the Bridge – Details…": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo nevidí Bridge – podrobnosti…"
+          }
+        }
+      }
+    },
+    "Dicavo can't see the bridge": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo nevidí Bridge"
+          }
+        }
+      }
+    },
+    "Quit and reopen Dicavo CLI Bridge.": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončite Bridge a znova ho otvorte."
+          }
+        }
+      }
+    },
+    "Update Failed – Details…": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualizácia sa nepodarila – podrobnosti…"
+          }
+        }
+      }
+    },
+    "Version %@ is installed – reopen the bridge": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verzia %@ je nainštalovaná – znova otvorte Bridge"
+          }
+        }
+      }
+    },
+    "Quit Dicavo CLI Bridge?": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončiť Dicavo CLI Bridge?"
+          }
+        }
+      }
+    },
+    "Dicavo is waiting for an AI analysis with %@. If you quit the bridge, the analysis stops and has to be started again in Dicavo. The recording and transcript stay saved.": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo čaká na AI analýzu cez %@. Ak Bridge ukončíte, analýza sa preruší a v Dicave ju bude treba spustiť znova. Nahrávka aj prepis ostávajú uložené."
+          }
+        }
+      }
+    },
+    "Quit": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončiť"
+          }
+        }
+      }
+    },
+    "Use local command": {
+      "extractionState": "manual",
+      "localizations": {
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Používať lokálny príkaz"
           }
         }
       }

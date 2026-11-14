@@ -77,7 +77,7 @@ struct LocalCommandSettingsView: View {
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Toggle(t("Enabled"), isOn: $isEnabled)
+            Toggle(t("Use local command"), isOn: $isEnabled)
 
             VStack(alignment: .leading, spacing: 6) {
                 Text(verbatim: t("Executable"))
@@ -88,10 +88,22 @@ struct LocalCommandSettingsView: View {
                     .labelsHidden()
                     Button(t("Choose…")) { chooseExecutable() }
                 }
-                Text(verbatim: executableStatus)
+                if executableHasProblem {
+                    HStack(alignment: .firstTextBaseline, spacing: 4) {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                            .accessibilityHidden(true)
+                        Text(verbatim: executableStatus)
+                            .foregroundStyle(.primary)
+                    }
                     .font(.caption)
-                    .foregroundStyle(executableIsRunnable ? Color.secondary : Color.orange)
                     .fixedSize(horizontal: false, vertical: true)
+                } else {
+                    Text(verbatim: executableStatus)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
 
             VStack(alignment: .leading, spacing: 6) {
@@ -100,6 +112,8 @@ struct LocalCommandSettingsView: View {
                     .font(.system(.body, design: .monospaced))
                     .frame(height: 90)
                     .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color(nsColor: .separatorColor)))
+                    .accessibilityLabel(t("Arguments"))
+                    .accessibilityHint(t("One argument per line, passed exactly as written. There is no shell: quotes, variables and redirections have no special meaning."))
                 Text(verbatim: t("One argument per line, passed exactly as written. There is no shell: quotes, variables and redirections have no special meaning."))
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -141,10 +155,12 @@ struct LocalCommandSettingsView: View {
         .frame(width: 500)
     }
 
-    private var executableIsRunnable: Bool {
+    /// Only the two states that stop the command from running at all. Shown
+    /// with a warning icon as well as words, so colour is never the only signal.
+    private var executableHasProblem: Bool {
         switch draft.availability() {
-        case .ready, .disabled: return true
-        case .notSetUp, .notFound, .notExecutable: return false
+        case .notFound, .notExecutable: return true
+        case .notSetUp, .ready, .disabled: return false
         }
     }
 

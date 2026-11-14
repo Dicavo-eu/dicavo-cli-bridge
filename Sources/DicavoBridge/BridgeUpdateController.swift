@@ -19,6 +19,8 @@ final class BridgeUpdateController: ObservableObject {
         /// Verified and staged; waits until Dicavo's current request is done.
         case waitingForRequests(BridgeUpdateManifest)
         case installing(BridgeUpdateManifest)
+        /// Installed, but the bridge could not start the new version itself.
+        case installedPendingRestart(BridgeUpdateManifest)
         case failed(String)
 
         var isBusy: Bool {
@@ -223,7 +225,7 @@ final class BridgeUpdateController: ObservableObject {
             // The new version is in place; it starts the next time the
             // bridge is opened. Say so rather than quitting into nothing.
             model?.pauseRequests(false)
-            phase = .failed(InterfaceLanguage.text("Version \(manifest.version) is installed. Quit and reopen Dicavo CLI Bridge to start it."))
+            phase = .installedPendingRestart(manifest)
             return
         }
         model?.stop()
@@ -257,12 +259,37 @@ final class BridgeUpdateController: ObservableObject {
         NSWorkspace.shared.open(Self.downloadPageURL)
     }
 
+    /// The descriptor's failure in full, where the menu has room for it
+    /// (B-11).
+    func showDescriptorProblem(_ message: String) {
+        alert(
+            InterfaceLanguage.text("Dicavo can't see the bridge"),
+            message + "\n\n" + InterfaceLanguage.text("Quit and reopen Dicavo CLI Bridge.")
+        )
+    }
+
+    /// What went wrong with the update, shown the way a failed install shows
+    /// it (B-11).
+    func showUpdateProblem() {
+        guard case let .failed(message) = phase else { return }
+        alert(
+            InterfaceLanguage.text("The update was not installed"),
+            message + "\n\n" + InterfaceLanguage.text("The running version is unchanged. You can also download the update from dicavo.eu."),
+            showsDownloadPage: true
+        )
+    }
+
     // MARK: Windows
 
     func showAbout() {
         NSApplication.shared.activate(ignoringOtherApps: true)
+        var description = InterfaceLanguage.text("Runs the Claude Code, Codex or Antigravity installed on this Mac for Dicavo.") + "\n"
+        // Where it listens belongs here, in the small print, not in the menu.
+        if case let .listening(port) = model?.serverState {
+            description += InterfaceLanguage.text("Listening on 127.0.0.1:\(String(port)) for Dicavo") + "\n"
+        }
         let credits = NSMutableAttributedString(
-            string: InterfaceLanguage.text("Runs the Claude Code, Codex or Antigravity installed on this Mac for Dicavo.") + "\n",
+            string: description,
             attributes: [.font: NSFont.systemFont(ofSize: NSFont.smallSystemFontSize), .foregroundColor: NSColor.secondaryLabelColor]
         )
         credits.append(NSAttributedString(
@@ -278,13 +305,39 @@ final class BridgeUpdateController: ObservableObject {
     private func showWelcome() {
         NSApplication.shared.activate(ignoringOtherApps: true)
         let alert = NSAlert()
-        alert.messageText = InterfaceLanguage.text("Dicavo CLI Bridge runs in the menu bar")
-        alert.informativeText = InterfaceLanguage.text("Look for ›D at the top right of the screen. From there you can check your tools, start the bridge at login and quit it.\n\nShould the bridge check once a day whether a new version is available? It then downloads a small file from dicavo.eu; nothing about your meetings or tools is sent. You can change this in the menu at any time.")
-        alert.addButton(withTitle: InterfaceLanguage.text("Check for updates automatically"))
-        alert.addButton(withTitle: InterfaceLanguage.text("Not now"))
+        alert.messageText = InterfaceLanguage.text("Check for updates automatically?")
+        alert.informativeText = InterfaceLanguage.text("Once a day the bridge would download a small file from dicavo.eu that names the newest version. Nothing about your meetings or tools is sent. You can change this in the bridge's menu at any time.")
+        alert.accessoryView = welcomeAccessory()
+        let checkAutomatically = alert.addButton(withTitle: InterfaceLanguage.text("Check Automatically"))
+        checkAutomatically.keyEquivalent = "\r"
+        let notNow = alert.addButton(withTitle: InterfaceLanguage.text("Not now"))
+        // Esc answers the quieter choice, as it does in the install alert.
+        notNow.keyEquivalent = "\u{1b}"
         if alert.runModal() == .alertFirstButtonReturn {
             setAutomaticChecks(true)
         }
+    }
+
+    /// The icon the person is meant to look for in the menu bar, beside the
+    /// words that point at it.
+    private func welcomeAccessory() -> NSView {
+        let icon = NSImageView()
+        icon.image = BridgeStatusIcon.image(for: .ready, height: 22)
+        icon.contentTintColor = .labelColor
+        icon.imageScaling = .scaleNone
+        // Decorative: the text beside it names the icon.
+        icon.setAccessibilityElement(false)
+
+        let text = NSTextField(wrappingLabelWithString: InterfaceLanguage.text("Dicavo CLI Bridge is in the menu bar at the top right, under this icon. From there you can check your tools, start the bridge at login and quit it."))
+        text.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
+        text.preferredMaxLayoutWidth = 220
+
+        let stack = NSStackView(views: [icon, text])
+        stack.orientation = .horizontal
+        stack.alignment = .centerY
+        stack.spacing = 10
+        stack.frame = NSRect(x: 0, y: 0, width: 260, height: stack.fittingSize.height)
+        return stack
     }
 
     private func showUpToDate() {
@@ -305,13 +358,15 @@ final class BridgeUpdateController: ObservableObject {
         alert(InterfaceLanguage.text("Could not check for updates"), message, showsDownloadPage: true)
     }
 
-    private func offerInstall(_ manifest: BridgeUpdateManifest) {
+    func offerInstall(_ manifest: BridgeUpdateManifest) {
         NSApplication.shared.activate(ignoringOtherApps: true)
         let alert = NSAlert()
         alert.messageText = InterfaceLanguage.text("Version \(manifest.version) is available")
         alert.informativeText = InterfaceLanguage.text("You have \(BridgeModel.version). The bridge downloads the update from dicavo.eu, checks that it is signed by the Dicavo developer and notarized by Apple, replaces itself and starts again.")
         alert.addButton(withTitle: InterfaceLanguage.text("Install and restart"))
-        alert.addButton(withTitle: InterfaceLanguage.text("Later"))
+        let later = alert.addButton(withTitle: InterfaceLanguage.text("Later"))
+        // Esc answers Later, the choice that changes nothing.
+        later.keyEquivalent = "\u{1b}"
         if manifest.releaseNotesURL != nil {
             alert.addButton(withTitle: InterfaceLanguage.text("What's new"))
         }

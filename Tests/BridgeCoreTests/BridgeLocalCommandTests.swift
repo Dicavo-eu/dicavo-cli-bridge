@@ -469,7 +469,9 @@ final class BridgeLocalCommandTests: XCTestCase {
             "Local command: ready", "Local command: off", "Local command: not found",
             "Local command: not executable", "Local command: not set up",
             "Dicavo CLI Bridge can run one command of your choice for Dicavo, for example llm or ollama run with a model. The command receives the meeting transcript, notes and instructions on standard input and writes the analysis as Markdown to standard output. Dicavo cannot see what the command does with the transcript: if the command sends it to a server, that is where it goes.",
-            "Enabled", "Executable", "Choose…", "Arguments",
+            // "Use local command" (HIG review B-10, was "Enabled") joins this
+            // list once the 2.4 translation round adds cs, de and pl.
+            "Executable", "Choose…", "Arguments",
             "One argument per line, passed exactly as written. There is no shell: quotes, variables and redirections have no special meaning.",
             "Timeout (seconds)", "At most %lld seconds, the longest Dicavo waits for one answer.",
             "Cancel", "Save",

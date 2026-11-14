@@ -25,7 +25,8 @@ let rightIconX: CGFloat = 495
 // Brand/06-Brand-Guide/tokens.json
 let paper = NSColor(srgbRed: 0xF3 / 255.0, green: 0xF1 / 255.0, blue: 0xEC / 255.0, alpha: 1)
 let indigo = NSColor(srgbRed: 0x22 / 255.0, green: 0x23 / 255.0, blue: 0x3F / 255.0, alpha: 1)
-let muted = NSColor(srgbRed: 0x77 / 255.0, green: 0x77 / 255.0, blue: 0x81 / 255.0, alpha: 1)
+// #62626C: at least 4.5 : 1 on paper for the 15-point hint (HIG review B-15)
+let muted = NSColor(srgbRed: 0x62 / 255.0, green: 0x62 / 255.0, blue: 0x6C / 255.0, alpha: 1)
 
 func drawCentred(_ text: String, font: NSFont, color: NSColor, top: CGFloat) {
     let attributes: [NSAttributedString.Key: Any] = [.font: font, .foregroundColor: color]

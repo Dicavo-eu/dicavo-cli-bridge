@@ -7,17 +7,18 @@ import AppKit
 /// Unlike Dicavo's own item this one stays a template image. The bridge
 /// has nothing that deserves colour in the menu bar, and a template follows
 /// the menu bar's appearance for free, so every state is told apart by shape:
-/// dimmed while starting, a dot when no tool is usable, struck through when
-/// it does not listen.
+/// dimmed while starting, a dot when no tool is usable, a filled frame while
+/// Dicavo waits on an analysis, struck through when it did not start.
 enum BridgeStatusIcon {
     enum State: Hashable {
         case starting
         case ready
         case noUsableTool
         case failed
-        /// Dicavo waits on an analysis (X16): the glyph with a dot. The dot
-        /// is dimmed every other beat to pulse, never with Reduce Motion.
-        case working(dimmed: Bool)
+        /// Dicavo waits on an analysis: the frame is filled and the prompt
+        /// is cut out of it, so it reads as a different shape and not as
+        /// the idle glyph with a dot added.
+        case working
     }
 
     /// The glyph is drawn on the brand kit's 28 x 20 grid, at the height
@@ -42,6 +43,20 @@ enum BridgeStatusIcon {
     }
 
     private static func makeImage(for state: State) -> NSImage {
+        let image = uncachedImage(for: state, height: symbolHeight)
+        image.accessibilityDescription = accessibilityLabel(for: state)
+        return image
+    }
+
+    /// The same drawing as `image(for:)` but built on every call, at any
+    /// height. Not cached: it exists for callers that need one size of their
+    /// own (larger glyphs, previews) without a new key in the shared cache.
+    static func image(for state: State, height: CGFloat) -> NSImage {
+        uncachedImage(for: state, height: height)
+    }
+
+    private static func uncachedImage(for state: State, height: CGFloat) -> NSImage {
+        let size = NSSize(width: units.width * height / units.height, height: height)
         // Flipped, so the drawing below reads in the SVG's own coordinates.
         let image = NSImage(size: size, flipped: true) { rect in
             guard let context = NSGraphicsContext.current else { return false }
@@ -53,7 +68,6 @@ enum BridgeStatusIcon {
             return true
         }
         image.isTemplate = true
-        image.accessibilityDescription = accessibilityLabel(for: state)
         return image
     }
 
@@ -62,7 +76,7 @@ enum BridgeStatusIcon {
         case .starting: return InterfaceLanguage.text("Dicavo CLI Bridge is starting")
         case .ready: return InterfaceLanguage.text("Dicavo CLI Bridge is ready")
         case .noUsableTool: return InterfaceLanguage.text("Dicavo CLI Bridge found no usable tool")
-        case .failed: return InterfaceLanguage.text("Dicavo CLI Bridge is not listening")
+        case .failed: return InterfaceLanguage.text("Dicavo CLI Bridge did not start")
         case .working: return InterfaceLanguage.text("Dicavo CLI Bridge is working")
         }
     }
@@ -81,14 +95,22 @@ enum BridgeStatusIcon {
             knockOut(NSBezierPath(ovalIn: circle(center, radius: 4)), in: context)
             NSColor.black.setFill()
             NSBezierPath(ovalIn: circle(center, radius: 2.6)).fill()
-        case let .working(dimmed):
-            drawGlyph(alpha: 1)
-            // The same ring cut out of the corner as for no usable tool,
-            // a solid dot inside: something runs.
-            let center = NSPoint(x: 24.5, y: 4.5)
-            knockOut(NSBezierPath(ovalIn: circle(center, radius: 4.4)), in: context)
-            NSColor.black.withAlphaComponent(dimmed ? 0.35 : 1).setFill()
-            NSBezierPath(ovalIn: circle(center, radius: 3)).fill()
+        case .working:
+            // The frame filled and the prompt cut out of it: a different
+            // shape from the hollow frame, not the same glyph with a mark.
+            NSColor.black.setFill()
+            NSBezierPath(
+                roundedRect: NSRect(x: 2.25, y: 2.25, width: 23.5, height: 15.5),
+                xRadius: 4.2,
+                yRadius: 4.2
+            ).fill()
+            context.saveGraphicsState()
+            context.compositingOperation = .clear
+            NSColor.black.setStroke()
+            for path in promptPaths() {
+                path.stroke()
+            }
+            context.restoreGraphicsState()
         case .failed:
             drawGlyph(alpha: 0.45)
             let slash = NSBezierPath()
@@ -114,6 +136,15 @@ enum BridgeStatusIcon {
         color.setStroke()
         frame.stroke()
 
+        color.setStroke()
+        for path in promptPaths() {
+            path.stroke()
+        }
+    }
+
+    /// The `›_` prompt as two stroked paths, shared by the hollow glyph and
+    /// the filled frame that cuts them out, so both stay one shape.
+    private static func promptPaths() -> [NSBezierPath] {
         let chevron = NSBezierPath()
         chevron.move(to: NSPoint(x: 8, y: 7))
         chevron.line(to: NSPoint(x: 11, y: 10))
@@ -121,16 +152,14 @@ enum BridgeStatusIcon {
         chevron.lineWidth = 1.8
         chevron.lineCapStyle = .round
         chevron.lineJoinStyle = .round
-        color.setStroke()
-        chevron.stroke()
 
         let underscore = NSBezierPath()
         underscore.move(to: NSPoint(x: 13.5, y: 13))
         underscore.line(to: NSPoint(x: 19, y: 13))
         underscore.lineWidth = 1.8
         underscore.lineCapStyle = .round
-        color.setStroke()
-        underscore.stroke()
+
+        return [chevron, underscore]
     }
 
     private static func knockOut(_ path: NSBezierPath, in context: NSGraphicsContext) {

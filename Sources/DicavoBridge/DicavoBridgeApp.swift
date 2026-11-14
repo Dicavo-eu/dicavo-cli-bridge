@@ -24,13 +24,41 @@ struct DicavoBridgeApp: App {
                 .labelStyle(.titleAndIcon)
             }
             Text(verbatim: statusLine)
+            // Why it did not start, and the one thing that helps (B-12).
+            if case let .failed(reason) = model.serverState {
+                Text(verbatim: reason).font(.caption)
+                Button(t("Try Again")) {
+                    model.retryStart()
+                }
+            }
+            // No tool signed in: the sign-in command is one click away, where
+            // someone who is stuck looks first (B-12).
+            if iconState == .noUsableTool {
+                if model.toolStatuses.contains(where: { $0.executablePath != nil }) {
+                    ForEach(signInNeededStatuses, id: \.tool) { status in
+                        signInButton(for: status)
+                    }
+                } else {
+                    Button(t("Local command…")) {
+                        localCommandWindow.show(model: model)
+                    }
+                }
+                Button(t("Check tools again")) {
+                    Task { await model.refreshTools() }
+                }
+                .disabled(model.isRefreshingTools)
+            }
             // What Dicavo waits on (X16): one line per analysis, built when
             // the analysis starts.
             ForEach(model.workingTasks) { task in
                 Text(verbatim: taskLine(task))
             }
+            // The full text does not fit a menu item; it goes to an alert
+            // (B-11).
             if let error = model.descriptorError {
-                Text(verbatim: error).font(.caption)
+                Button(t("Dicavo Can’t See the Bridge – Details…")) {
+                    updates.showDescriptorProblem(error)
+                }
             }
             Divider()
             Menu(t("AI tools (\(usableToolCount))")) {
@@ -45,11 +73,8 @@ struct DicavoBridgeApp: App {
                         if let path = line.path { Text(verbatim: path) }
                     }
                     .disabled(true)
-                    if status.executablePath != nil, status.isAuthenticated == false, let command = status.loginCommand {
-                        Button(t("Copy sign-in command for \(status.tool.displayName)")) {
-                            NSPasteboard.general.clearContents()
-                            NSPasteboard.general.setString(command, forType: .string)
-                        }
+                    if status.executablePath != nil, status.isAuthenticated == false, status.loginCommand != nil {
+                        signInButton(for: status)
                     }
                 }
                 Button(t("Local command…")) {
@@ -72,8 +97,7 @@ struct DicavoBridgeApp: App {
                 updates.showAbout()
             }
             Button(t("Quit Dicavo CLI Bridge")) {
-                model.stop()
-                NSApplication.shared.terminate(nil)
+                quit()
             }
             .keyboardShortcut("q")
         } label: {
@@ -100,23 +124,64 @@ struct DicavoBridgeApp: App {
         model.toolStatuses.filter(\.isUsable).count
     }
 
+    /// The tools that are installed but not signed in: the menu offers their
+    /// sign-in command on its first level too.
+    private var signInNeededStatuses: [BridgeToolStatus] {
+        model.toolStatuses.filter {
+            $0.executablePath != nil && $0.isAuthenticated == false && $0.loginCommand != nil
+        }
+    }
+
+    /// "Copy sign-in command for Claude Code": the same item in the AI tools
+    /// submenu and on the menu's first level.
+    private func signInButton(for status: BridgeToolStatus) -> some View {
+        Button(t("Copy sign-in command for \(status.tool.displayName)")) {
+            guard let command = status.loginCommand else { return }
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(command, forType: .string)
+        }
+    }
+
+    /// Quitting during an analysis loses it, so it is asked first (B-13).
+    private func quit() {
+        guard let task = model.workingTasks.first else {
+            model.stop()
+            NSApplication.shared.terminate(nil)
+            return
+        }
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        let alert = NSAlert()
+        alert.messageText = t("Quit Dicavo CLI Bridge?")
+        alert.informativeText = InterfaceLanguage.text("Dicavo is waiting for an AI analysis with \(task.tool.displayName). If you quit the bridge, the analysis stops and has to be started again in Dicavo. The recording and transcript stay saved.")
+        // The destructive button gets no Return key: a stray key must not
+        // throw the analysis away. Esc answers Cancel, as it does elsewhere.
+        let quitButton = alert.addButton(withTitle: t("Quit"))
+        quitButton.keyEquivalent = ""
+        quitButton.hasDestructiveAction = true
+        let cancelButton = alert.addButton(withTitle: t("Cancel"))
+        cancelButton.keyEquivalent = "\u{1b}"
+        if alert.runModal() == .alertFirstButtonReturn {
+            model.stop()
+            NSApplication.shared.terminate(nil)
+        }
+    }
+
     private var iconState: BridgeStatusIcon.State {
         switch model.serverState {
         case .starting: return .starting
         case .listening:
-            if !model.workingTasks.isEmpty { return .working(dimmed: false) }
+            if !model.workingTasks.isEmpty { return .working }
             return model.toolStatuses.contains(where: \.isUsable) ? .ready : .noUsableTool
         case .failed: return .failed
         }
     }
 
-    /// "AI analysis with Claude Code · Sprint retro · part 3 of 5 · since 10:12".
-    /// The title is shown only when Dicavo sent it.
+    /// "AI analysis with Claude Code · part 3 of 5 · since 10:12 · Sprint retro".
+    /// The title is shown only when Dicavo sent it, and last: it is what a
+    /// menu item can afford to lose, so it is shortened and the state stays
+    /// readable (B-11).
     private func taskLine(_ task: BridgeActiveTask) -> String {
         var line = InterfaceLanguage.text("AI analysis with \(task.tool.displayName)")
-        if let title = task.info?.title {
-            line += " · " + title
-        }
         if let part = task.info?.part, let count = task.info?.partCount {
             line += " · " + InterfaceLanguage.text("part \(part) of \(count)")
         }
@@ -127,6 +192,9 @@ struct DicavoBridgeApp: App {
             Date.FormatStyle(date: .omitted, time: .shortened).locale(InterfaceLanguage.locale)
         )
         line += " · " + InterfaceLanguage.text("since \(started)")
+        if let title = task.info?.title {
+            line += " · " + (title.count > 40 ? String(title.prefix(39)) + "…" : title)
+        }
         return line
     }
 
@@ -135,7 +203,7 @@ struct DicavoBridgeApp: App {
         switch updates.phase {
         case let .available(manifest):
             Button(t("Install version \(manifest.version)…")) {
-                Task { await updates.install(manifest) }
+                updates.offerInstall(manifest)
             }
         case let .requiresNewerSystem(manifest):
             Text(verbatim: t("Version \(manifest.version) requires macOS \(manifest.minimumSystemVersion)"))
@@ -147,8 +215,12 @@ struct DicavoBridgeApp: App {
             Text(verbatim: t("Version \(manifest.version) installs when the current analysis finishes"))
         case let .installing(manifest):
             Text(verbatim: t("Installing version \(manifest.version)…"))
-        case let .failed(message):
-            Text(verbatim: t("Update: \(message)")).font(.caption)
+        case let .installedPendingRestart(manifest):
+            Text(verbatim: t("Version \(manifest.version) is installed – reopen the bridge"))
+        case .failed:
+            Button(t("Update Failed – Details…")) {
+                updates.showUpdateProblem()
+            }
             Button(t("Open download page")) {
                 updates.openDownloadPage()
             }
@@ -176,17 +248,20 @@ struct DicavoBridgeApp: App {
         InterfaceLanguage.text(text)
     }
 
+    /// Said in words, the same state the icon shows; the port and the
+    /// failure's own text stay out of the way here (B-03).
     private var statusLine: String {
-        switch model.serverState {
+        switch iconState {
         case .starting:
             return InterfaceLanguage.text("Starting…")
-        case .listening where !model.workingTasks.isEmpty:
+        case .ready:
+            return InterfaceLanguage.text("Ready for Dicavo")
+        case .working:
             return InterfaceLanguage.text("Dicavo CLI Bridge is working")
-        case let .listening(port):
-            // A port is not a quantity: no digit grouping ("48 123").
-            return InterfaceLanguage.text("Listening on 127.0.0.1:\(String(port)) for Dicavo")
-        case let .failed(reason):
-            return InterfaceLanguage.text("Not listening: \(reason)")
+        case .noUsableTool:
+            return InterfaceLanguage.text("No AI tool is ready")
+        case .failed:
+            return InterfaceLanguage.text("Dicavo CLI Bridge did not start")
         }
     }
 

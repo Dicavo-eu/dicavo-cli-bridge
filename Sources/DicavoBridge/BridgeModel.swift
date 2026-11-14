@@ -119,6 +119,14 @@ final class BridgeModel: ObservableObject {
         }
     }
 
+    /// Starts the bridge again after a failed start: the server left from that
+    /// attempt is stopped and dropped, and the menu's `onChange` starts a new one.
+    func retryStart() {
+        server?.stop()
+        server = nil
+        serverState = .starting
+    }
+
     /// Whether Dicavo is waiting on the bridge right now.
     var hasActiveRequests: Bool {
         (server?.activeRequestCount ?? 0) > 0
