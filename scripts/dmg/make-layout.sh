@@ -33,8 +33,16 @@ APP_NAME="Dicavo CLI Bridge.app"
 
 WORK="$(mktemp -d /private/tmp/Dicavo-dmg-layout.XXXXXX)"
 MOUNTPOINT=""
+# Hiding the status bar of one window hides it in every Finder window: the
+# user's own setting is put back afterwards.
+STATUS_BAR="$(defaults read com.apple.finder ShowStatusBar 2>/dev/null || echo unset)"
 cleanup() {
     local status=$?
+    if [ "$STATUS_BAR" = "unset" ]; then
+        defaults delete com.apple.finder ShowStatusBar 2>/dev/null || true
+    else
+        defaults write com.apple.finder ShowStatusBar -bool "$([ "$STATUS_BAR" = 1 ] && echo true || echo false)"
+    fi
     [ -n "$MOUNTPOINT" ] && hdiutil detach "$MOUNTPOINT" -quiet 2>/dev/null || true
     rm -rf "$WORK"
     exit $status
@@ -71,8 +79,9 @@ on run argv
         set current view of theWindow to icon view
         set toolbar visible of theWindow to false
         set statusbar visible of theWindow to false
-        -- 660 x 400 points of content; the extra height is the title bar.
-        set bounds of theWindow to {200, 120, 860, 548}
+        -- 660 x 400 points of content; the extra 32 points are the title bar
+        -- of a window without a toolbar (macOS 27).
+        set bounds of theWindow to {200, 120, 860, 552}
         set viewOptions to icon view options of theWindow
         set arrangement of viewOptions to not arranged
         set icon size of viewOptions to 128
@@ -88,8 +97,10 @@ end run
 APPLESCRIPT
 
 # Finder writes .DS_Store on its own schedule after the window closes.
-for _ in $(seq 1 20); do
-    [ -f "$MOUNTPOINT/.DS_Store" ] && grep -q "pBBk\|backgroundImageAlias" "$MOUNTPOINT/.DS_Store" && break
+# The window record (bwsp) can arrive after the background, so wait for both.
+for _ in $(seq 1 40); do
+    [ -f "$MOUNTPOINT/.DS_Store" ] && grep -q "pBBk\|backgroundImageAlias" "$MOUNTPOINT/.DS_Store" \
+        && grep -q "bwsp" "$MOUNTPOINT/.DS_Store" && break
     sleep 0.5
 done
 grep -q "pBBk\|backgroundImageAlias" "$MOUNTPOINT/.DS_Store" 2>/dev/null \
