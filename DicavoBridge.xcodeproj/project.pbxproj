@@ -190,6 +190,10 @@
 				de,
 				pl,
 				sk,
+				es,
+				fr,
+				it,
+				"pt-PT",
 			);
 			mainGroup = EDA6D6223944636B9C5B54AA /* Root */;
 			productRefGroup = BFE00B156DCFC34C4751A6E5 /* Products */;

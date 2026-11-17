@@ -17,6 +17,13 @@
 #
 # The layout refers to the background by the volume name, so the image must
 # be mounted under the same name that make-dmg.sh gives it (VOLUME_NAME).
+#
+# The stored window, 660 x 400 points of content, is what a user sees when
+# Finder opens the image in a window of its own. With "Open folders in tabs
+# instead of new windows" on (the macOS default) and another Finder window
+# open, the image opens as a tab of that window and takes its size and bars;
+# nothing in .DS_Store can prevent that. The path bar and status bar follow
+# the user's own Finder settings in every window, whatever the layout says.
 
 set -euo pipefail
 

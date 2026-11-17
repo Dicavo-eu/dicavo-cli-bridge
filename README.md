@@ -84,7 +84,7 @@ scripts/make-dmg.sh --ref HEAD
 
 `Config/Signing.local.xcconfig` is ignored by Git. `scripts/make-dmg.sh --distribution --notary-profile <name>` produces a DMG signed with Developer ID and notarized by Apple, and reads the identity from your login Keychain.
 
-The image opens as an installer window: a background drawn by `scripts/dmg/render-background.swift` and Finder's layout in `scripts/dmg/DS_Store`, which only `scripts/dmg/make-layout.sh` regenerates (it drives Finder, so it needs a logged-in session). The layout finds the background through the volume name, which is therefore always `Dicavo CLI Bridge`, without a version.
+The image opens as an installer window: a background drawn by `scripts/dmg/render-background.swift` and Finder's layout in `scripts/dmg/DS_Store`, which only `scripts/dmg/make-layout.sh` regenerates (it drives Finder, so it needs a logged-in session). The layout finds the background through the volume name, which is therefore always `Dicavo CLI Bridge`, without a version. Finder opens the image in a window of its own only when "Open folders in tabs instead of new windows" is off or no Finder window is open; otherwise the image becomes a tab and takes the size and bars of the window that holds it. The path bar and status bar follow the user's own Finder settings in every window.
 
 A bridge you sign with your own team cannot talk to Dicavo from the App Store. The App Group `H8LTS9AT3K.cz.smartbrains.dicavo` and the update check belong to the Team ID that signs Dicavo, and macOS shares the group only with apps from that team. You can still run your build, read the code and run the tests.
 

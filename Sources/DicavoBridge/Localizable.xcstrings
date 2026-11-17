@@ -6,7 +6,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spustitelný soubor AI nástroje nebyl nalezen na %@."
+            "value": "Spustitelný soubor AI nástroje nebyl nalezen v umístění %@."
           }
         },
         "de": {
@@ -15,16 +15,40 @@
             "value": "Die ausführbare Datei des KI-Tools wurde nicht unter %@ gefunden."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha encontrado el ejecutable de la herramienta de IA en %@."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’exécutable de l’outil d’IA est introuvable à l’emplacement %@."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’eseguibile dello strumento IA non è stato trovato in %@."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie znaleziono pliku wykonywalnego narzędzia AI w lokalizacji %@."
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O executável da ferramenta de IA não foi encontrado em %@."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spustiteľný súbor AI nástroja sa nenašiel na %@."
+            "value": "Spustiteľný súbor AI nástroja sa nenašiel na ceste %@."
           }
         }
       }
@@ -43,10 +67,34 @@
             "value": "Das ausgewählte KI-Tool ist nicht ausführbar: %@."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La herramienta de IA seleccionada no es ejecutable: %@."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’outil d’IA sélectionné n’est pas exécutable : %@."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo strumento IA selezionato non è eseguibile: %@."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wybrane narzędzie AI nie jest wykonywalne: %@."
+            "value": "Nie można uruchomić wybranego narzędzia AI: %@."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A ferramenta de IA selecionada não é executável: %@."
           }
         },
         "sk": {
@@ -68,13 +116,37 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ konnte nicht gestartet werden: %2$@"
+            "value": "%@ konnte nicht gestartet werden: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido iniciar %@: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ n’a pas pu être démarré : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ non può essere avviato: %2$@"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można uruchomić %1$@: %2$@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível iniciar %@: %@"
           }
         },
         "sk": {
@@ -99,10 +171,34 @@
             "value": "Keine Diagnoseausgabe."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay salida de diagnóstico."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune sortie de diagnostic."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun output diagnostico."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Brak danych diagnostycznych."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem saída de diagnóstico."
           }
         },
         "sk": {
@@ -124,7 +220,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Die Anmeldung bei %1$@ ist abgelaufen oder ungültig. Öffnen Sie Terminal und führen Sie Folgendes aus:\n%2$@\nSchließen Sie die Anmeldung ab und wiederholen Sie dann die KI-Analyse. Ihre Aufnahme und das Transkript sind gespeichert."
+            "value": "Die Anmeldung bei %@ ist abgelaufen oder ungültig. Öffnen Sie Terminal und führen Sie Folgendes aus:\n%@\nSchließen Sie die Anmeldung ab und wiederholen Sie dann die KI-Analyse. Ihre Aufnahme und das Transkript sind gespeichert."
           }
         },
         "en": {
@@ -133,10 +229,34 @@
             "value": "%@ sign-in has expired or is invalid. Open Terminal and run:\n%@\nComplete the sign-in, then retry AI analysis. Your recording and transcript are saved."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El inicio de sesión de %@ ha caducado o no es válido. Abre Terminal y ejecuta:\n%@\nCompleta el inicio de sesión y vuelve a intentar el análisis de IA. Tu grabación y la transcripción están guardadas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La connexion à %@ a expiré ou n’est pas valide. Ouvrez Terminal et exécutez :\n%@\nTerminez la connexion, puis relancez l’analyse IA. Votre enregistrement et sa transcription sont conservés."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’accesso a %1$@ è scaduto o non è valido. Apri Terminale ed esegui:\n%2$@\nCompleta l’accesso, poi riprova l’analisi IA. La registrazione e la trascrizione sono salvate."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Logowanie do %1$@ wygasło lub jest nieprawidłowe. Otwórz Terminal i uruchom:\n%2$@\nDokończ logowanie, a następnie ponów analizę AI. Nagranie i transkrypcja są zapisane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A sessão em %@ expirou ou é inválida. Abra o Terminal e execute:\n%@\nConclua o início de sessão e tente novamente a análise de IA. A gravação e a transcrição estão guardadas."
           }
         },
         "sk": {
@@ -161,10 +281,34 @@
             "value": "Die Analyse mit %@ hat das Zeitlimit überschritten."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El análisis con %@ ha agotado el tiempo de espera."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analyse avec %@ a dépassé le délai imparti."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analisi con %@ ha superato il tempo massimo."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Analiza za pomocą %@ przekroczyła limit czasu."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A análise com %@ excedeu o tempo limite."
           }
         },
         "sk": {
@@ -189,10 +333,34 @@
             "value": "Ein Transkriptabschnitt oder eine Teilanalyse ist zu groß, um sicher verarbeitet zu werden."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un segmento de la transcripción o un análisis parcial es demasiado grande para procesarlo de forma segura."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un segment de transcription ou une analyse partielle est trop volumineux pour être traité en toute sécurité."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un segmento della trascrizione o un’analisi parziale ha dimensioni eccessive per l’elaborazione in sicurezza."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Fragment transkrypcji lub częściowa analiza ma zbyt duży rozmiar, aby można było bezpiecznie kontynuować przetwarzanie."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um segmento da transcrição ou uma análise parcial é demasiado grande para ser processado em segurança."
           }
         },
         "sk": {
@@ -217,10 +385,34 @@
             "value": "Das KI-Tool hat eine leere Analyse zurückgegeben."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La herramienta de IA ha devuelto un análisis vacío."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’outil d’IA a renvoyé une analyse vide."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo strumento IA ha restituito un’analisi vuota."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Narzędzie AI zwróciło pustą analizę."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A ferramenta de IA devolveu uma análise vazia."
           }
         },
         "sk": {
@@ -245,10 +437,34 @@
             "value": "Das KI-Tool hat eine zu große Analyse zurückgegeben."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La herramienta de IA ha devuelto un análisis demasiado grande."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’outil d’IA a renvoyé une analyse trop volumineuse."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo strumento IA ha restituito un’analisi troppo grande."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Narzędzie AI zwróciło zbyt dużą analizę."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A ferramenta de IA devolveu uma análise demasiado grande."
           }
         },
         "sk": {
@@ -273,10 +489,34 @@
             "value": "Die KI-Analyse enthält eine reservierte Dicavo-Markierung."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El análisis de IA contiene un marcador reservado de Dicavo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analyse IA contient un marqueur réservé de Dicavo."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analisi IA contiene un contrassegno riservato di Dicavo."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Analiza AI zawiera zastrzeżony znacznik Dicavo."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A análise de IA contém um marcador reservado do Dicavo."
           }
         },
         "sk": {
@@ -301,10 +541,34 @@
             "value": "Die strukturierte KI-Analyse konnte nicht decodiert werden: %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido decodificar el análisis de IA estructurado: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analyse IA structurée n’a pas pu être décodée : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile decodificare l’analisi IA strutturata: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można zdekodować ustrukturyzowanej analizy AI: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível descodificar a análise de IA estruturada: %@"
           }
         },
         "sk": {
@@ -320,7 +584,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ posílá přepis externí službě. Potvrďte to v Nastavení → AI, teprve potom může analýza běžet. Nic se neodeslalo."
+            "value": "%@ posílá přepis externí službě. Potvrďte to v Nastavení → AI, aby bylo možné spustit analýzu. Nic se neodeslalo."
           }
         },
         "de": {
@@ -329,10 +593,40 @@
             "value": "%@ sendet das Transkript an einen externen Dienst. Bestätigen Sie das unter Einstellungen → KI, bevor die Analyse ausgeführt werden kann. Es wurde nichts gesendet."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ sends the transcript to an external service. Confirm this in Settings → AI before analysis can run. Nothing was sent."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ envía la transcripción a un servicio externo. Confírmalo en Ajustes → IA antes de que pueda ejecutarse el análisis. No se ha enviado nada."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ envoie la transcription à un service externe. Confirmez-le dans Réglages → IA avant de pouvoir lancer l’analyse. Rien n’a été envoyé."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ invia la trascrizione a un servizio esterno. Confermalo in Impostazioni → IA prima di avviare l’analisi. Non è stato inviato nulla."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ wysyła transkrypcję do zewnętrznej usługi. Potwierdź to w Ustawieniach → AI, aby można było uruchomić analizę. Nic nie zostało wysłane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ envia a transcrição para um serviço externo. Confirme isso em Definições → IA para que a análise possa ser executada. Nada foi enviado."
           }
         },
         "sk": {
@@ -357,10 +651,34 @@
             "value": "Dicavo Pro ist am %@ abgelaufen. "
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo Pro finalizó el %@. "
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo Pro a pris fin le %@. "
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo Pro è terminato il %@. "
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo Pro wygasło %@. "
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo Pro terminou a %@. "
           }
         },
         "sk": {
@@ -385,10 +703,34 @@
             "value": "Die Cloud-KI-Analyse erfordert Dicavo Pro. Es wurde nichts gesendet; Ihre Aufnahme und das Transkript sind gespeichert."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El análisis de IA en la nube requiere Dicavo Pro. No se ha enviado nada; tu grabación y la transcripción están guardadas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analyse IA dans le cloud nécessite Dicavo Pro. Rien n’a été envoyé ; votre enregistrement et sa transcription sont conservés."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analisi IA nel cloud richiede Dicavo Pro. Non è stato inviato nulla; la registrazione e la trascrizione sono salvate."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Analiza AI w chmurze wymaga Dicavo Pro. Nic nie zostało wysłane; nagranie i transkrypcja są zapisane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A análise de IA na nuvem requer o Dicavo Pro. Nada foi enviado; a gravação e a transcrição estão guardadas."
           }
         },
         "sk": {
@@ -413,10 +755,34 @@
             "value": "Die Analyse über Dicavo CLI Bridge erfordert Dicavo Pro. Es wurde nichts gesendet; Ihre Aufnahme und das Transkript sind gespeichert."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El análisis con Dicavo CLI Bridge requiere Dicavo Pro. No se ha enviado nada; tu grabación y la transcripción están guardadas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analyse avec Dicavo CLI Bridge nécessite Dicavo Pro. Rien n’a été envoyé ; votre enregistrement et sa transcription sont conservés."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analisi con Dicavo CLI Bridge richiede Dicavo Pro. Non è stato inviato nulla; la registrazione e la trascrizione sono salvate."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Analiza przez Dicavo CLI Bridge wymaga Dicavo Pro. Nic nie zostało wysłane; nagranie i transkrypcja są zapisane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A análise com o Dicavo CLI Bridge requer o Dicavo Pro. Nada foi enviado; a gravação e a transcrição estão guardadas."
           }
         },
         "sk": {
@@ -447,10 +813,34 @@
             "value": "This feature requires Dicavo Pro. Nothing was sent; your recording and transcript are saved."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta función requiere Dicavo Pro. No se ha enviado nada; tu grabación y la transcripción están guardadas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cette fonction nécessite Dicavo Pro. Rien n’a été envoyé ; votre enregistrement et sa transcription sont conservés."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questa funzione richiede Dicavo Pro. Non è stato inviato nulla; la registrazione e la trascrizione sono salvate."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Ta funkcja wymaga Dicavo Pro. Nic nie zostało wysłane; nagranie i transkrypcja są zapisane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta funcionalidade requer o Dicavo Pro. Nada foi enviado; a gravação e a transcrição estão guardadas."
           }
         },
         "sk": {
@@ -475,10 +865,34 @@
             "value": "Für %@ ist kein API-Schlüssel gespeichert. Geben Sie einen unter Einstellungen → KI ein. Es wurde nichts gesendet."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ninguna clave de API guardada para %@. Introduce una en Ajustes → IA. No se ha enviado nada."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune clé API n’est enregistrée pour %@. Saisissez-en une dans Réglages → IA. Rien n’a été envoyé."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non è stata salvata alcuna chiave API per %@. Inseriscine una in Impostazioni → IA. Non è stato inviato nulla."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Brak zapisanego klucza API dla %@. Wpisz go w Ustawieniach → AI. Nic nie zostało wysłane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não há nenhuma chave de API guardada para %@. Introduza uma em Definições → IA. Nada foi enviado."
           }
         },
         "sk": {
@@ -509,10 +923,34 @@
             "value": "%@ rejected the API key. Check the key in Settings → AI and make sure it has access to the selected model."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ha rechazado la clave de API. Comprueba la clave en Ajustes → IA y asegúrate de que tiene acceso al modelo seleccionado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a refusé la clé API. Vérifiez la clé dans Réglages → IA et assurez-vous qu’elle a accès au modèle sélectionné."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ha rifiutato la chiave API. Controlla la chiave in Impostazioni → IA e verifica che abbia accesso al modello selezionato."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ odrzucił klucz API. Sprawdź klucz w Ustawieniach → AI oraz to, czy ma dostęp do wybranego modelu."
+            "value": "%@ odrzucił klucz API. Sprawdź klucz w Ustawieniach → AI i upewnij się, że zapewnia dostęp do wybranego modelu."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ rejeitou a chave de API. Verifique a chave em Definições → IA e certifique-se de que tem acesso ao modelo selecionado."
           }
         },
         "sk": {
@@ -537,10 +975,34 @@
             "value": "%@ hat keine gültige Basis-URL. Geben Sie eine unter Einstellungen → KI ein."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ no tiene una URL base válida. Introduce una en Ajustes → IA."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ n’a pas d’URL de base valide. Saisissez-en une dans Réglages → IA."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ non ha un URL di base valido. Inseriscine uno in Impostazioni → IA."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ nie ma prawidłowego bazowego adresu URL. Wpisz go w Ustawieniach → AI."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ não tem um URL de base válido. Introduza um em Definições → IA."
           }
         },
         "sk": {
@@ -562,13 +1024,37 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ konnte nicht erreicht werden: %2$@"
+            "value": "%@ konnte nicht erreicht werden: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido conectar con %1$@: %2$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ n’a pas pu être contacté : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile raggiungere %@: %@"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można połączyć się z %1$@: %2$@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível contactar %1$@: %2$@"
           }
         },
         "sk": {
@@ -593,10 +1079,34 @@
             "value": "%@ über Dicavo CLI Bridge"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ mediante Dicavo CLI Bridge"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ via Dicavo CLI Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ tramite Dicavo CLI Bridge"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ przez Dicavo CLI Bridge"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ através do Dicavo CLI Bridge"
           }
         },
         "sk": {
@@ -612,7 +1122,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nástroj %@ právě dosáhl limitu využití. Nahrávka, přepis i poznámka jsou uložené; AI analýzu zkuste znovu později."
+            "value": "Nástroj %@ právě dosáhl limitu využití. Nahrávka, přepis i zápis jsou uložené; AI analýzu zkuste znovu později."
           }
         },
         "de": {
@@ -621,16 +1131,40 @@
             "value": "Für %@ ist das Nutzungslimit gerade überschritten. Aufnahme, Transkript und Notiz sind gespeichert; wiederholen Sie die KI-Analyse später."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ha superado su límite de uso en este momento. La grabación, la transcripción y la nota están guardadas; vuelve a intentar el análisis de IA más tarde."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a dépassé sa limite d’utilisation pour l’instant. L’enregistrement, la transcription et la note sont conservés ; relancez l’analyse IA plus tard."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ha superato il limite di utilizzo in questo momento. La registrazione, la trascrizione e la nota sono salvate; riprova l’analisi IA in seguito."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Limit użycia %@ został chwilowo przekroczony. Nagranie, transkrypcja i notatka są zapisane. Ponów analizę AI później."
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ excedeu o limite de utilização. A gravação, a transcrição e a nota estão guardadas; tente novamente a análise de IA mais tarde."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pre %@ je momentálne vyčerpaný limit používania. Nahrávka, prepis aj poznámka sú uložené; AI analýzu skúste znova neskôr."
+            "value": "Pre %@ je momentálne vyčerpaný limit používania. Nahrávka, prepis aj zápis sú uložené; AI analýzu skúste znova neskôr."
           }
         }
       }
@@ -640,7 +1174,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ hlásí překročení limitu využití: %2$@ Nahrávka, přepis i poznámka jsou uložené; AI analýzu zkuste znovu později."
+            "value": "%1$@ hlásí překročení limitu využití: %2$@ Nahrávka, přepis i zápis jsou uložené; AI analýzu zkuste znovu později."
           }
         },
         "de": {
@@ -649,16 +1183,40 @@
             "value": "%@ meldet ein Nutzungslimit: %@ Aufnahme, Transkript und Notiz sind gespeichert; wiederholen Sie die KI-Analyse später."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ indica un límite de uso: %@ La grabación, la transcripción y la nota están guardadas; vuelve a intentar el análisis de IA más tarde."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ signale une limite d’utilisation : %@ L’enregistrement, la transcription et la note sont conservés ; relancez l’analyse IA plus tard."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ segnala un limite di utilizzo: %@ La registrazione, la trascrizione e la nota sono salvate; riprova l’analisi IA in seguito."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ zgłasza przekroczenie limitu użycia: %@ Nagranie, transkrypcja i notatka są zapisane. Ponów analizę AI później."
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ comunica um limite de utilização: %@ A gravação, a transcrição e a nota estão guardadas; tente novamente a análise de IA mais tarde."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ hlási limit používania: %2$@ Nahrávka, prepis aj poznámka sú uložené; AI analýzu skúste znova neskôr."
+            "value": "%1$@ hlási limit používania: %2$@ Nahrávka, prepis aj zápis sú uložené; AI analýzu skúste znova neskôr."
           }
         }
       }
@@ -677,10 +1235,34 @@
             "value": "%@ hat die Analyse dieser Aufnahme abgelehnt."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ se ha negado a analizar esta grabación."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a refusé d’analyser cet enregistrement."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ha rifiutato di analizzare questa registrazione."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ odmówił analizy tego nagrania."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ recusou analisar esta gravação."
           }
         },
         "sk": {
@@ -705,10 +1287,34 @@
             "value": "Apple Intelligence ist nicht verfügbar: %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence no está disponible: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence n’est pas disponible : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence non è disponibile: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence jest niedostępna: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Apple Intelligence não está disponível: %@"
           }
         },
         "sk": {
@@ -733,10 +1339,34 @@
             "value": "Apple Intelligence unterstützt %@ nicht als Ausgabesprache. Wählen Sie eine andere Ausgabesprache oder ein anderes KI-Tool."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence no admite %@ como idioma de salida. Elige otro idioma de salida u otra herramienta de IA."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence ne prend pas en charge %@ comme langue de sortie. Choisissez une autre langue de sortie ou un autre outil d’IA."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence non supporta %@ come lingua di output. Scegli un’altra lingua di output o un altro strumento IA."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence nie obsługuje języka %@ jako języka wyniku. Wybierz inny język wyniku lub inne narzędzie AI."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Apple Intelligence não suporta %@ como idioma de saída. Escolha outro idioma de saída ou outra ferramenta de IA."
           }
         },
         "sk": {
@@ -761,10 +1391,34 @@
             "value": "Dicavo CLI Bridge läuft nicht auf diesem Mac. Starten Sie die Bridge und wiederholen Sie dann die KI-Analyse."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge no se está ejecutando en este Mac. Inícialo y vuelve a intentar el análisis de IA."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge n’est pas en cours d’exécution sur ce Mac. Lancez-le, puis relancez l’analyse IA."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge non è in esecuzione su questo Mac. Avvialo, poi riprova l’analisi IA."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge nie działa na tym Macu. Uruchom go, a następnie ponów analizę AI."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge não está a ser executado neste Mac. Inicie-o e tente novamente a análise de IA."
           }
         },
         "sk": {
@@ -792,13 +1446,37 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dicavo CLI Bridge cannot run %@ on this Mac: it is not installed or ready. In Settings → AI, choose a model for a tool the bridge lists under Usable tools, then retry AI analysis."
+            "value": "Dicavo CLI Bridge cannot run %@ on this Mac: it is not installed or ready. In Settings → AI, choose a model for a tool the Bridge lists under Usable tools, then retry AI analysis."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge no puede ejecutar %@ en este Mac: no está instalado o no está listo. En Ajustes → IA, elige un modelo para una herramienta que el Bridge muestre en “Herramientas utilizables” y vuelve a intentar el análisis de IA."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge ne peut pas exécuter %@ sur ce Mac : il n’est pas installé ou n’est pas prêt. Dans Réglages → IA, choisissez un modèle pour un outil que le Bridge répertorie sous « Outils utilisables », puis relancez l’analyse IA."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge non può eseguire %@ su questo Mac: non è installato o non è pronto. In Impostazioni → IA, scegli un modello per uno strumento che il Bridge elenca sotto Strumenti utilizzabili, poi riprova l’analisi IA."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dicavo CLI Bridge nie może uruchomić %@ na tym Macu: narzędzie nie jest zainstalowane lub gotowe. W Ustawieniach → AI wybierz model narzędzia wymienionego przez Bridge w sekcji Dostępne narzędzia, a następnie ponów analizę AI."
+            "value": "Dicavo CLI Bridge nie może uruchomić %@ na tym Macu: narzędzie nie jest zainstalowane lub nie jest gotowe. W Ustawieniach → AI wybierz model narzędzia wymienionego przez Bridge w sekcji Dostępne narzędzia, a następnie ponów analizę AI."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge não consegue executar %@ neste Mac: não está instalado ou não está pronto. Em Definições → IA, escolha um modelo para uma ferramenta que o Bridge apresente em Ferramentas utilizáveis e tente novamente a análise de IA."
           }
         },
         "sk": {
@@ -811,16 +1489,34 @@
     },
     "%@ failed with exit code %lld: %@": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ skončil s chybovým kódom %2$lld: %3$@"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$@ skončil s návratovým kódem %2$lld: %3$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ ist mit Exit-Code %2$lld fehlgeschlagen: %3$@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ ha fallado con el código de salida %2$lld: %3$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a échoué avec le code de sortie %lld : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ non è riuscito, codice di uscita %lld: %@"
           }
         },
         "pl": {
@@ -829,26 +1525,50 @@
             "value": "%1$@ zakończył działanie z kodem błędu %2$lld: %3$@"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ wurde mit dem Fehlercode %2$lld beendet: %3$@"
+            "value": "%1$@ falhou com o código de saída %2$lld: %3$@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ skončil s návratovým kódom %2$lld: %3$@"
           }
         }
       }
     },
     "%@ responded with HTTP %lld: %@": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ odpovedal kódom HTTP %2$lld: %3$@"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$@ odpověděl kódem HTTP %2$lld: %3$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ antwortete mit HTTP %lld: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ ha respondido con HTTP %2$lld: %3$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a répondu avec le code HTTP %lld : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ha risposto con HTTP %lld: %@"
           }
         },
         "pl": {
@@ -857,26 +1577,50 @@
             "value": "%1$@ odpowiedział kodem HTTP %2$lld: %3$@"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ antwortete mit HTTP %2$lld: %3$@"
+            "value": "%1$@ respondeu com HTTP %2$lld: %3$@"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ odpovedal kódom HTTP %2$lld: %3$@"
           }
         }
       }
     },
     "AI analysis uses a locally installed command-line tool that this device cannot run. Transfer the recording to your Mac to analyze it there.": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AI analýza využíva lokálne nainštalovaný nástroj príkazového riadka, ktorý toto zariadenie nedokáže spustiť. Preneste nahrávku do Macu a analyzujte ju tam."
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "AI analýza probíhá pomocí lokálně nainstalovaného nástroje příkazového řádku, který toto zařízení nedokáže spustit. Přeneste nahrávku do Macu a analyzujte ji tam."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die KI-Analyse läuft über ein lokal installiertes Befehlszeilen-Tool, das dieses Gerät nicht ausführen kann. Übertragen Sie die Aufnahme auf Ihren Mac und analysieren Sie sie dort."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El análisis de IA usa una herramienta de línea de comandos instalada localmente que este dispositivo no puede ejecutar. Transfiere la grabación a tu Mac para analizarla allí."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analyse IA utilise un outil en ligne de commande installé localement que cet appareil ne peut pas exécuter. Transférez l’enregistrement sur votre Mac pour l’y analyser."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’analisi IA usa uno strumento da riga di comando installato localmente che questo dispositivo non può eseguire. Trasferisci la registrazione sul tuo Mac per analizzarla lì."
           }
         },
         "pl": {
@@ -885,26 +1629,50 @@
             "value": "Analiza AI korzysta z lokalnie zainstalowanego narzędzia wiersza poleceń, którego to urządzenie nie może uruchomić. Przenieś nagranie na Maca i przeanalizuj je tam."
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Die KI-Analyse läuft über ein lokal installiertes Befehlszeilen-Tool, das dieses Gerät nicht starten kann. Übertragen Sie die Aufnahme auf den Mac und analysieren Sie sie dort."
+            "value": "A análise de IA utiliza uma ferramenta de linha de comandos instalada localmente que este dispositivo não consegue executar. Transfira a gravação para o seu Mac para a analisar aí."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analýza využíva lokálne nainštalovaný nástroj príkazového riadka, ktorý toto zariadenie nedokáže spustiť. Preneste nahrávku do Macu a analyzujte ju tam."
           }
         }
       }
     },
     "requires macOS 26 or newer": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "vyžaduje macOS 26 alebo novší"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "vyžaduje macOS 26 nebo novější"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "erfordert macOS 26 oder neuer"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "requiere macOS 26 o posterior"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nécessite macOS 26 ou une version ultérieure"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "richiede macOS 26 o versioni successive"
           }
         },
         "pl": {
@@ -913,26 +1681,50 @@
             "value": "wymaga systemu macOS 26 lub nowszego"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "erfordert macOS 26 oder neuer"
+            "value": "requer o macOS 26 ou posterior"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vyžaduje macOS 26 alebo novší"
           }
         }
       }
     },
     "this device does not support Apple Intelligence": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "toto zariadenie nepodporuje Apple Intelligence"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "toto zařízení nepodporuje Apple Intelligence"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dieses Gerät unterstützt Apple Intelligence nicht"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "este dispositivo no admite Apple Intelligence"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cet appareil ne prend pas en charge Apple Intelligence"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "questo dispositivo non supporta Apple Intelligence"
           }
         },
         "pl": {
@@ -941,26 +1733,50 @@
             "value": "to urządzenie nie obsługuje Apple Intelligence"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "dieses Gerät unterstützt Apple Intelligence nicht"
+            "value": "este dispositivo não suporta a Apple Intelligence"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "toto zariadenie nepodporuje Apple Intelligence"
           }
         }
       }
     },
     "Apple Intelligence is turned off in System Settings": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apple Intelligence je vypnutá v Systémových nastaveniach"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "Apple Intelligence je vypnutá v Nastavení systému"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence ist in den Systemeinstellungen deaktiviert"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence está desactivado en Ajustes del Sistema"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence est désactivé dans Réglages Système"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence è disattivata in Impostazioni di Sistema"
           }
         },
         "pl": {
@@ -969,26 +1785,50 @@
             "value": "funkcja Apple Intelligence jest wyłączona w Ustawieniach systemowych"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apple Intelligence ist in den Systemeinstellungen deaktiviert"
+            "value": "a Apple Intelligence está desativada nas Definições do Sistema"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence je vypnutá v Systémových nastaveniach"
           }
         }
       }
     },
     "the model is still downloading or being prepared": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "model sa ešte sťahuje alebo pripravuje"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "model se ještě stahuje nebo připravuje"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das Modell wird noch heruntergeladen oder vorbereitet"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "el modelo aún se está descargando o preparando"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "le modèle est en cours de téléchargement ou de préparation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "il modello è ancora in fase di download o di preparazione"
           }
         },
         "pl": {
@@ -997,26 +1837,50 @@
             "value": "model jest jeszcze pobierany lub przygotowywany"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "das Modell wird noch heruntergeladen oder vorbereitet"
+            "value": "o modelo ainda está a ser descarregado ou preparado"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model sa ešte sťahuje alebo pripravuje"
           }
         }
       }
     },
     "the reason is unknown": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "dôvod nie je známy"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "důvod není znám"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "der Grund ist unbekannt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "el motivo es desconocido"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "la raison est inconnue"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "il motivo è sconosciuto"
           }
         },
         "pl": {
@@ -1025,26 +1889,50 @@
             "value": "przyczyna jest nieznana"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "der Grund ist unbekannt"
+            "value": "o motivo é desconhecido"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dôvod nie je známy"
           }
         }
       }
     },
     "the requested language": {
       "localizations": {
-        "sk": {
+        "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "požadovaný jazyk"
           }
         },
-        "cs": {
+        "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "požadovaný jazyk"
+            "value": "die gewünschte Sprache"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "el idioma solicitado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "la langue demandée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "la lingua richiesta"
           }
         },
         "pl": {
@@ -1053,26 +1941,50 @@
             "value": "żądany język"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "die gewünschte Sprache"
+            "value": "o idioma pedido"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "požadovaný jazyk"
           }
         }
       }
     },
     "the model assets are not available": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "súbory modelu nie sú dostupné"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "soubory modelu nejsou dostupné"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "die Modelldateien sind nicht verfügbar"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "los recursos del modelo no están disponibles"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "les ressources du modèle ne sont pas disponibles"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "i file del modello non sono disponibili"
           }
         },
         "pl": {
@@ -1081,26 +1993,50 @@
             "value": "pliki modelu nie są dostępne"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "die Modelldateien sind nicht verfügbar"
+            "value": "os ficheiros do modelo não estão disponíveis"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "súbory modelu nie sú dostupné"
           }
         }
       }
     },
     "the system is rate-limiting requests": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "systém obmedzuje počet požiadaviek"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "systém omezuje počet požadavků"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das System begrenzt die Anzahl der Anfragen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "el sistema está limitando la frecuencia de las solicitudes"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "le système limite le nombre de requêtes"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "il sistema sta limitando le richieste"
           }
         },
         "pl": {
@@ -1109,26 +2045,50 @@
             "value": "system ogranicza liczbę żądań"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "das System begrenzt die Anzahl der Anfragen"
+            "value": "o sistema está a limitar o número de pedidos"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "systém obmedzuje počet požiadaviek"
           }
         }
       }
     },
     "another request is already running": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "už sa spracúva iná požiadavka"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "už běží jiný požadavek"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "eine andere Anfrage läuft bereits"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ya hay otra solicitud en curso"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "une autre requête est déjà en cours"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "un’altra richiesta è già in corso"
           }
         },
         "pl": {
@@ -1137,26 +2097,50 @@
             "value": "trwa już przetwarzanie innego żądania"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "eine andere Anfrage läuft bereits"
+            "value": "já está a decorrer outro pedido"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "už sa spracúva iná požiadavka"
           }
         }
       }
     },
     "the on-device model returned a response that could not be decoded": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "model v zariadení vrátil odpoveď, ktorú nemožno dekódovať"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "model v zařízení vrátil odpověď, kterou nelze zpracovat"
+            "value": "model v zařízení vrátil odpověď, kterou nelze dekódovat"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das Modell auf dem Gerät hat eine nicht dekodierbare Antwort geliefert"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "el modelo del dispositivo ha devuelto una respuesta que no se ha podido decodificar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "le modèle sur l’appareil a renvoyé une réponse impossible à décoder"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "il modello sul dispositivo ha restituito una risposta che non è stato possibile decodificare"
           }
         },
         "pl": {
@@ -1165,26 +2149,50 @@
             "value": "model na urządzeniu zwrócił odpowiedź, której nie da się zdekodować"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "das Modell auf dem Gerät hat eine nicht dekodierbare Antwort geliefert"
+            "value": "o modelo no dispositivo devolveu uma resposta que não foi possível descodificar"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model v zariadení vrátil odpoveď, ktorú nemožno dekódovať"
           }
         }
       }
     },
     "the on-device model rejected the output format": {
       "localizations": {
-        "sk": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "model v zariadení odmietol požadovaný formát výstupu"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
             "value": "model v zařízení odmítl požadovaný formát výstupu"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "das Modell auf dem Gerät hat das vorgegebene Ausgabeformat abgelehnt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "el modelo del dispositivo ha rechazado el formato de salida"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "le modèle sur l’appareil a refusé le format de sortie"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "il modello sul dispositivo ha rifiutato il formato di output"
           }
         },
         "pl": {
@@ -1193,10 +2201,16 @@
             "value": "model na urządzeniu odrzucił format wyniku"
           }
         },
-        "de": {
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "das Modell auf dem Gerät hat das vorgegebene Ausgabeformat abgelehnt"
+            "value": "o modelo no dispositivo rejeitou o formato de saída"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "model v zariadení odmietol požadovaný formát výstupu"
           }
         }
       }
@@ -1216,7 +2230,31 @@
             "value": "Dicavo CLI Bridge"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge"
+          }
+        },
         "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge"
+          }
+        },
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge"
@@ -1245,16 +2283,40 @@
             "value": "Installierte Tools werden geprüft…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprobando las herramientas instaladas…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérification des outils installés…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifica degli strumenti installati…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Sprawdzanie zainstalowanych narzędzi…"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A verificar as ferramentas instaladas…"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kontrolujem nainštalované nástroje…"
+            "value": "Kontrolujú sa nainštalované nástroje…"
           }
         }
       }
@@ -1274,10 +2336,34 @@
             "value": "Noch keine Tools geprüft"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no se ha comprobado ninguna herramienta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun outil vérifié pour l’instant"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuno strumento ancora verificato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Narzędzia nie zostały jeszcze sprawdzone"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainda não foram verificadas ferramentas"
           }
         },
         "sk": {
@@ -1303,22 +2389,46 @@
             "value": "Tools erneut prüfen"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check Tools Again"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprobar herramientas de nuevo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revérifier les outils"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifica di nuovo gli strumenti"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Sprawdź narzędzia ponownie"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificar ferramentas novamente"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Skontrolovať nástroje znova"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Check Tools Again"
           }
         }
       }
@@ -1338,22 +2448,46 @@
             "value": "Bei der Anmeldung öffnen"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at Login"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir al iniciar sesión"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir à l’ouverture de session"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri al login"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Uruchamiaj przy logowaniu"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ao iniciar sessão"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Spustiť pri prihlásení"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Launch at Login"
           }
         }
       }
@@ -1373,10 +2507,34 @@
             "value": "Dicavo CLI Bridge beenden"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir de Dicavo CLI Bridge"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitter Dicavo CLI Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esci da Dicavo CLI Bridge"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Zakończ Dicavo CLI Bridge"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do Dicavo CLI Bridge"
           }
         },
         "sk": {
@@ -1402,10 +2560,34 @@
             "value": "Wird gestartet…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciando…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrage…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avvio…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Uruchamianie…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A iniciar…"
           }
         },
         "sk": {
@@ -1431,22 +2613,46 @@
             "value": "Anmeldebefehl für %@ kopieren"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy Sign-In Command for %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar comando de inicio de sesión para %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier la commande de connexion pour %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia il comando di accesso per %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Kopiuj polecenie logowania dla %@"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar comando de início de sessão para %@"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Kopírovať prihlasovací príkaz pre %@"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Copy Sign-In Command for %@"
           }
         }
       }
@@ -1466,10 +2672,34 @@
             "value": "%@: nicht installiert"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: sin instalar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ : non installé"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: non installato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@: nie zainstalowano"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: não instalado"
           }
         },
         "sk": {
@@ -1495,10 +2725,40 @@
             "value": "Die Bridge konnte für Dicavo nicht bereitgestellt werden: %@"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not publish the Bridge for Dicavo: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido publicar el Bridge para Dicavo: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de publier le Bridge pour Dicavo : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile pubblicare il Bridge per Dicavo: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można udostępnić Bridge aplikacji Dicavo: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível publicar o Bridge para o Dicavo: %@"
           }
         },
         "sk": {
@@ -1524,7 +2784,31 @@
             "value": "Dicavo CLI Bridge %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@"
+          }
+        },
         "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@"
+          }
+        },
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge %@"
@@ -1553,10 +2837,34 @@
             "value": "Über Dicavo CLI Bridge"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de Dicavo CLI Bridge"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À propos de Dicavo CLI Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informazioni su Dicavo CLI Bridge"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge – informacje"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca do Dicavo CLI Bridge"
           }
         },
         "sk": {
@@ -1582,22 +2890,46 @@
             "value": "Version %@ installieren…"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install Version %@…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalar la versión %@…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installer la version %@…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installa la versione %@…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Zainstaluj wersję %@…"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalar a versão %@…"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Nainštalovať verziu %@…"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Install Version %@…"
           }
         }
       }
@@ -1617,10 +2949,34 @@
             "value": "Version %@ erfordert macOS %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión %@ requiere macOS %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version %@ nécessite macOS %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione %@ richiede macOS %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Wersja %@ wymaga macOS %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão %@ requer o macOS %@"
           }
         },
         "sk": {
@@ -1646,10 +3002,34 @@
             "value": "Suche nach Updates…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscando actualizaciones…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recherche de mises à jour…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ricerca di aggiornamenti…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Sprawdzanie uaktualnień…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A procurar atualizações…"
           }
         },
         "sk": {
@@ -1675,10 +3055,34 @@
             "value": "Version %@ wird heruntergeladen und überprüft…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descargando y verificando la versión %@…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargement et vérification de la version %@…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download e verifica della versione %@…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pobieranie i weryfikowanie wersji %@…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A descarregar e a verificar a versão %@…"
           }
         },
         "sk": {
@@ -1704,16 +3108,46 @@
             "value": "Version %@ wird nach Abschluss der aktuellen Analyse installiert"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@ will be installed when the current analysis finishes"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión %@ se instalará cuando termine el análisis actual"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version %@ s’installera à la fin de l’analyse en cours"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione %@ verrà installata al termine dell’analisi in corso"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Wersja %@ zostanie zainstalowana po zakończeniu bieżącej analizy"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão %@ será instalada quando a análise atual terminar"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Verzia %@ sa nainštaluje po dokončení analýzy"
+            "value": "Verzia %@ sa nainštaluje po dokončení aktuálnej analýzy"
           }
         }
       }
@@ -1733,10 +3167,34 @@
             "value": "Version %@ wird installiert…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalando la versión %@…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installation de la version %@…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installazione della versione %@…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Instalowanie wersji %@…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A instalar a versão %@…"
           }
         },
         "sk": {
@@ -1762,22 +3220,46 @@
             "value": "Downloadseite öffnen"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Download Page"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir la página de descarga"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir la page de téléchargement"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri la pagina di download"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Otwórz stronę pobierania"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir página de descarga"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Otvoriť stránku na stiahnutie"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open Download Page"
           }
         }
       }
@@ -1797,22 +3279,46 @@
             "value": "Nach Updates suchen…"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check for Updates…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar actualizaciones…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher des mises à jour…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca aggiornamenti…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Sprawdź uaktualnienia…"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurar atualizações…"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Skontrolovať aktualizácie…"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Check for Updates…"
           }
         }
       }
@@ -1832,22 +3338,46 @@
             "value": "Automatisch nach Updates suchen"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check for Updates Automatically"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar actualizaciones automáticamente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher automatiquement les mises à jour"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca aggiornamenti automaticamente"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Automatycznie sprawdzaj uaktualnienia"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurar atualizações automaticamente"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Automaticky kontrolovať aktualizácie"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Check for Updates Automatically"
           }
         }
       }
@@ -1867,10 +3397,34 @@
             "value": "Aus – manuell nach Updates suchen"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivado – buscar actualizaciones manualmente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Désactivé – rechercher les mises à jour manuellement"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disattivato – cerca aggiornamenti manualmente"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Wyłączone – sprawdzaj uaktualnienia ręcznie"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desativado – procurar atualizações manualmente"
           }
         },
         "sk": {
@@ -1896,10 +3450,34 @@
             "value": "Zuletzt geprüft: %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última comprobación: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernière vérification : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ultimo controllo: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Ostatnio sprawdzono: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última verificação: %@"
           }
         },
         "sk": {
@@ -1925,10 +3503,34 @@
             "value": "Dicavo CLI Bridge wird gestartet"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge se está iniciando"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrage de Dicavo CLI Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge si sta avviando"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge się uruchamia"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge está a iniciar"
           }
         },
         "sk": {
@@ -1954,10 +3556,34 @@
             "value": "Dicavo CLI Bridge ist bereit"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge está listo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge est prêt"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge è pronto"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge jest gotowy"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge está pronto"
           }
         },
         "sk": {
@@ -1980,13 +3606,37 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teil %1$lld von %2$lld"
+            "value": "Teil %lld von %lld"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "parte %lld de %lld"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "partie %lld sur %lld"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "parte %lld di %lld"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "część %1$lld z %2$lld"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "parte %1$lld de %2$lld"
           }
         },
         "sk": {
@@ -2012,10 +3662,34 @@
             "value": "KI-Analyse mit %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Análisis de IA con %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analyse IA avec %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analisi IA con %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Analiza AI przez %@"
+            "value": "Analiza AI z użyciem %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Análise de IA com %@"
           }
         },
         "sk": {
@@ -2041,10 +3715,34 @@
             "value": "Dicavo CLI Bridge arbeitet"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge está trabajando"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge travaille"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge sta lavorando"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge pracuje"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge está a trabalhar"
           }
         },
         "sk": {
@@ -2076,10 +3774,34 @@
             "value": "Dicavo CLI Bridge found no usable tools"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge no ha encontrado ninguna herramienta utilizable"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge n’a trouvé aucun outil utilisable"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge non ha trovato strumenti utilizzabili"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge nie znalazł żadnych narzędzi, z których może korzystać"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge não encontrou ferramentas utilizáveis"
           }
         },
         "sk": {
@@ -2105,10 +3827,34 @@
             "value": "Update im Finder abschließen"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Termina la actualización en el Finder"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminer la mise à jour dans le Finder"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completa l’aggiornamento nel Finder"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dokończ uaktualnienie w Finderze"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concluir a atualização no Finder"
           }
         },
         "sk": {
@@ -2125,7 +3871,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dicavo CLI Bridge se nemůže nahradit v umístění, ze kterého běží. Ověřený obraz disku je ve složce Stažené a právě se otevřel: ukončete Bridge a potom přetáhněte Dicavo CLI Bridge do Aplikací."
+            "value": "Dicavo CLI Bridge se nemůže nahradit v umístění, ze kterého běží. Ověřený obraz disku je ve složce Stažené soubory a je nyní otevřený: ukončete Bridge a potom přetáhněte Dicavo CLI Bridge do Aplikací."
           }
         },
         "de": {
@@ -2137,7 +3883,25 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dicavo CLI Bridge cannot replace itself while running from its current location. The verified disk image is in your Downloads folder and is now open: quit the bridge, then drag Dicavo CLI Bridge to Applications."
+            "value": "Dicavo CLI Bridge cannot replace itself while running from its current location. The verified disk image is in your Downloads folder and is now open: quit the Bridge, then drag Dicavo CLI Bridge to Applications."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge no puede reemplazarse mientras se ejecuta desde su ubicación actual. La imagen de disco verificada está en tu carpeta Descargas y ya está abierta: sal del Bridge y arrastra Dicavo CLI Bridge a Aplicaciones."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge ne peut pas se remplacer lui-même tant qu’il s’exécute depuis son emplacement actuel. L’image disque vérifiée se trouve dans votre dossier « Téléchargements » et est maintenant ouverte : quittez le Bridge, puis faites glisser Dicavo CLI Bridge dans Applications."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge non può sostituirsi mentre è in esecuzione dalla posizione attuale. L’immagine disco verificata è nella cartella Download ed è ora aperta: esci dal Bridge, quindi trascina Dicavo CLI Bridge in Applicazioni."
           }
         },
         "pl": {
@@ -2146,10 +3910,16 @@
             "value": "Dicavo CLI Bridge nie może zastąpić samego siebie w miejscu, z którego działa. Zweryfikowany obraz dysku znajduje się w folderze Pobrane i jest teraz otwarty: zakończ Bridge, a następnie przeciągnij Dicavo CLI Bridge do folderu Aplikacje."
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge não pode substituir-se enquanto está a ser executado a partir da localização atual. A imagem de disco verificada está na pasta Descargas e já foi aberta: saia do Bridge e, em seguida, arraste o Dicavo CLI Bridge para Aplicações."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dicavo CLI Bridge sa nemôže nahradiť v umiestnení, z ktorého beží. Overený obraz disku je v priečinku Stiahnuté a je otvorený: ukončite Bridge a potom pretiahnite Dicavo CLI Bridge do Aplikácií."
+            "value": "Dicavo CLI Bridge sa nemôže nahradiť v umiestnení, z ktorého beží. Overený obraz disku je v priečinku Stiahnuté a je otvorený: ukončite Bridge a potom pretiahnite Dicavo CLI Bridge do priečinka Aplikácie."
           }
         }
       }
@@ -2169,10 +3939,34 @@
             "value": "Das Update wurde nicht installiert"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha instalado la actualización"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La mise à jour n’a pas été installée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’aggiornamento non è stato installato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Uaktualnienie nie zostało zainstalowane"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A atualização não foi instalada"
           }
         },
         "sk": {
@@ -2198,10 +3992,34 @@
             "value": "Die laufende Version bleibt unverändert. Sie können das Update auch von dicavo.eu herunterladen."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión en ejecución no ha cambiado. También puedes descargar la actualización desde dicavo.eu."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version en cours d’exécution reste inchangée. Vous pouvez aussi télécharger la mise à jour sur dicavo.eu."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione in esecuzione resta invariata. Puoi anche scaricare l’aggiornamento da dicavo.eu."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Uruchomiona wersja pozostała bez zmian. Uaktualnienie możesz też pobrać z dicavo.eu."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão em execução não foi alterada. Também pode descarregar a atualização em dicavo.eu."
           }
         },
         "sk": {
@@ -2233,10 +4051,34 @@
             "value": "Runs Claude Code, Codex or Antigravity on this Mac for Dicavo."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ejecuta Claude Code, Codex o Antigravity en este Mac para Dicavo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exécute Claude Code, Codex ou Antigravity sur ce Mac pour Dicavo."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esegue Claude Code, Codex o Antigravity su questo Mac per Dicavo."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Uruchamia Claude Code, Codex lub Antigravity na tym Macu dla Dicavo."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executa o Claude Code, o Codex ou o Antigravity neste Mac para o Dicavo."
           }
         },
         "sk": {
@@ -2262,22 +4104,46 @@
             "value": "Nicht jetzt"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Now"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora no"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas maintenant"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non ora"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie teraz"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agora não"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Teraz nie"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not Now"
           }
         }
       }
@@ -2297,10 +4163,34 @@
             "value": "Dicavo CLI Bridge ist auf dem neuesten Stand"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge está actualizado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge est à jour"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge è aggiornato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge jest aktualny"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge está atualizado"
           }
         },
         "sk": {
@@ -2326,10 +4216,34 @@
             "value": "Version %@ ist die neueste verfügbare Version."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión %@ es la más reciente disponible."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version %@ est la plus récente disponible."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione %@ è la più recente disponibile."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Wersja %@ jest najnowszą dostępną."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão %@ é a mais recente disponível."
           }
         },
         "sk": {
@@ -2361,10 +4275,34 @@
             "value": "Version %@ requires a newer version of macOS"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión %@ requiere una versión más reciente de macOS"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version %@ nécessite une version plus récente de macOS"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione %@ richiede una versione più recente di macOS"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wersja %@ wymaga nowszego systemu macOS"
+            "value": "Wersja %@ wymaga nowszej wersji macOS"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão %@ requer uma versão mais recente do macOS"
           }
         },
         "sk": {
@@ -2396,10 +4334,34 @@
             "value": "Dicavo CLI Bridge %@ requires macOS %@ or later. Your current version will continue to work."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@ requiere macOS %@ o posterior. Tu versión actual seguirá funcionando."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@ nécessite macOS %@ ou une version ultérieure. Votre version actuelle continuera de fonctionner."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge %@ richiede macOS %@ o versioni successive. La versione attuale continuerà a funzionare."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge %@ wymaga macOS %@ lub nowszego. Twoja obecna wersja będzie nadal działać."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge %@ requer o macOS %@ ou posterior. A sua versão atual continuará a funcionar."
           }
         },
         "sk": {
@@ -2425,10 +4387,34 @@
             "value": "Suche nach Updates fehlgeschlagen"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se han podido buscar actualizaciones"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de rechercher les mises à jour"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile cercare aggiornamenti"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można sprawdzić uaktualnień"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível procurar atualizações"
           }
         },
         "sk": {
@@ -2454,10 +4440,34 @@
             "value": "Version %@ ist verfügbar"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión %@ está disponible"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version %@ est disponible"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione %@ è disponibile"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dostępna jest wersja %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão %@ está disponível"
           }
         },
         "sk": {
@@ -2474,7 +4484,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Máte verzi %@. Bridge stáhne aktualizaci z dicavo.eu, ověří, že ji podepsal vývojář Dicavo a notarizoval Apple, nahradí aktuální verzi a znovu se spustí."
+            "value": "Máte verzi %@. Bridge stáhne aktualizaci z dicavo.eu, ověří, že ji podepsal vývojář Dicava a notarizoval Apple, nahradí aktuální verzi a znovu se spustí."
           }
         },
         "de": {
@@ -2483,10 +4493,40 @@
             "value": "Sie verwenden Version %@. Die Bridge lädt das Update von dicavo.eu, prüft, ob es vom Dicavo-Entwickler signiert und von Apple notarisiert ist, ersetzt sich selbst und startet neu."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have %@. The Bridge downloads the update from dicavo.eu, checks that it is signed by the Dicavo developer and notarized by Apple, replaces itself and starts again."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes la versión %@. El Bridge descarga la actualización desde dicavo.eu, comprueba que esté firmada por el desarrollador de Dicavo y certificada por Apple, se reemplaza y se vuelve a iniciar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous utilisez la version %@. Le Bridge télécharge la mise à jour depuis dicavo.eu, vérifie qu’elle est signée par le développeur de Dicavo et notarisée par Apple, se remplace lui-même et redémarre."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hai la versione %@. Il Bridge scarica l’aggiornamento da dicavo.eu, verifica che sia firmato dallo sviluppatore di Dicavo e autenticato da Apple, si sostituisce e si riavvia."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Masz wersję %@. Bridge pobierze uaktualnienie z dicavo.eu, sprawdzi, czy jest podpisane przez twórcę Dicavo i poddane notaryzacji przez Apple, zastąpi obecną wersję i uruchomi się ponownie."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tem a versão %@. O Bridge descarrega a atualização de dicavo.eu, verifica se está assinada pelo programador do Dicavo e autenticada pela Apple, substitui-se e volta a iniciar."
           }
         },
         "sk": {
@@ -2512,22 +4552,46 @@
             "value": "Installieren und neu starten"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install and Restart"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalar y reiniciar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installer et redémarrer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installa e riavvia"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Zainstaluj i uruchom ponownie"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalar e reiniciar"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Nainštalovať a reštartovať"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Install and Restart"
           }
         }
       }
@@ -2547,10 +4611,34 @@
             "value": "Später"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más tarde"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus tard"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In seguito"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Później"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mais tarde"
           }
         },
         "sk": {
@@ -2576,22 +4664,46 @@
             "value": "Neuerungen"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What's New"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novedades"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouveautés"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novità"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Co nowego"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novidades"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Čo je nové"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "What's New"
           }
         }
       }
@@ -2611,7 +4723,31 @@
             "value": "OK"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aceptar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
         "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "pt-PT": {
           "stringUnit": {
             "state": "translated",
             "value": "OK"
@@ -2640,10 +4776,34 @@
             "value": "Die Update-Informationen auf dicavo.eu konnten nicht gelesen werden."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido leer la información de actualización de dicavo.eu."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les informations de mise à jour sur dicavo.eu n’ont pas pu être lues."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non è stato possibile leggere le informazioni sull’aggiornamento su dicavo.eu."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można odczytać informacji o uaktualnieniu na dicavo.eu."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível ler as informações de atualização em dicavo.eu."
           }
         },
         "sk": {
@@ -2675,10 +4835,34 @@
             "value": "The update points to a site other than dicavo.eu."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La actualización apunta a un sitio distinto de dicavo.eu."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La mise à jour renvoie vers un site autre que dicavo.eu."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’aggiornamento rimanda a un sito diverso da dicavo.eu."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Uaktualnienie wskazuje na witrynę inną niż dicavo.eu."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A atualização aponta para um site diferente de dicavo.eu."
           }
         },
         "sk": {
@@ -2704,10 +4888,40 @@
             "value": "dicavo.eu hat mit dem HTTP-Statuscode %lld geantwortet."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dicavo.eu responded with HTTP %lld."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dicavo.eu ha respondido con HTTP %lld."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dicavo.eu a répondu avec le code HTTP %lld."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dicavo.eu ha risposto con HTTP %lld."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "dicavo.eu zwróciło kod HTTP %lld."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dicavo.eu respondeu com HTTP %lld."
           }
         },
         "sk": {
@@ -2733,10 +4947,34 @@
             "value": "Die heruntergeladene Datei stimmt nicht mit der veröffentlichten überein."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El archivo descargado no coincide con el publicado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le fichier téléchargé ne correspond pas à celui publié."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il file scaricato non corrisponde a quello pubblicato."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pobrany plik nie odpowiada opublikowanemu plikowi."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O ficheiro descarregado não corresponde ao publicado."
           }
         },
         "sk": {
@@ -2762,10 +5000,34 @@
             "value": "Das Festplattenimage konnte nicht geöffnet werden: %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido abrir la imagen de disco: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’image disque n’a pas pu être ouverte : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non è stato possibile aprire l’immagine disco: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można otworzyć obrazu dysku: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível abrir a imagem de disco: %@"
           }
         },
         "sk": {
@@ -2791,10 +5053,34 @@
             "value": "Das Festplattenimage enthält Dicavo CLI Bridge nicht."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La imagen de disco no contiene Dicavo CLI Bridge."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’image disque ne contient pas Dicavo CLI Bridge."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’immagine disco non contiene Dicavo CLI Bridge."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Obraz dysku nie zawiera Dicavo CLI Bridge."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A imagem de disco não contém o Dicavo CLI Bridge."
           }
         },
         "sk": {
@@ -2811,7 +5097,7 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Staženou aplikaci nepodepsal vývojář Dicavo: %@"
+            "value": "Staženou aplikaci nepodepsal vývojář Dicava: %@"
           }
         },
         "de": {
@@ -2820,10 +5106,34 @@
             "value": "Die heruntergeladene App ist nicht vom Dicavo-Entwickler signiert: %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app descargada no está firmada por el desarrollador de Dicavo: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app téléchargée n’est pas signée par le développeur de Dicavo : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app scaricata non è firmata dallo sviluppatore di Dicavo: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pobrana aplikacja nie jest podpisana przez twórcę Dicavo: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A aplicação descarregada não está assinada pelo programador do Dicavo: %@"
           }
         },
         "sk": {
@@ -2849,10 +5159,34 @@
             "value": "Die heruntergeladene App ist nicht die veröffentlichte Version von Dicavo CLI Bridge."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app descargada no es la versión publicada de Dicavo CLI Bridge."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app téléchargée n’est pas la version publiée de Dicavo CLI Bridge."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app scaricata non è la versione pubblicata di Dicavo CLI Bridge."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pobrana aplikacja nie jest opublikowaną wersją Dicavo CLI Bridge."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A aplicação descarregada não é a versão publicada do Dicavo CLI Bridge."
           }
         },
         "sk": {
@@ -2878,10 +5212,34 @@
             "value": "Die heruntergeladene App ist nicht von Apple notarisiert."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app descargada no está certificada por Apple."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app téléchargée n’est pas notarisée par Apple."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app scaricata non è autenticata da Apple."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pobrana aplikacja nie została poddana notaryzacji przez Apple."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A aplicação descarregada não está autenticada pela Apple."
           }
         },
         "sk": {
@@ -2913,10 +5271,34 @@
             "value": "The downloaded app is not newer than the version currently running."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app descargada no es más reciente que la versión que se está ejecutando."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app téléchargée n’est pas plus récente que la version en cours d’exécution."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app scaricata non è più recente della versione in esecuzione."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pobrana aplikacja nie jest nowsza od obecnie uruchomionej wersji."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A aplicação descarregada não é mais recente do que a versão em execução."
           }
         },
         "sk": {
@@ -2942,10 +5324,34 @@
             "value": "Das Update konnte nicht installiert werden: %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha podido instalar la actualización: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La mise à jour n’a pas pu être installée : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non è stato possibile installare l’aggiornamento: %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nie można zainstalować uaktualnienia: %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível instalar a atualização: %@"
           }
         },
         "sk": {
@@ -2961,13 +5367,37 @@
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tuto verzi Codexu nelze spustit bez konfigurace uživatele. Aktualizujte Codex a zkuste to znovu."
+            "value": "Tuto verzi Codexu nelze spustit bez vaší konfigurace. Aktualizujte Codex a zkuste to znovu."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Diese Version von Codex kann ohne die Benutzerkonfiguration nicht ausgeführt werden. Aktualisieren Sie Codex und versuchen Sie es erneut."
+            "value": "Diese Version von Codex kann ohne Ihre Konfiguration nicht ausgeführt werden. Aktualisieren Sie Codex und versuchen Sie es erneut."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This version of Codex cannot run without your configuration. Update Codex and try again."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta versión de Codex no se puede ejecutar sin tu configuración. Actualiza Codex e inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cette version de Codex ne peut pas s’exécuter sans votre configuration. Mettez Codex à jour et réessayez."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questa versione di Codex non può funzionare senza la tua configurazione. Aggiorna Codex e riprova."
           }
         },
         "pl": {
@@ -2976,10 +5406,16 @@
             "value": "Tej wersji Codex nie można uruchomić bez konfiguracji użytkownika. Zaktualizuj Codex i spróbuj ponownie."
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta versão do Codex não pode ser executada sem a sua configuração. Atualize o Codex e tente novamente."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Táto verzia Codexu sa nedá spustiť bez konfigurácie používateľa. Aktualizujte Codex a skúste to znova."
+            "value": "Táto verzia Codexu sa nedá spustiť bez vašej konfigurácie. Aktualizujte Codex a skúste to znova."
           }
         }
       }
@@ -2999,22 +5435,46 @@
             "value": "Lokaler Befehl…"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Command…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne…"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local…"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Lokálny príkaz…"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Local Command…"
           }
         }
       }
@@ -3034,22 +5494,46 @@
             "value": "Lokaler Befehl"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Command"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne"
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
             "value": "Lokálny príkaz"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Local Command"
           }
         }
       }
@@ -3069,10 +5553,34 @@
             "value": "Lokaler Befehl: nicht eingerichtet"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: sin configurar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale : non configurée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale: non configurato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne: nie skonfigurowano"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: não configurado"
           }
         },
         "sk": {
@@ -3104,16 +5612,40 @@
             "value": "Dicavo CLI Bridge can run one command of your choice for Dicavo, for example, llm or ollama run with a model. The command receives the meeting transcript, notes and instructions on standard input and writes the analysis as Markdown to standard output. Dicavo cannot see what the command does with the transcript: if the command sends it to a server, that is where it goes."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge puede ejecutar para Dicavo un comando que elijas, por ejemplo, llm u ollama run con un modelo. El comando recibe la transcripción de la reunión, los apuntes y las instrucciones por la entrada estándar y escribe el análisis en Markdown en la salida estándar. Dicavo no puede ver qué hace el comando con la transcripción: si el comando la envía a un servidor, allí acaba."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge peut exécuter pour Dicavo une commande de votre choix, par exemple llm ou ollama run avec un modèle. La commande reçoit la transcription de la réunion, les notes et les instructions sur l’entrée standard et écrit l’analyse au format Markdown sur la sortie standard. Dicavo ne voit pas ce que la commande fait de la transcription : si la commande l’envoie à un serveur, elle y aboutit."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge può eseguire per Dicavo un comando a tua scelta, ad esempio llm o ollama run con un modello. Il comando riceve la trascrizione della riunione, gli appunti e le istruzioni sullo standard input e scrive l’analisi in Markdown sullo standard output. Dicavo non può vedere cosa fa il comando con la trascrizione: se il comando la invia a un server, è lì che finisce."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Dicavo CLI Bridge może uruchamiać dla Dicavo jedno wybrane przez Ciebie polecenie, na przykład llm lub ollama run z modelem. Polecenie otrzymuje transkrypcję spotkania, notatki i instrukcje przez standardowe wejście, a analizę zapisuje w formacie Markdown na standardowe wyjście. Dicavo nie widzi, co polecenie robi z transkrypcją: jeśli wyśle ją na serwer, właśnie tam trafi."
           }
         },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge pode executar um comando à sua escolha para o Dicavo, por exemplo, llm ou ollama run com um modelo. O comando recebe a transcrição da reunião, os apontamentos e as instruções na entrada padrão e escreve a análise em Markdown na saída padrão. O Dicavo não vê o que o comando faz com a transcrição: se o comando a enviar para um servidor, é para aí que ela vai."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dicavo CLI Bridge môže pre Dicavo spúšťať jeden príkaz podľa vášho výberu, napríklad llm alebo ollama run s modelom. Príkaz dostane na štandardný vstup prepis stretnutia, poznámky a pokyny a analýzu zapíše ako Markdown na štandardný výstup. Dicavo nevidí, čo príkaz s prepisom urobí: ak ho pošle na server, prepis odíde tam."
+            "value": "Dicavo CLI Bridge môže pre Dicavo spúšťať jeden príkaz podľa vášho výberu, napríklad llm alebo ollama run s modelom. Príkaz dostane na štandardný vstup prepis schôdzky, poznámky a pokyny a analýzu zapíše ako Markdown na štandardný výstup. Dicavo nevidí, čo príkaz s prepisom urobí: ak ho pošle na server, prepis odíde tam."
           }
         }
       }
@@ -3133,10 +5665,34 @@
             "value": "Ausführbare Datei"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ejecutable"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exécutable"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eseguibile"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Plik wykonywalny"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executável"
           }
         },
         "sk": {
@@ -3162,10 +5718,34 @@
             "value": "Auswählen…"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elegir…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choisir…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scegli…"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Wybierz…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolher…"
           }
         },
         "sk": {
@@ -3191,10 +5771,34 @@
             "value": "Argumente"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Argumentos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arguments"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Argomenti"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Argumenty"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Argumentos"
           }
         },
         "sk": {
@@ -3220,10 +5824,34 @@
             "value": "Ein Argument pro Zeile, das genau so übergeben wird, wie es geschrieben ist. Es gibt keine Shell: Anführungszeichen, Variablen und Umleitungen haben keine besondere Bedeutung."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un argumento por línea, que se pasa tal como está escrito. No hay shell: las comillas, las variables y las redirecciones no tienen ningún significado especial."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un argument par ligne, transmis exactement tel qu’il est écrit. Il n’y a pas de shell : les guillemets, les variables et les redirections n’ont aucune signification particulière."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un argomento per riga, passato esattamente come scritto. Non c’è una shell: virgolette, variabili e reindirizzamenti non hanno alcun significato speciale."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Jeden argument na wiersz, przekazywany dokładnie tak, jak go wpisano. Polecenie działa bez powłoki: cudzysłowy, zmienne i przekierowania nie mają specjalnego znaczenia."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um argumento por linha, passado exatamente como está escrito. Não há shell: aspas, variáveis e redirecionamentos não têm significado especial."
           }
         },
         "sk": {
@@ -3249,10 +5877,34 @@
             "value": "Zeitlimit (Sekunden)"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiempo de espera (segundos)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Délai d’attente (secondes)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Timeout (secondi)"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Limit czasu (sekundy)"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo limite (segundos)"
           }
         },
         "sk": {
@@ -3284,10 +5936,34 @@
             "value": "Maximum: %lld seconds. This is the longest Dicavo waits for one answer."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Máximo: %lld segundos. Es el tiempo máximo que Dicavo espera para recibir una respuesta."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maximum : %lld secondes. C’est le temps maximal pendant lequel Dicavo attend une réponse."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Massimo: %lld secondi. È il tempo massimo che Dicavo attende per una risposta."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Najwyżej %lld sekund – dłużej Dicavo nie czeka na jedną odpowiedź."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Máximo: %lld segundos. É o tempo máximo que o Dicavo espera por uma resposta."
           }
         },
         "sk": {
@@ -3313,10 +5989,34 @@
             "value": "Abbrechen"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Anuluj"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
         "sk": {
@@ -3342,10 +6042,34 @@
             "value": "Speichern"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Zapisz"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
           }
         },
         "sk": {
@@ -3371,10 +6095,34 @@
             "value": "Geben Sie den vollständigen Pfad des Programms ein, zum Beispiel /opt/homebrew/bin/ollama."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduce la ruta completa del programa, por ejemplo /opt/homebrew/bin/ollama."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saisissez le chemin complet du programme, par exemple /opt/homebrew/bin/ollama."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inserisci il percorso completo del programma, ad esempio /opt/homebrew/bin/ollama."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Podaj pełną ścieżkę do programu, na przykład /opt/homebrew/bin/ollama."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduza o caminho completo do programa, por exemplo /opt/homebrew/bin/ollama."
           }
         },
         "sk": {
@@ -3400,10 +6148,34 @@
             "value": "Unter diesem Pfad gibt es kein Programm. Geben Sie den vollständigen Pfad ein, beginnend mit /."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ningún programa en esta ruta. Introduce la ruta completa, empezando por /."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun programme ne se trouve à ce chemin. Saisissez le chemin complet, commençant par /."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non c’è nessun programma in questo percorso. Inserisci il percorso completo, a partire da /."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Pod tą ścieżką nie ma programu. Podaj pełną ścieżkę zaczynającą się od /."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não existe nenhum programa neste caminho. Introduza o caminho completo, começando por /."
           }
         },
         "sk": {
@@ -3429,10 +6201,34 @@
             "value": "Diese Datei kann nicht ausgeführt werden. Wählen Sie das Programm selbst aus."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este archivo no se puede ejecutar. Elige el programa en sí."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce fichier ne peut pas être exécuté. Choisissez le programme lui-même."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questo file non può essere eseguito. Scegli il file del programma."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Tego pliku nie można uruchomić. Wybierz sam program."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este ficheiro não pode ser executado. Escolha o próprio programa."
           }
         },
         "sk": {
@@ -3458,10 +6254,34 @@
             "value": "Gefunden und ausführbar."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Encontrado y ejecutable."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouvé et exécutable."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trovato ed eseguibile."
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Znaleziono. Można uruchomić."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Encontrado e executável."
           }
         },
         "sk": {
@@ -3490,13 +6310,37 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No local command is set up and enabled in Dicavo CLI Bridge. Set one up with Local command… in the bridge's menu."
+            "value": "No local command is set up and enabled in Dicavo CLI Bridge. Set one up with Local Command… in the Bridge's menu."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ningún comando local configurado y activado en Dicavo CLI Bridge. Configura uno con Comando local… en el menú del Bridge."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune commande locale n’est configurée et activée dans Dicavo CLI Bridge. Configurez-en une avec Commande locale… dans le menu du Bridge."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Dicavo CLI Bridge non è configurato e attivo alcun comando locale. Configurane uno con Comando locale… nel menu del Bridge."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "W Dicavo CLI Bridge nie ustawiono ani nie włączono polecenia lokalnego. Ustaw je za pomocą pozycji „Polecenie lokalne…” w menu Bridge."
+            "value": "W Dicavo CLI Bridge nie ma skonfigurowanego i włączonego polecenia lokalnego. Skonfiguruj je za pomocą pozycji „Polecenie lokalne…” w menu Bridge."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não está configurado e ativado nenhum comando local no Dicavo CLI Bridge. Configure um com Comando local… no menu do Bridge."
           }
         },
         "sk": {
@@ -3522,10 +6366,34 @@
             "value": "KI-Tools (%lld)"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herramientas de IA (%lld)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outils d’IA (%lld)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strumenti IA (%lld)"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Narzędzia AI (%lld)"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ferramentas de IA (%lld)"
           }
         },
         "sk": {
@@ -3551,10 +6419,34 @@
             "value": "Empfangsbereit auf 127.0.0.1:%@ für Dicavo"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escuchando en 127.0.0.1:%@ para Dicavo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À l’écoute sur 127.0.0.1:%@ pour Dicavo"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In ascolto su 127.0.0.1:%@ per Dicavo"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Nasłuchuje na 127.0.0.1:%@ dla Dicavo"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À espera de ligações em 127.0.0.1:%@ para o Dicavo"
           }
         },
         "sk": {
@@ -3580,10 +6472,34 @@
             "value": "Lokaler Befehl: bereit"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: listo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale : prête"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale: pronto"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne: gotowe"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: pronto"
           }
         },
         "sk": {
@@ -3609,10 +6525,34 @@
             "value": "Lokaler Befehl: aus"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: desactivado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale : désactivée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale: disattivato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne: wyłączone"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: desativado"
           }
         },
         "sk": {
@@ -3638,10 +6578,34 @@
             "value": "Lokaler Befehl: nicht gefunden"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: no encontrado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale : introuvable"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale: non trovato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne: nie znaleziono"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: não encontrado"
           }
         },
         "sk": {
@@ -3667,10 +6631,34 @@
             "value": "Lokaler Befehl: nicht ausführbar"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: no ejecutable"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande locale : non exécutable"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando locale: non eseguibile"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "Polecenie lokalne: nie można uruchomić"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comando local: não executável"
           }
         },
         "sk": {
@@ -3696,10 +6684,34 @@
             "value": "%@%@: bereit"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@: listo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@ : prêt"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@: pronto"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "%@%@: gotowe"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@: pronto"
           }
         },
         "sk": {
@@ -3725,10 +6737,34 @@
             "value": "%@%@: nicht angemeldet"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@: sin iniciar sesión"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@ : non connecté"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@: accesso non effettuato"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@%@: niezalogowano"
+            "value": "%@%@: nie zalogowano"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@%@: sessão não iniciada"
           }
         },
         "sk": {
@@ -3754,10 +6790,34 @@
             "value": "seit %@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "desde %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "depuis %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "da %@"
+          }
+        },
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "od %@"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "desde %@"
           }
         },
         "sk": {
@@ -3771,6 +6831,48 @@
     "Check for updates automatically?": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontrolovat aktualizace automaticky?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch nach Updates suchen?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Buscar actualizaciones automáticamente?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher automatiquement les mises à jour ?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cercare aggiornamenti automaticamente?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdzać uaktualnienia automatycznie?"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurar atualizações automaticamente?"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3782,6 +6884,54 @@
     "Once a day the bridge would download a small file from dicavo.eu that names the newest version. Nothing about your meetings or tools is sent. You can change this in the bridge's menu at any time.": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bridge by jednou denně stahoval z dicavo.eu malý soubor s číslem nejnovější verze. O vašich schůzkách ani nástrojích se nic neodesílá. Změnit to můžete kdykoli v nabídce Bridge."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Bridge würde einmal täglich eine kleine Datei von dicavo.eu laden, die die neueste Version nennt. Es werden keine Informationen über Ihre Meetings oder Tools gesendet. Sie können das jederzeit im Menü der Bridge ändern."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Once a day, the Bridge would download a small file from dicavo.eu that names the latest version. Nothing about your meetings or tools is sent. You can change this in the Bridge's menu at any time."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una vez al día, el Bridge descargaría un archivo pequeño de dicavo.eu que indica la última versión. No se envía nada sobre tus reuniones ni tus herramientas. Puedes cambiarlo en cualquier momento en el menú del Bridge."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une fois par jour, le Bridge téléchargerait un petit fichier depuis dicavo.eu indiquant la dernière version. Aucune information sur vos réunions ou vos outils n’est envoyée. Vous pouvez modifier ce réglage à tout moment dans le menu du Bridge."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una volta al giorno il Bridge scaricherebbe da dicavo.eu un piccolo file che indica la versione più recente. Non viene inviato nulla sulle tue riunioni o sui tuoi strumenti. Puoi modificare questa impostazione in qualsiasi momento nel menu del Bridge."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raz dziennie Bridge pobierałby z dicavo.eu mały plik z numerem najnowszej wersji. Żadne informacje o twoich spotkaniach ani narzędziach nie są wysyłane. Możesz to zmienić w dowolnym momencie w menu Bridge."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uma vez por dia, o Bridge descarregaria um pequeno ficheiro de dicavo.eu que indica a versão mais recente. Nada sobre as suas reuniões ou ferramentas é enviado. Pode alterar isto a qualquer momento no menu do Bridge."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3793,6 +6943,54 @@
     "Dicavo CLI Bridge is in the menu bar at the top right, under this icon. From there you can check your tools, start the bridge at login and quit it.": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge najdete vpravo nahoře v řádku nabídek pod touto ikonou. Odtud zkontrolujete nástroje, zapnete spouštění při přihlášení a Bridge ukončíte."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge finden Sie oben rechts in der Menüleiste unter diesem Symbol. Dort können Sie Ihre Tools prüfen, das Öffnen der Bridge bei der Anmeldung festlegen und sie beenden."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge is in the menu bar at the top right, under this icon. From there you can check your tools, set the Bridge to open at login and quit it."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge está en la barra de menús, arriba a la derecha, bajo este icono. Desde ahí puedes comprobar tus herramientas, configurar el Bridge para que se abra al iniciar sesión y salir de él."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge se trouve dans la barre des menus en haut à droite, sous cette icône. Vous pouvez y vérifier vos outils, configurer le Bridge pour qu’il s’ouvre à l’ouverture de session et le quitter."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge è nella barra dei menu in alto a destra, sotto questa icona. Da lì puoi controllare i tuoi strumenti, impostare l’apertura del Bridge al login e uscire dall’app."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge znajdziesz w prawym górnym rogu na pasku menu pod tą ikoną. Stamtąd sprawdzisz narzędzia, włączysz uruchamianie przy logowaniu i zakończysz działanie Bridge."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge está na barra de menus, no canto superior direito, sob este ícone. A partir daí, pode verificar as suas ferramentas, definir o Bridge para abrir ao iniciar sessão e sair do Bridge."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3804,6 +7002,48 @@
     "Check Automatically": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontrolovat automaticky"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch suchen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar automáticamente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher automatiquement"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Controlla automaticamente"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdzaj automatycznie"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificar automaticamente"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3815,6 +7055,48 @@
     "Ready for Dicavo": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Připravený pro Dicavo"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bereit für Dicavo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo para Dicavo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prêt pour Dicavo"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronto per Dicavo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gotowy do pracy z Dicavo"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronto para o Dicavo"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3826,6 +7108,48 @@
     "No AI tool is ready": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Žádný AI nástroj není připravený"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein KI-Tool ist bereit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ninguna herramienta de IA está lista"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun outil d’IA n’est prêt"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuno strumento IA è pronto"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Żadne narzędzie AI nie jest gotowe"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma ferramenta de IA está pronta"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3837,6 +7161,48 @@
     "Dicavo CLI Bridge did not start": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge se nespustil"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge wurde nicht gestartet"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge no se ha iniciado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge n’a pas démarré"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge non si è avviato"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge się nie uruchomił"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo CLI Bridge não foi iniciado"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3848,6 +7214,48 @@
     "Try Again": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zkusit znovu"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erneut versuchen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reintentar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réessayer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Riprova"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spróbuj ponownie"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar novamente"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3859,6 +7267,48 @@
     "Dicavo Can’t See the Bridge – Details…": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo nevidí Bridge – podrobnosti…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo erkennt die Bridge nicht – Details …"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo no detecta el Bridge – Detalles…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo ne voit pas le Bridge – Détails…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo non vede il Bridge – Dettagli…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo nie widzi Bridge – szczegóły…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo não deteta o Bridge – Detalhes…"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3870,6 +7320,54 @@
     "Dicavo can't see the bridge": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo nevidí Bridge"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo erkennt die Bridge nicht"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo can't see the Bridge"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo no detecta el Bridge"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo ne voit pas le Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo non vede il Bridge"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo nie widzi Bridge"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo não deteta o Bridge"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3881,6 +7379,48 @@
     "Quit and reopen Dicavo CLI Bridge.": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončete Bridge a znovu ho otevřete."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beenden Sie die Bridge und öffnen Sie sie erneut."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sal de Dicavo CLI Bridge y vuelve a abrirlo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quittez Dicavo CLI Bridge et rouvrez-le."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esci da Dicavo CLI Bridge e riaprilo."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończ działanie Bridge i otwórz go ponownie."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saia do Dicavo CLI Bridge e volte a abri-lo."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3892,6 +7432,48 @@
     "Update Failed – Details…": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualizace se nezdařila – podrobnosti…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update fehlgeschlagen – Details…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error de actualización – Detalles…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de la mise à jour – Détails…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiornamento non riuscito – Dettagli…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uaktualnienie nie powiodło się – szczegóły…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha na atualização – Detalhes…"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3903,6 +7485,54 @@
     "Version %@ is installed – reopen the bridge": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verze %@ je nainstalovaná – znovu otevřete Bridge"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@ ist installiert – Bridge erneut öffnen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@ is installed – reopen the Bridge"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versión %@ está instalada – vuelve a abrir el Bridge"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La version %@ est installée – rouvrir le Bridge"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La versione %@ è installata – riapri il Bridge"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wersja %@ jest zainstalowana – otwórz Bridge ponownie"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A versão %@ está instalada – reabra o Bridge"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3914,6 +7544,48 @@
     "Quit Dicavo CLI Bridge?": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončit Dicavo CLI Bridge?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo CLI Bridge beenden?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Salir de Dicavo CLI Bridge?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitter Dicavo CLI Bridge ?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vuoi uscire da Dicavo CLI Bridge?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończyć Dicavo CLI Bridge?"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do Dicavo CLI Bridge?"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3925,6 +7597,54 @@
     "Dicavo is waiting for an AI analysis with %@. If you quit the bridge, the analysis stops and has to be started again in Dicavo. The recording and transcript stay saved.": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo čeká na AI analýzu přes %@. Pokud Bridge ukončíte, analýza se přeruší a v Dicavu ji bude potřeba spustit znovu. Nahrávka i přepis zůstanou uložené."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo wartet auf eine KI-Analyse mit %@. Wenn Sie die Bridge beenden, bricht die Analyse ab und muss in Dicavo erneut gestartet werden. Aufnahme und Transkript bleiben gespeichert."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo is waiting for an AI analysis using %@. If you quit the Bridge, the analysis will stop and you will need to restart it in Dicavo. The recording and transcript stay saved."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo está esperando un análisis de IA con %@. Si sales del Bridge, el análisis se detendrá y tendrás que reiniciarlo en Dicavo. La grabación y la transcripción se conservan."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo attend une analyse IA avec %@. Si vous quittez le Bridge, l’analyse s’arrêtera et vous devrez la relancer dans Dicavo. L’enregistrement et la transcription restent enregistrés."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo è in attesa di un’analisi IA con %@. Se esci dal Bridge, l’analisi si interrompe e dovrai riavviarla in Dicavo. La registrazione e la trascrizione restano salvate."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicavo czeka na analizę AI z użyciem %@. Jeśli zakończysz działanie Bridge, analiza zostanie przerwana i trzeba będzie uruchomić ją ponownie w Dicavo. Nagranie i transkrypcja pozostaną zapisane."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Dicavo está a aguardar uma análise de IA com %@. Se sair do Bridge, a análise será interrompida e terá de a reiniciar no Dicavo. A gravação e a transcrição permanecem guardadas."
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3936,6 +7656,48 @@
     "Quit": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončit"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beenden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitter"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esci"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończ"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",
@@ -3947,6 +7709,48 @@
     "Use local command": {
       "extractionState": "manual",
       "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Používat lokální příkaz"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokalen Befehl verwenden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar comando local"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utiliser la commande locale"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa comando locale"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Używaj polecenia lokalnego"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizar comando local"
+          }
+        },
         "sk": {
           "stringUnit": {
             "state": "translated",

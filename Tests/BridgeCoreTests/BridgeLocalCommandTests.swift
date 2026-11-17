@@ -469,8 +469,7 @@ final class BridgeLocalCommandTests: XCTestCase {
             "Local command: ready", "Local command: off", "Local command: not found",
             "Local command: not executable", "Local command: not set up",
             "Dicavo CLI Bridge can run one command of your choice for Dicavo, for example llm or ollama run with a model. The command receives the meeting transcript, notes and instructions on standard input and writes the analysis as Markdown to standard output. Dicavo cannot see what the command does with the transcript: if the command sends it to a server, that is where it goes.",
-            // "Use local command" (HIG review B-10, was "Enabled") joins this
-            // list once the 2.4 translation round adds cs, de and pl.
+            "Use local command",
             "Executable", "Choose…", "Arguments",
             "One argument per line, passed exactly as written. There is no shell: quotes, variables and redirections have no special meaning.",
             "Timeout (seconds)", "At most %lld seconds, the longest Dicavo waits for one answer.",
@@ -515,7 +514,7 @@ final class BridgeLocalCommandTests: XCTestCase {
             let entry = strings[key] as? [String: Any]
             XCTAssertNotNil(entry, "\(path) has no entry for \(key)", file: file, line: line)
             let localizations = entry?["localizations"] as? [String: Any] ?? [:]
-            for language in ["sk", "cs", "pl"] {
+            for language in ["sk", "cs", "pl", "de", "es", "fr", "it", "pt-PT"] {
                 let unit = (localizations[language] as? [String: Any])?["stringUnit"] as? [String: Any]
                 let value = unit?["value"] as? String ?? ""
                 XCTAssertFalse(value.isEmpty, "\(path): \(language) is missing for \(key)", file: file, line: line)
