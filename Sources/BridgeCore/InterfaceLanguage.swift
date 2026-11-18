@@ -56,6 +56,29 @@ enum InterfaceLanguage {
         return Locale(identifier: Locale.preferredLanguages.first ?? "en")
     }
 
+    /// The locale dates are written in: the interface language with the
+    /// user's own region preferences (24-hour clock, first weekday,
+    /// calendar). `Date.formatted()` alone takes the system's language, so an
+    /// English interface on a Slovak Mac read "Free trial until 13. októbra
+    /// 2026." (Y19). The iPhone sets no code and speaks the language its
+    /// bundle chose, which is not always the first preferred one.
+    static var formattingLocale: Locale {
+        if isTesting { return locale }
+        let language = code ?? sharedCode ?? Bundle.main.preferredLocalizations.first ?? "en"
+        var components = Locale.Components(locale: .autoupdatingCurrent)
+        components.languageComponents = Locale.Language.Components(identifier: language)
+        return Locale(components: components)
+    }
+
+    /// `date` as `Date.formatted(date:time:)` writes it, in `formattingLocale`.
+    static func dateText(
+        _ date: Date,
+        date dateStyle: Date.FormatStyle.DateStyle,
+        time timeStyle: Date.FormatStyle.TimeStyle
+    ) -> String {
+        date.formatted(Date.FormatStyle(date: dateStyle, time: timeStyle, locale: formattingLocale))
+    }
+
     /// `text` from the process's string catalog in the interface language.
     static func text(_ text: LocalizedStringResource) -> String {
         var text = text

@@ -90,7 +90,7 @@ enum AnalysisError: Error, Equatable, LocalizedError {
         case let .proRequired(feature, state):
             let ended: String
             if case .free(.expired(let date)) = state {
-                ended = InterfaceLanguage.text("Dicavo Pro ended on \(date.formatted(date: .long, time: .omitted)). ")
+                ended = InterfaceLanguage.text("Dicavo Pro ended on \(InterfaceLanguage.dateText(date, date: .long, time: .omitted)). ")
             } else {
                 ended = ""
             }
